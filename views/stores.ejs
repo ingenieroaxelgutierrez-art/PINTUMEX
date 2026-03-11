@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
+    <title><%= title %></title>`r`n    <link rel="icon" type="image/webp" href="/images/logo.webp">`r`n    <link rel="apple-touch-icon" href="/images/logo.webp">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -307,7 +307,7 @@
     <section class="store-hero">
         <div class="container position-relative" style="z-index: 2;">
             <h1><i class="fas fa-map-marked-alt me-3"></i>Nuestras Tiendas</h1>
-            <p class="mb-0">Visítanos en cualquiera de nuestras sucursales en Puebla</p>
+            <p class="mb-0">VisÃ­tanos en cualquiera de nuestras sucursales en Puebla</p>
         </div>
     </section>
 
@@ -352,7 +352,7 @@
                                     <!-- Address -->
                                     <div class="store-info">
                                         <div class="store-info-label">
-                                            <i class="fas fa-map-marker-alt me-2" style="color: var(--primary-blue);"></i>Dirección
+                                            <i class="fas fa-map-marker-alt me-2" style="color: var(--primary-blue);"></i>DirecciÃ³n
                                         </div>
                                         <div class="store-info-content"><%= store.address %></div>
                                     </div>
@@ -360,7 +360,7 @@
                                     <!-- Phone -->
                                     <div class="store-info">
                                         <div class="store-info-label">
-                                            <i class="fas fa-phone me-2" style="color: var(--primary-blue);"></i>Teléfono
+                                            <i class="fas fa-phone me-2" style="color: var(--primary-blue);"></i>TelÃ©fono
                                         </div>
                                         <div class="store-info-content">
                                             <a href="tel:<%= store.phone %>"><%= store.phone %></a>
@@ -380,7 +380,7 @@
                                     <!-- Hours -->
                                     <div class="store-info">
                                         <div class="store-info-label">
-                                            <i class="fas fa-clock me-2" style="color: var(--primary-blue);"></i>Horario de Atención
+                                            <i class="fas fa-clock me-2" style="color: var(--primary-blue);"></i>Horario de AtenciÃ³n
                                         </div>
                                         <table class="hours-table">
                                             <tr>
@@ -392,7 +392,7 @@
                                                 <td><%= store.hours.tuesday %></td>
                                             </tr>
                                             <tr>
-                                                <td>Miércoles</td>
+                                                <td>MiÃ©rcoles</td>
                                                 <td><%= store.hours.wednesday %></td>
                                             </tr>
                                             <tr>
@@ -404,7 +404,7 @@
                                                 <td><%= store.hours.friday %></td>
                                             </tr>
                                             <tr>
-                                                <td>Sábado</td>
+                                                <td>SÃ¡bado</td>
                                                 <td><%= store.hours.saturday %></td>
                                             </tr>
                                             <tr>
@@ -417,7 +417,7 @@
                                     <!-- Action Buttons -->
                                     <div class="store-buttons">
                                         <a href="<%= store.googleMapsUrl || ('https://maps.google.com/?q=' + store.latitude + ',' + store.longitude) %>" target="_blank" class="btn store-button btn-store-primary">
-                                            <i class="fas fa-directions me-2"></i>Ubicación
+                                            <i class="fas fa-directions me-2"></i>UbicaciÃ³n
                                         </a>
                                         <a href="https://wa.me/<%= (store.whatsapp || store.phone).replace(/[^0-9]/g, '') %>" target="_blank" class="btn store-button btn-store-secondary">
                                             <i class="fab fa-whatsapp me-2"></i>WhatsApp
@@ -446,7 +446,7 @@
                             <i class="fas fa-clock"></i>
                         </div>
                         <h5 class="feature-title">Horario Extendido</h5>
-                        <p class="feature-text">Abierto de lunes a sábado para tu conveniencia</p>
+                        <p class="feature-text">Abierto de lunes a sÃ¡bado para tu conveniencia</p>
                     </div>
                 </div>
 
@@ -455,8 +455,8 @@
                         <div class="feature-icon">
                             <i class="fas fa-map-marked-alt"></i>
                         </div>
-                        <h5 class="feature-title">Ubicación Accesible</h5>
-                        <p class="feature-text">Fácil acceso desde cualquier punto de Puebla</p>
+                        <h5 class="feature-title">UbicaciÃ³n Accesible</h5>
+                        <p class="feature-text">FÃ¡cil acceso desde cualquier punto de Puebla</p>
                     </div>
                 </div>
 
@@ -465,7 +465,7 @@
                         <div class="feature-icon">
                             <i class="fas fa-users"></i>
                         </div>
-                        <h5 class="feature-title">Atención Profesional</h5>
+                        <h5 class="feature-title">AtenciÃ³n Profesional</h5>
                         <p class="feature-text">Equipo capacitado para asesorarte</p>
                     </div>
                 </div>
@@ -486,8 +486,8 @@
     <!-- CTA Section -->
     <section class="py-5" style="background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%); color: white;">
         <div class="container text-center">
-            <h2 class="display-5 fw-bold mb-3">¿No encuentras lo que buscas?</h2>
-            <p class="lead mb-4">Contacta con nosotros a través de WhatsApp para consultas especiales</p>
+            <h2 class="display-5 fw-bold mb-3">Â¿No encuentras lo que buscas?</h2>
+            <p class="lead mb-4">Contacta con nosotros a travÃ©s de WhatsApp para consultas especiales</p>
             <div class="d-flex gap-3 justify-content-center flex-wrap">
                 <% if (stores && stores.length > 0) { %>
                     <% stores.forEach((store) => { %>
@@ -509,7 +509,7 @@
                     <p>Tu tienda de confianza para materiales de pintura profesionales y de calidad superior.</p>
                 </div>
                 <div class="col-md-3 mb-4">
-                    <h5>Enlaces Rápidos</h5>
+                    <h5>Enlaces RÃ¡pidos</h5>
                     <ul class="list-unstyled">
                         <li><a href="/" class="text-white-50 text-decoration-none">Inicio</a></li>
                         <li><a href="/productos" class="text-white-50 text-decoration-none">Productos</a></li>
@@ -530,11 +530,11 @@
                         <% } %>
                     </p>
                     <p class="text-white-50">
-                        <i class="fas fa-map-marker-alt"></i> <%= stores && stores[0] ? stores[0].address : 'Puebla, México' %>
+                        <i class="fas fa-map-marker-alt"></i> <%= stores && stores[0] ? stores[0].address : 'Puebla, MÃ©xico' %>
                     </p>
                 </div>
                 <div class="col-md-3 mb-4">
-                    <h5>Síguenos</h5>
+                    <h5>SÃ­guenos</h5>
                     <a href="#" class="text-white-50 me-3 text-decoration-none"><i class="fab fa-facebook fa-lg"></i></a>
                     <a href="#" class="text-white-50 me-3 text-decoration-none"><i class="fab fa-instagram fa-lg"></i></a>
                     <a href="https://wa.me/<%= stores && stores[0] ? (stores[0].whatsapp || stores[0].phone).replace(/[^0-9]/g, '') : '522222941010' %>" target="_blank" class="text-white-50 me-3 text-decoration-none"><i class="fab fa-whatsapp fa-lg"></i></a>
@@ -544,10 +544,10 @@
             <hr class="bg-white-50">
             <div class="footer-bottom">
                 <p class="footer-legal">
-                    <span class="footer-legal-line">&copy; 2026 Pintumex Puebla | Diseñado por: Axel Gutiérrez</span>
+                    <span class="footer-legal-line">&copy; 2026 Pintumex Puebla | DiseÃ±ado por: Axel GutiÃ©rrez</span>
                     <span class="footer-legal-line">
-                        <a href="/terminos">Términos y Condiciones</a> | 
-                        <a href="/privacidad">Política de Privacidad</a>
+                        <a href="/terminos">TÃ©rminos y Condiciones</a> | 
+                        <a href="/privacidad">PolÃ­tica de Privacidad</a>
                     </span>
                 </p>
             </div>
@@ -559,3 +559,4 @@
     <script src="/js/main.js"></script>
 </body>
 </html>
+
