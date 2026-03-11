@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pintumex - Pinturas de Calidad Profesional</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+        :root {
+            --primary-blue: #1e40af;
+            --dark-blue: #1e3a8a;
+            --primary-green: #16a34a;
+            --accent-light: #0ea5e9;
+            --text-dark: #212121;
+            --text-light: #757575;
+            --light-bg: #f5f5f5;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--white);
+            color: var(--text-dark);
+        }
+
+        /* Navbar Estilo */
+        .navbar {
+            background: linear-gradient(90deg, #2d4a75, #1a2744) !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            color: #eaf6ff !important;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand:hover {
+            color: #ffffff !important;
+            transform: scale(1.05);
+        }
+
+        .navbar-brand .brand-text {
+            color: #eaf6ff;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+        }
+
+        .nav-link {
+            font-weight: 600;
+            color: rgba(255,255,255,0.8) !important;
+            transition: all 0.3s ease;
+            margin: 0 5px;
+            border-radius: 6px;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-blue) !important;
+            background: rgba(30, 64, 175, 0.2);
+            padding-left: 10px;
+        }
+
+        .nav-link.active {
+            color: var(--primary-blue) !important;
+            background: rgba(30, 64, 175, 0.3);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 50%, var(--primary-green) 100%);
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            color: white;
+            padding: 80px 0;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,50 Q300,100 600,50 T1200,50 L1200,120 L0,120 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-repeat: repeat-x;
+            opacity: 0.3;
+        }
+
+        .hero-text {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            letter-spacing: -1px;
+        }
+
+        .hero-section .lead {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+
+        .hero-image {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-image img {
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+            animation: float 3s ease-in-out infinite;
+        }
+        .hero-video {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-video video{
+            border-radius: 15px;
+            box-shadow:  0 20px 60px rgba(0,0,0,0.4);
+            animation: float 3s ease-in-out infinite;
+            width: 100%;
+            height: 580px;
+            object-fit: cover;
+            object-position: right;
+            border-radius: 12px;
+        }
+
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+       /* .services-hero {
+    position: relative;
+    height: 80vh;
+}
+
+.services-hero {
+    min-height: 80vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    display: flex;
+    align-items: center;
+}*/
+        /* Botones */
+        .btn-hero {
+            padding: 15px 35px;
+            font-weight: 700;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.05rem;
+        }
+
+        .btn-primary-hero {
+            background: var(--white);
+            color: var(--primary-blue);
+            border: 2px solid var(--white);
+        }
+
+        .btn-primary-hero:hover {
+            background: var(--accent-light);
+            color: var(--white);
+            border-color: var(--accent-light);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .btn-secondary-hero {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary-hero:hover {
+            background: var(--white);
+            color: var(--primary-blue);
+            transform: translateY(-3px);
+        }
+
+        /* Sección Categorías */
+        .categories-section {
+            padding: 80px 0;
+            background: linear-gradient(180deg, var(--light-bg) 0%, var(--white) 100%);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 50px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 30px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-green));
+            border-radius: 3px;
+        }
+
+        .category-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+            border: 2px solid transparent;
+            text-align: center;
+        }
+
+        .category-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(30, 64, 175, 0.25);
+            border-color: var(--primary-blue);
+        }
+
+        .category-icon {
+            font-size: 3.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .category-card:hover .category-icon {
+            color: var(--primary-green);
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        .category-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .category-desc {
+            color: var(--text-light);
+            font-size: 1rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .service-icon {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.35);
+}
+
+        /* Sección Productos */
+        .products-section {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+            border: 1px solid #e0e0e0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 50px rgba(30, 64, 175, 0.2);
+            border-color: var(--primary-blue);
+        }
+
+        .product-image-wrapper {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #f0f0f0, #e8e8e8);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.12);
+        }
+
+        .product-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .product-card:hover .product-overlay {
+            opacity: 1;
+        }
+
+        .overlay-btn {
+            background: var(--primary-blue);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .overlay-btn:hover {
+            background: var(--primary-green);
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+            color: white;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--accent-light);
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover .feature-icon {
+            transform: scale(1.2) rotate(-10deg);
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .feature-text {
+            font-size: 1rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-blue) 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .cta-desc {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #1a2744, #0f1728);
+            color: rgba(255,255,255,0.8);
+            padding: 60px 0 20px;
+        }
+
+        footer h5 {
+            color: var(--accent-light);
+            font-weight: 700;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+
+        footer a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        footer a:hover {
+            color: var(--primary-blue);
+            padding-left: 5px;
+        }
+
+        .footer-info {
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 40px;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-section {
+                min-height: 400px;
+                padding: 60px 0;
+            }
+
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+
+            .hero-section .lead {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 20px;
+            }
+
+            .cta-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <% 
+        const primaryStore = (typeof stores !== 'undefined' && stores[0]) ? stores[0] : null;
+        const secondaryStore = (typeof stores !== 'undefined' && stores[1]) ? stores[1] : null;
+        const primaryWhatsapp = primaryStore ? (primaryStore.whatsapp || primaryStore.phone) : '522222941010';
+    %>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <img src="/images/logo.webp" alt="Pintumex" height="36" class="me-2">
+                <span class="brand-text">PINTUMEX</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/productos">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/tiendas">Tiendas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/acerca-de">Acerca de</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contacto">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="/carrito">
+                            <i class="fas fa-shopping-cart"></i> Carrito
+                            <span id="cartBadge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display: none;">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 hero-text">
+                    <h1><img src="/images/logo.webp" alt="Pintumex Logo" height="200" class="me-2">Pinturas de Calidad Profesional</h1>
+                    <p class="lead">Desde hace más de una década, Pintumex ofrece soluciones en pintura y recubrimientos de la más alta calidad para profesionales y aficionados que buscan excelencia.</p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="/productos" class="btn-hero btn-primary-hero">
+                            <i class="fas fa-shopping-bag me-2"></i>Ver Catálogo
+                        </a>
+                        <a href="/tiendas" class="btn-hero btn-secondary-hero">
+                            <i class="fas fa-map-marker-alt me-2"></i>Nuestras Tiendas
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 hero-video">
+                    <video autoplay muted loop playsinline>
+                    <source src="/images/video.mp4" type="video/mp4">
+                    Tu navegador no soporta video HTML5.
+                    </video>
+                </div>
+
+                </div>
+            </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="container">
+            <h2 class="section-title">Nuestras Categorías</h2>
+            <div class="row g-4 mt-3">
+                <div class="col-md-4">
+                    <div class="category-card">
+                        <div class="category-icon"><img src="/images/vinilicas.webp" 
+                        alt="Vinílicas"
+                        class="service-icon mb-4"></div>
+                        <h4 class="category-title">Vinílicas</h4>
+                        <p class="category-desc">Pinturas de bajo olor, fácil aplicación y máxima cobertura para interiores</p>
+                        <a href="/productos" class="btn btn-sm" style="background: var(--primary-blue); color: white;">Ver Más</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="category-card">
+                        <div class="category-icon"><img src="/images/impermeabilizante.webp" 
+                        alt="Impermeabilizantes"
+                        class="service-icon mb-4"></div>
+                        <h4 class="category-title">Impermeabilizantes</h4>
+                        <p class="category-desc">Sistemas de impermeabilización con tecnología fibratada de máxima durabilidad</p>
+                        <a href="/productos" class="btn btn-sm" style="background: var(--primary-blue); color: white;">Ver Más</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="category-card">
+                        <div class="category-icon"><img src="/images/esmaltes.webp" 
+                        alt="Esmaltes"
+                        class="service-icon mb-4"></div>
+                        <h4 class="category-title">Esmaltes</h4>
+                        <p class="category-desc">Esmaltes de secado rápido para acabados detallados y profesionales</p>
+                        <a href="/productos" class="btn btn-sm" style="background: var(--primary-blue); color: white;">Ver Más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">Productos Destacados</h2>
+            <div class="product-grid">
+                <% if(products && products.length > 0) { %>
+                    <% for(let i = 0; i < Math.min(6, products.length); i++) { 
+                        const product = products[i];
+                        const imageUrls = [
+                            '/images/SUPERVIN.webp',
+                            '/images/SUPERVIN.webp',
+                            '/images/SUPERVIN.webp',
+                            '/images/SUPERVIN.webp',
+                            '/images/VIP.webp',
+                            '/images/VINET.webp'
+                        ];
+                        const image = imageUrls[i % imageUrls.length];
+                    %>
+                    <div class="product-card">
+                        <div class="product-image-wrapper">
+                            <img src="<%= image %>" alt="<%= product.name %>" class="product-image">
+                            <div class="product-overlay">
+                                <a href="/productos/<%= product.id %>" class="overlay-btn">
+                                    <i class="fas fa-eye me-2"></i>Ver Detalles
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h5 class="product-name"><%= product.name %></h5>
+                            <div class="product-price">$<%= product.price.toFixed(2) %></div>
+                            <button class="btn btn-sm add-to-cart" data-product-id="<%= product.id %>" style="background: var(--primary-blue); color: white; width: 100%; margin-top: auto;">
+                                <i class="fas fa-shopping-cart me-2"></i>Agregar al Carrito
+                            </button>
+                        </div>
+                    </div>
+                    <% } %>
+                <% } %>
+            </div>
+            <div class="text-center mt-5">
+                <a href="/productos" class="btn btn-lg" style="background: var(--primary-blue); color: white; padding: 15px 40px; font-weight: 700;">
+                    <i class="fas fa-cubes me-2"></i>Ver Todo el Catálogo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 feature-item">
+                    <div class="feature-icon"><i class="fas fa-flask-vial"></i></div>
+                    <h4 class="feature-title">Productos Premium</h4>
+                    <p class="feature-text">Pinturas de máxima calidad cumpliendo con normas internacionales</p>
+                </div>
+                <div class="col-md-3 feature-item">
+                    <div class="feature-icon"><i class="fas fa-truck"></i></div>
+                    <h4 class="feature-title">Entrega Rápida</h4>
+                    <p class="feature-text">Dos sucursales estratégicas en Puebla para tu conveniencia</p>
+                </div>
+                <div class="col-md-3 feature-item">
+                    <div class="feature-icon"><i class="fas fa-headset"></i></div>
+                    <h4 class="feature-title">Soporte Técnico</h4>
+                    <p class="feature-text">Asesoría profesional disponible todos los días de la semana</p>
+                </div>
+                <div class="col-md-3 feature-item">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h4 class="feature-title">100% Garantía</h4>
+                    <p class="feature-text">Satisfacción garantizada en todos nuestros productos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container text-center">
+            <h2 class="cta-title">¿Listo Para Tu Proyecto?</h2>
+            <p class="cta-desc">Contáctanos y obtén asesoría técnica especializada de forma gratuita</p>
+            <div class="d-flex gap-3 justify-content-center flex-wrap">
+                <a href="/productos" class="btn-hero btn-primary-hero" style="background: var(--white); color: var(--primary-blue);">
+                    <i class="fas fa-shopping-bag me-2"></i>Comprar Ahora
+                </a>
+                <a href="https://wa.me/<%= primaryWhatsapp.replace(/[^0-9]/g, '') %>?text=Hola%20Pintumex,%20me%20gustaría%20más%20información" target="_blank" class="btn-hero btn-secondary-hero">
+                    <i class="fab fa-whatsapp me-2"></i>Contactar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-3 mb-4">
+                    <h5><i class="fas fa-paint-brush me-2"></i>Pintumex</h5>
+                    <p class="footer-info">Tu tienda de confianza para materiales de pintura profesionales desde 2010. Ubicada en Puebla, México.</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Enlaces Rápidos</h5>
+                    <a href="/">Inicio</a>
+                    <a href="/productos">Productos</a>
+                    <a href="/tiendas">Tiendas</a>
+                    <a href="/contacto">Contacto</a>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Contacto</h5>
+                    <p class="footer-info">
+                        <% if (primaryStore) { %>
+                            <i class="fas fa-phone me-2"></i><%= primaryStore.phone %><br>
+                        <% } %>
+                        <% if (secondaryStore) { %>
+                            <i class="fas fa-phone me-2"></i><%= secondaryStore.phone %><br>
+                        <% } %>
+                        <% if (primaryStore) { %>
+                            <i class="fas fa-envelope me-2"></i><%= primaryStore.email %>
+                        <% } %>
+                    </p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Síguenos</h5>
+                    <a href="#" class="text-decoration-none"><i class="fab fa-facebook fa-lg me-3" style="color: #0ea5e9;"></i></a>
+                    <a href="#" class="text-decoration-none"><i class="fab fa-instagram fa-lg me-3" style="color: #0ea5e9;"></i></a>
+                    <a href="https://wa.me/<%= primaryWhatsapp.replace(/[^0-9]/g, '') %>" target="_blank" class="text-decoration-none"><i class="fab fa-whatsapp fa-lg me-3" style="color: #0ea5e9;"></i></a>
+                    <a href="#" class="text-decoration-none"><i class="fab fa-twitter fa-lg" style="color: #0ea5e9;"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-legal">
+                    <span class="footer-legal-line">&copy; 2026 Pintumex Puebla | Diseñado por: Axel Gutiérrez</span>
+                    <span class="footer-legal-line">
+                        <a href="/terminos">Términos y Condiciones</a> | <a href="/privacidad">Política de Privacidad</a> 
+                    </span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

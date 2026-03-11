@@ -1,0 +1,51 @@
+[
+  {
+    "customerName": "liz",
+    "customerEmail": "ingenieroaxelgutierrez@gmail.com",
+    "customerPhone": "4771234567",
+    "address": "asda",
+    "notes": "dsadsadsa",
+    "items": [
+      {
+        "id": 1,
+        "name": "SUPERVIN 20 AÑOS",
+        "code": "250",
+        "price": 4632,
+        "image": "/images/supervin-20-anos.webp",
+        "size": "19 L",
+        "quantity": 1
+      },
+      {
+        "id": 1,
+        "name": "SUPERVIN 20 AÑOS",
+        "code": "250",
+        "price": 1111,
+        "image": "/images/supervin-20-anos.webp",
+        "size": "4 L",
+        "quantity": 1
+      },
+      {
+        "id": 6,
+        "name": "ULTRA LUMINOSA (COLOR BLANCO)",
+        "code": "TULB",
+        "price": 2988,
+        "image": "/images/VINET.jpg",
+        "size": "4 L",
+        "quantity": 1
+      },
+      {
+        "id": 7,
+        "name": "SUPERVIN ANTIBACTERIAL",
+        "code": "200",
+        "price": 2950,
+        "image": "/images/SUPERVIN.jpg",
+        "size": "19 L",
+        "quantity": 1
+      }
+    ],
+    "total": 11681,
+    "id": 1771106562993,
+    "date": "2026-02-14T22:02:42.993Z",
+    "status": "pending"
+  }
+]

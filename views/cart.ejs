@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+        :root {
+            --primary-red: #1e40af;
+            --dark-red: #16a34a;
+            --primary-blue: #1976d2;
+            --accent-gold: #ffa000;
+            --light-bg: #f5f5f5;
+            --dark-text: #212121;
+        }
+
+        .cart-hero {
+            background: linear-gradient(135deg, var(--light-bg) 0%, white 100%);
+            padding: 40px 0;
+            border-bottom: 2px solid #eee;
+        }
+
+        .breadcrumb {
+            background: none;
+            padding-left: 0;
+        }
+
+        .breadcrumb-item a {
+            color: var(--primary-red);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .breadcrumb-item.active {
+            color: var(--dark-text);
+            font-weight: 600;
+        }
+
+        .cart-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--dark-text);
+        }
+
+        .cart-item {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            background: white;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .cart-item:hover {
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-color: var(--primary-red);
+        }
+
+        .cart-item-image {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            flex-shrink: 0;
+            background: var(--light-bg);
+        }
+
+        .cart-item-info {
+            flex: 1;
+        }
+
+        .cart-item-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--dark-text);
+            margin-bottom: 5px;
+        }
+
+        .cart-item-code {
+            font-size: 0.85rem;
+            color: var(--primary-red);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+
+        .cart-item-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-red);
+            margin-bottom: 15px;
+        }
+
+        .cart-item-size {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: fit-content;
+            border: 2px solid #eee;
+            border-radius: 6px;
+            padding: 5px;
+            background: var(--light-bg);
+        }
+
+        .qty-btn {
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 700;
+            color: var(--primary-red);
+            transition: all 0.3s ease;
+        }
+
+        .qty-btn:hover {
+            background: var(--primary-red);
+            color: white;
+        }
+
+        .qty-input {
+            width: 50px;
+            text-align: center;
+            border: none;
+            background: transparent;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .qty-input:focus {
+            outline: none;
+        }
+
+        .cart-item-actions {
+            display: flex;
+            gap: 10px;
+            align-items: flex-end;
+            margin-top: 15px;
+        }
+
+        .remove-btn {
+            background: var(--primary-red);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .remove-btn:hover {
+            background: var(--dark-red);
+            transform: scale(1.05);
+        }
+
+        .empty-cart {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .empty-icon {
+            font-size: 4rem;
+            color: #ddd;
+            margin-bottom: 20px;
+        }
+
+        .order-summary {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 100px;
+        }
+
+        .summary-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--dark-text);
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--primary-red);
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            font-size: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .summary-row:last-child {
+            border-bottom: none;
+        }
+
+        .summary-label {
+            color: #666;
+            font-weight: 500;
+        }
+
+        .summary-value {
+            color: var(--dark-text);
+            font-weight: 600;
+        }
+
+        .summary-total {
+            background: linear-gradient(135deg, var(--primary-red), var(--dark-red));
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .checkout-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .btn-checkout {
+            padding: 15px;
+            font-weight: 700;
+            border-radius: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary-checkout {
+            background: var(--primary-red);
+            color: white;
+            border-color: var(--primary-red);
+        }
+
+        .btn-primary-checkout:hover {
+            background: var(--dark-red);
+            border-color: var(--dark-red);
+            transform: scale(1.02);
+        }
+
+        .btn-whatsapp-checkout {
+            background: #25D366;
+            color: white;
+            border-color: #25D366;
+        }
+
+        .btn-whatsapp-checkout:hover {
+            background: #1fbd56;
+            border-color: #1fbd56;
+        }
+
+        .btn-secondary-checkout {
+            background: white;
+            color: var(--primary-red);
+            border-color: var(--primary-red);
+        }
+
+        .btn-secondary-checkout:hover {
+            background: var(--light-bg);
+            border-color: var(--dark-red);
+            color: var(--dark-red);
+        }
+
+        .checkout-modal-content {
+            border-radius: 12px;
+        }
+
+        .form-label {
+            font-weight: 700;
+            color: var(--dark-text);
+            margin-bottom: 10px;
+        }
+
+        .form-control {
+            border: 2px solid #eee;
+            border-radius: 6px;
+            padding: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-red);
+            box-shadow: 0 0 0 0.2rem rgba(30, 64, 175, 0.25);
+        }
+
+        @media (max-width: 991px) {
+            .order-summary {
+                position: static;
+                top: auto;
+                margin-top: 30px;
+            }
+
+            .cart-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .cart-item-image {
+                width: 150px;
+                height: 150px;
+            }
+
+            .quantity-control,
+            .cart-item-actions {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .cart-title {
+                font-size: 1.8rem;
+            }
+
+            .cart-item-price {
+                font-size: 1.1rem;
+            }
+
+            .summary-total {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <% 
+        const primaryStore = (typeof stores !== 'undefined' && stores[0]) ? stores[0] : null;
+        const secondaryStore = (typeof stores !== 'undefined' && stores[1]) ? stores[1] : null;
+        const primaryWhatsapp = primaryStore ? (primaryStore.whatsapp || primaryStore.phone) : '522222941010';
+    %>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="/">
+                <img src="/images/logo.webp" alt="Pintumex" height="36" class="me-2">
+                <span class="brand-text">PINTUMEX</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/productos">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/tiendas">Tiendas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/acerca-de">Acerca de</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contacto">Contacto</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="/carrito">
+                            <i class="fas fa-shopping-cart"></i> Carrito
+                            <span id="cartBadge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display: none;">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart Hero -->
+    <section class="cart-hero">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/"><i class="fas fa-home me-2"></i>Inicio</a></li>
+                    <li class="breadcrumb-item active"><i class="fas fa-shopping-cart me-2"></i>Mi Carrito</li>
+                </ol>
+            </nav>
+            <h1 class="cart-title mt-3">
+                <i class="fas fa-cart-plus me-3"></i>Mi Carrito de Compras
+            </h1>
+        </div>
+    </section>
+
+    <!-- Cart Content -->
+    <section class="py-5">
+        <div class="container">
+            <% if(cartItems && cartItems.length > 0) { %>
+                <div class="row g-4">
+                    <!-- Cart Items -->
+                    <div class="col-lg-8">
+                        <div class="mb-4">
+                            <h5 class="mb-4" style="color: var(--dark-text); font-weight: 700;">
+                                <i class="fas fa-list me-2" style="color: var(--primary-red);"></i>
+                                <%= cartItems.length %> producto<%= cartItems.length !== 1 ? 's' : '' %> en tu carrito
+                            </h5>
+
+                            <% cartItems.forEach((item, index) => { %>
+                                <div class="cart-item">
+                                    <img src="<%= item.image || 'https://images.unsplash.com/photo-1452860606245-08acc8bd41d3?w=200&h=200&fit=crop' %>" alt="<%= item.name %>" class="cart-item-image">
+                                    
+                                    <div class="cart-item-info">
+                                        <div class="cart-item-code"><%= item.code || 'SKU-' + item.id %></div>
+                                        <h4 class="cart-item-name"><%= item.name %></h4>
+                                        <% if (item.size) { %>
+                                            <div class="cart-item-size">Presentacion: <strong><%= item.size %></strong></div>
+                                        <% } %>
+                                        <div class="cart-item-price">$<%= item.price.toFixed(2) %></div>
+
+                                        <div class="cart-item-actions">
+                                            <div class="quantity-control">
+                                                <button class="qty-btn decrease-quantity" data-product-id="<%= item.id %>" title="Disminuir cantidad">
+                                                    <i class="fas fa-minus"></i>
+                                                </button>
+                                                <input type="number" class="qty-input quantity-input" value="<%= item.quantity %>" data-product-id="<%= item.id %>" min="1">
+                                                <button class="qty-btn increase-quantity" data-product-id="<%= item.id %>" title="Aumentar cantidad">
+                                                    <i class="fas fa-plus"></i>
+                                                </button>
+                                            </div>
+                                            
+                                            <button class="remove-btn remove-from-cart" data-product-id="<%= item.id %>" title="Eliminar del carrito">
+                                                <i class="fas fa-trash me-2"></i>Eliminar
+                                            </button>
+
+                                            <div style="margin-left: auto; text-align: right;">
+                                                <div style="font-size: 0.9rem; color: #666;">Subtotal</div>
+                                                <div style="font-size: 1.3rem; font-weight: 700; color: var(--primary-red);">
+                                                    $<%= (item.price * item.quantity).toFixed(2) %>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% }); %>
+                        </div>
+
+                        <!-- Continue Shopping -->
+                        <a href="/productos" class="btn btn-secondary-checkout btn-checkout" style="width: fit-content;">
+                            <i class="fas fa-arrow-left me-2"></i>Seguir Comprando
+                        </a>
+                    </div>
+
+                    <!-- Order Summary & Checkout -->
+                    <div class="col-lg-4">
+                        <div class="order-summary">
+                            <h3 class="summary-title">Resumen del Pedido</h3>
+
+                            <div class="summary-row">
+                                <span class="summary-label">Subtotal</span>
+                                <span class="summary-value">$<span id="subtotal"><%= total %></span></span>
+                            </div>
+
+                            <div class="summary-row">
+                                <span class="summary-label">Impuesto (16%)</span>
+                                <span class="summary-value">$<span id="tax"><%= (total * 0.16).toFixed(2) %></span></span>
+                            </div>
+
+                            <div class="summary-row">
+                                <span class="summary-label">Envío</span>
+                                <span class="summary-value" style="color: #4caf50; font-weight: 700;">¡GRATIS!</span>
+                            </div>
+
+                            <div class="summary-total">
+                                <span>Total a Pagar</span>
+                                <span>$<span id="total"><%= (total * 1.16).toFixed(2) %></span></span>
+                            </div>
+
+                            <div class="checkout-buttons">
+                                <button class="btn-checkout btn-primary-checkout" data-bs-toggle="modal" data-bs-target="#checkoutModal">
+                                    <i class="fas fa-credit-card me-2"></i>Proceder al Pago
+                                </button>
+                                <a href="https://wa.me/<%= primaryWhatsapp.replace(/[^0-9]/g, '') %>?text=Hola%20Pintumex,%20quiero%20finalizar%20mi%20compra" 
+                                   target="_blank" class="btn-checkout btn-whatsapp-checkout text-decoration-none text-center">
+                                    <i class="fab fa-whatsapp me-2"></i>Completar Compra por WhatsApp
+                                </a>
+                                <button class="btn-checkout btn-secondary-checkout clear-cart">
+                                    <i class="fas fa-trash me-2"></i>Vaciar Carrito
+                                </button>
+                            </div>
+
+                            <!-- Info Box -->
+                            <div style="background: rgba(30, 64, 175, 0.05); border-left: 4px solid var(--primary-red); padding: 15px; border-radius: 6px; margin-top: 20px; font-size: 0.9rem; color: #555;">
+                                <i class="fas fa-info-circle me-2" style="color: var(--primary-red);"></i>
+                                <strong>Recibirás confirmación</strong> vía WhatsApp o Email después de realizar tu pedido.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <% } else { %>
+                <div class="empty-cart">
+                    <div class="empty-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h2 style="color: var(--dark-text); font-weight: 700; margin-bottom: 15px;">Tu carrito está vacío</h2>
+                    <p style="color: #666; font-size: 1.1rem; margin-bottom: 30px;">
+                        Aún no has agregado productos a tu carrito. ¡Comienza a comprar ahora!
+                    </p>
+                    <a href="/productos" class="btn-checkout btn-primary-checkout" style="display: inline-block; text-decoration: none;">
+                        <i class="fas fa-shopping-bag me-2"></i>Ver Productos
+                    </a>
+                </div>
+            <% } %>
+        </div>
+    </section>
+
+    <!-- Checkout Modal -->
+    <div class="modal fade" id="checkoutModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content checkout-modal-content">
+                <div class="modal-header" style="background: linear-gradient(135deg, var(--primary-red), var(--dark-red)); color: white; border: none;">
+                    <h5 class="modal-title fw-bold"><i class="fas fa-clipboard-check me-2"></i>Completar Compra</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body py-4">
+                    <form id="checkoutForm">
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <label class="form-label">Nombre Completo *</label>
+                                <input type="text" class="form-control" id="customerName" placeholder="Tu nombre" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Email *</label>
+                                <input type="email" class="form-control" id="customerEmail" placeholder="tu@email.com" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Teléfono/WhatsApp *</label>
+                                <input type="tel" class="form-control" id="customerPhone" placeholder="+52 1234567890" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Estado *</label>
+                                <select class="form-control" required>
+                                    <option value="">Seleccionar estado</option>
+                                    <option value="Puebla">Puebla</option>
+                                    <option value="CDMX">CDMX</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Dirección de Entrega *</label>
+                                <input type="text" class="form-control" id="address" placeholder="Calle, número, apartamento" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Notas Adicionales</label>
+                                <textarea class="form-control" id="notes" rows="3" placeholder="Instrucciones especiales, referencias, etc."></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer bg-light border-top">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger fw-bold px-4" id="processCheckout">
+                        <i class="fas fa-check me-2"></i>Confirmar Pedido
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-3 mb-4">
+                    <h5>Sobre Pintumex</h5>
+                    <p>Tu tienda de confianza para materiales de pintura profesionales y de calidad superior.</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Enlaces Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/" class="text-white-50 text-decoration-none">Inicio</a></li>
+                        <li><a href="/productos" class="text-white-50 text-decoration-none">Productos</a></li>
+                        <li><a href="/tiendas" class="text-white-50 text-decoration-none">Tiendas</a></li>
+                        <li><a href="/contacto" class="text-white-50 text-decoration-none">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Contacto Principal</h5>
+                    <p class="text-white-50 mb-1">
+                        <% if (primaryStore) { %>
+                            <i class="fas fa-phone"></i> <%= primaryStore.phone %>
+                        <% } %>
+                    </p>
+                    <p class="text-white-50 mb-1">
+                        <% if (secondaryStore) { %>
+                            <i class="fas fa-phone"></i> <%= secondaryStore.phone %>
+                        <% } %>
+                    </p>
+                    <p class="text-white-50">
+                        <i class="fas fa-map-marker-alt"></i> <%= primaryStore ? primaryStore.address : 'Puebla, México' %>
+                    </p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Síguenos</h5>
+                    <a href="#" class="text-white-50 me-3 text-decoration-none"><i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="#" class="text-white-50 me-3 text-decoration-none"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="https://wa.me/<%= primaryWhatsapp.replace(/[^0-9]/g, '') %>" target="_blank" class="text-white-50 me-3 text-decoration-none"><i class="fab fa-whatsapp fa-lg"></i></a>
+                    <a href="#" class="text-white-50 text-decoration-none"><i class="fab fa-twitter fa-lg"></i></a>
+                </div>
+            </div>
+            <hr class="bg-white-50">
+            <div class="footer-bottom">
+                <p class="footer-legal">
+                    <span class="footer-legal-line">&copy; 2026 Pintumex Puebla | Diseñado por: Axel Gutiérrez</span>
+                    <span class="footer-legal-line">
+                        <a href="/terminos">Términos y Condiciones</a> | 
+                        <a href="/privacidad">Política de Privacidad</a>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

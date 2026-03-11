@@ -1,0 +1,12 @@
+# robots.txt para Pintumex
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /carrito/checkout
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://pintumex.com.mx/sitemap.xml
+
+# Crawl-delay para ser amables con los servidores
+Crawl-delay: 1

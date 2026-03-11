@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+        :root {
+            --primary-red: #1e40af;
+            --dark-red: #16a34a;
+            --primary-blue: #1976d2;
+            --accent-gold: #ffa000;
+            --light-bg: #f5f5f5;
+            --dark-text: #212121;
+        }
+
+        .about-hero {
+            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,50 Q300,100 600,50 T1200,50 L1200,120 L0,120 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-repeat: repeat-x;
+            opacity: 0.5;
+        }
+
+        .about-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-hero p {
+            font-size: 1.3rem;
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--dark-text);
+            margin-bottom: 50px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 25px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #1e40af;
+            border-radius: 2px;
+        }
+
+        .history-image {
+            border-radius: 12px;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .history-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 45px rgba(30, 64, 175, 0.2);
+        }
+
+        .history-content h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--dark-text);
+            margin-bottom: 25px;
+        }
+
+        .history-content p {
+            font-size: 1.05rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .value-card {
+            text-align: center;
+            padding: 40px 30px;
+            background: white;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-top: 4px solid transparent;
+            height: 100%;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(30, 64, 175, 0.15);
+            border-top-color: #1e40af;
+        }
+
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 25px;
+            background: linear-gradient(135deg, #1e40af, #16a34a);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .value-card:hover .value-icon {
+            transform: scale(1.15) rotate(-10deg);
+        }
+
+        .value-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--dark-text);
+            margin-bottom: 15px;
+        }
+
+        .value-text {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(30, 64, 175, 0.15);
+        }
+
+        .team-avatar {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #1e40af, #16a34a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+        }
+
+        .team-content {
+            padding: 25px;
+        }
+
+        .team-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--dark-text);
+            margin-bottom: 10px;
+        }
+
+        .team-role {
+            color: #1e40af;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+
+        .team-bio {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .stats-section {
+            background: linear-gradient(135deg, #1e40af, #1e3a8a);
+            color: white;
+            padding: 60px 0;
+            margin: 60px 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--light-bg) 0%, white 100%);
+            padding: 60px 0;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--dark-text);
+            margin-bottom: 20px;
+        }
+
+        .cta-text {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            padding: 15px 40px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-primary {
+            background: #1e40af;
+            color: white;
+            border: 2px solid #1e40af;
+        }
+
+        .cta-primary:hover {
+            background: white;
+            color: #1e40af;
+        }
+
+        .cta-secondary {
+            background: white;
+            color: #1e40af;
+            border: 2px solid #1e40af;
+        }
+
+        .cta-secondary:hover {
+            background: #1e40af;
+            color: white;
+        }
+
+        @media (max-width: 767px) {
+            .about-hero h1 {
+                font-size: 2rem;
+            }
+
+            .about-hero p {
+                font-size: 1rem;
+            }
+
+            .about-hero {
+                padding: 50px 0;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <% 
+        const primaryStore = (typeof stores !== 'undefined' && stores[0]) ? stores[0] : null;
+        const secondaryStore = (typeof stores !== 'undefined' && stores[1]) ? stores[1] : null;
+        const primaryWhatsapp = primaryStore ? (primaryStore.whatsapp || primaryStore.phone) : '522222941010';
+    %>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="/">
+                <img src="/images/logo.webp" alt="Pintumex" height="36" class="me-2">
+                <span class="brand-text">PINTUMEX</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/productos">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/tiendas">Tiendas</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/acerca-de">Acerca de</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contacto">Contacto</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="/carrito">
+                            <i class="fas fa-shopping-cart"></i> Carrito
+                            <span id="cartBadge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display: none;">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="container position-relative" style="z-index: 2;">
+            <h1><i class="fas fa-building me-3"></i>Acerca de Pintumex</h1>
+            <p class="mb-0">Tu socio confiable en materiales de pintura desde 2010</p>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center g-5 mb-5">
+                <div class="col-lg-6">
+                    <img src="/images/LEMA.webp" 
+                         alt="Tienda Pintumex" class="img-fluid history-image">
+                </div>
+                <div class="col-lg-6">
+                    <div class="history-content">
+                        <h2><i class="fas fa-history me-2" style="color: var(--primary-red);"></i>Nuestra Historia</h2>
+                        <p>
+                            Pintumex fue fundada en 2010 con una visión clara: proporcionar materiales de pintura de alta calidad y un servicio excepcional a profesionales adinerados y personas que buscaban resultados de excelencia en sus proyectos.
+                        </p>
+                        <p>
+                            Durante más de una década, hemos construido una reputación sólida basada en <strong>calidad, confianza y compromiso</strong> con nuestros clientes. Nuestro crecimiento ha sido constante, permitiéndonos expandir a dos ubicaciones estratégicas en Puebla para servir mejor a nuestra comunidad.
+                        </p>
+                        <p>
+                            Hoy, Pintumex es sinónimo de productos originales, asesoría técnica profesional y soluciones personalizadas para todos tus proyectos de pintura.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="stat-item">
+                        <div class="stat-number">
+                            <i class="fas fa-calendar"></i>13+
+                        </div>
+                        <div class="stat-label">Años de Experiencia</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-item">
+                        <div class="stat-number">
+                            <i class="fas fa-users"></i>5000+
+                        </div>
+                        <div class="stat-label">Clientes Satisfechos</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-item">
+                        <div class="stat-number">
+                            <i class="fas fa-store"></i>2
+                        </div>
+                        <div class="stat-label">Sucursales</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-item">
+                        <div class="stat-number">
+                            <i class="fas fa-cube"></i>100+
+                        </div>
+                        <div class="stat-label">Productos Disponibles</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title">Nuestros Valores</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3 class="value-title">Calidad</h3>
+                        <p class="value-text">
+                            Ofrecemos solo productos originales de marcas reconocidas internacionalmente. Cada artículo es verificado para garantizar excelencia.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="value-title">Confianza</h3>
+                        <p class="value-text">
+                            Nuestros clientes son el corazón de nuestro negocio. Su satisfacción, confianza y fidelidad son lo más importante para nosotros.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="value-title">Innovación</h3>
+                        <p class="value-text">
+                            Nos mantenemos actualizados con las últimas tendencias y tecnologías en materiales de pintura para ofrecer las mejores soluciones.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-5" style="background: var(--light-bg);">
+        <div class="container">
+            <h2 class="section-title">Nuestro Equipo</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="team-content">
+                        <div class="team-name">Dirección General</div>
+                        <div class="team-role">Administración</div>
+                        <p class="team-bio">
+                            Con más de 15 años de experiencia en la industria de materiales de construcción y pinturas profesionales.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <i class="fas fa-user-hard-hat"></i>
+                    </div>
+                    <div class="team-content">
+                        <div class="team-name">Asesor Técnico</div>
+                        <div class="team-role">Especialista</div>
+                        <p class="team-bio">
+                            Especialista certificado en aplicación de pintura y soluciones técnicas para proyectos comerciales y residenciales.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <i class="fas fa-user-headset"></i>
+                    </div>
+                    <div class="team-content">
+                        <div class="team-name">Atención al Cliente</div>
+                        <div class="team-role">Servicio</div>
+                        <p class="team-bio">
+                            Disponible para resolver todas tus dudas y proporcionar la mejor asesoría en la selección de productos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: white; padding: 40px; border-radius: 12px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                <p style="color: #666; font-size: 1.05rem; margin-bottom: 20px;">
+                    Nuestro equipo está comprometido con tu satisfacción. Cada miembro trae experiencia, dedicación y profesionalismo al servicio.
+                </p>
+                <a href="/contacto" class="btn" style="background: var(--primary-red); color: white; padding: 12px 30px; border-radius: 6px; text-decoration: none; font-weight: 700;">
+                    <i class="fas fa-envelope me-2"></i>Conoce a Nuestro Equipo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="cta-section">
+                <h2 class="cta-title">
+                    <i class="fas fa-rocket me-2" style="color: var(--primary-red);"></i>¿Listo para Comenzar?
+                </h2>
+                <p class="cta-text">
+                    Visita una de nuestras tiendas o compra en línea. Estamos aquí para apoyarte en cada paso.
+                </p>
+                <div class="cta-buttons">
+                    <a href="/productos" class="cta-button cta-primary">
+                        <i class="fas fa-shopping-bag me-2"></i>Ver Catálogo
+                    </a>
+                    <a href="/tiendas" class="cta-button cta-secondary">
+                        <i class="fas fa-map-marker-alt me-2"></i>Nuestras Tiendas
+                    </a>
+                    <a href="https://wa.me/<%= primaryWhatsapp.replace(/[^0-9]/g, '') %>?text=Hola%20Pintumex,%20tengo%20una%20consulta" target="_blank" class="cta-button cta-secondary">
+                        <i class="fab fa-whatsapp me-2"></i>Contactar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-3 mb-4">
+                    <h5>Sobre Pintumex</h5>
+                    <p>Tu tienda de confianza para materiales de pintura profesionales y de calidad superior.</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Enlaces Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/" class="text-white-50 text-decoration-none">Inicio</a></li>
+                        <li><a href="/productos" class="text-white-50 text-decoration-none">Productos</a></li>
+                        <li><a href="/tiendas" class="text-white-50 text-decoration-none">Tiendas</a></li>
+                        <li><a href="/contacto" class="text-white-50 text-decoration-none">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Contacto Principal</h5>
+                    <p class="text-white-50 mb-1">
+                        <% if (primaryStore) { %>
+                            <i class="fas fa-phone"></i> <%= primaryStore.phone %>
+                        <% } %>
+                    </p>
+                    <p class="text-white-50 mb-1">
+                        <% if (secondaryStore) { %>
+                            <i class="fas fa-phone"></i> <%= secondaryStore.phone %>
+                        <% } %>
+                    </p>
+                    <p class="text-white-50">
+                        <i class="fas fa-map-marker-alt"></i> <%= primaryStore ? primaryStore.address : 'Puebla, México' %>
+                    </p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Síguenos</h5>
+                    <a href="#" class="text-white-50 me-3 text-decoration-none"><i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="#" class="text-white-50 me-3 text-decoration-none"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="https://wa.me/<%= primaryWhatsapp.replace(/[^0-9]/g, '') %>" target="_blank" class="text-white-50 me-3 text-decoration-none"><i class="fab fa-whatsapp fa-lg"></i></a>
+                    <a href="#" class="text-white-50 text-decoration-none"><i class="fab fa-twitter fa-lg"></i></a>
+                </div>
+            </div>
+            <hr class="bg-white-50">
+            <div class="footer-bottom">
+                <p class="footer-legal">
+                    <span class="footer-legal-line">&copy; 2026 Pintumex Puebla | Diseñado por: Axel Gutiérrez</span>
+                    <span class="footer-legal-line">
+                        <a href="/terminos">Términos y Condiciones</a> | 
+                        <a href="/privacidad">Política de Privacidad</a>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

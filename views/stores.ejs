@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+        :root {
+            --primary-blue: #1e40af;
+            --dark-blue: #1e3a8a;
+            --primary-green: #16a34a;
+            --accent-gold: #ffa000;
+            --light-bg: #f5f5f5;
+            --dark-text: #212121;
+        }
+
+        .store-hero {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .store-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,50 Q300,100 600,50 T1200,50 L1200,120 L0,120 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-repeat: repeat-x;
+            opacity: 0.5;
+        }
+
+        .store-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .store-hero p {
+            font-size: 1.3rem;
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
+        }
+
+        .store-card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .store-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(30, 64, 175, 0.2);
+        }
+
+        .store-image {
+            height: 280px;
+            object-fit: cover;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .store-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(30, 64, 175, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .store-card:hover .store-image::after {
+            background: rgba(30, 64, 175, 0.2);
+        }
+
+        .store-map {
+            height: 320px;
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            border: 3px solid var(--primary-blue);
+            box-shadow: 0 4px 15px rgba(30, 64, 175, 0.15);
+        }
+
+        .store-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .store-title {
+            color: var(--primary-blue);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            border-bottom: 3px solid var(--primary-blue);
+            padding-bottom: 10px;
+        }
+
+        .store-info {
+            margin-bottom: 15px;
+        }
+
+        .store-info-label {
+            font-weight: 700;
+            color: var(--dark-text);
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 5px;
+        }
+
+        .store-info-content {
+            color: #555;
+            font-size: 1rem;
+            margin-left: 5px;
+        }
+
+        .store-info-content a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .store-info-content a:hover {
+            color: var(--dark-blue);
+            text-decoration: underline;
+        }
+
+        .hours-table {
+            font-size: 0.95rem;
+            margin-top: 10px;
+        }
+
+        .hours-table tr {
+            border-bottom: 1px solid #eee;
+        }
+
+        .hours-table td {
+            padding: 8px 0;
+            color: #555;
+        }
+
+        .hours-table td:first-child {
+            font-weight: 600;
+            color: var(--primary-blue);
+            width: 50%;
+        }
+
+        .store-buttons {
+            margin-top: auto;
+            display: flex;
+            gap: 10px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .store-button {
+            flex: 1;
+            padding: 12px !important;
+            font-weight: 700;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-store-primary {
+            background: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+            color: white;
+        }
+
+        .btn-store-primary:hover {
+            background: var(--dark-blue);
+            border-color: var(--dark-blue);
+            transform: scale(1.05);
+        }
+
+        .btn-store-secondary {
+            background: white;
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
+        }
+
+        .btn-store-secondary:hover {
+            background: var(--light-bg);
+            border-color: var(--dark-blue);
+            color: var(--dark-blue);
+            transform: scale(1.05);
+        }
+
+        .features {
+            padding: 60px 0;
+            background-color: var(--light-bg);
+        }
+
+        .feature-box {
+            text-align: center;
+            padding: 30px;
+            border-radius: 10px;
+            background: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .feature-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(30, 64, 175, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-box:hover .feature-icon {
+            transform: scale(1.2) rotate(5deg);
+        }
+
+        .feature-title {
+            font-weight: 700;
+            color: var(--dark-text);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .feature-text {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 767px) {
+            .store-hero h1 {
+                font-size: 2rem;
+            }
+
+            .store-hero p {
+                font-size: 1rem;
+            }
+
+            .store-buttons {
+                flex-direction: column;
+            }
+
+            .store-map {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="/">
+                <img src="/images/logo.webp" alt="Pintumex" height="36" class="me-2">
+                <span class="brand-text">PINTUMEX</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/productos">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/tiendas">Tiendas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/acerca-de">Acerca de</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contacto">Contacto</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="/carrito">
+                            <i class="fas fa-shopping-cart"></i> Carrito
+                            <span id="cartBadge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display: none;">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="store-hero">
+        <div class="container position-relative" style="z-index: 2;">
+            <h1><i class="fas fa-map-marked-alt me-3"></i>Nuestras Tiendas</h1>
+            <p class="mb-0">Visítanos en cualquiera de nuestras sucursales en Puebla</p>
+        </div>
+    </section>
+
+    <!-- Stores Section -->
+    <section class="py-5">
+        <div class="container">
+            <% if(stores && stores.length > 0) { %>
+                <div class="row g-5">
+                    <% stores.forEach((store, index) => { 
+                        const storeImages = [
+                            'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1200&h=800&fit=crop',
+                            'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop'
+                        ];
+                        const rawImage = store.image ? String(store.image).trim() : '';
+                        const storeImage = rawImage
+                            ? (rawImage.startsWith('http') || rawImage.startsWith('/') ? rawImage : `/images/${rawImage}`)
+                            : storeImages[index % storeImages.length];
+                        const addressQuery = store.address ? encodeURIComponent(store.address) : '';
+                        const coordQuery = (store.latitude && store.longitude)
+                            ? `${store.latitude},${store.longitude}`
+                            : '';
+                        const mapQuery = addressQuery || coordQuery;
+                        const mapSrc = mapQuery
+                            ? `https://maps.google.com/maps?q=${mapQuery}&z=15&output=embed`
+                            : store.googleMapsUrl;
+                    %>
+                        <div class="col-lg-6">
+                            <div class="store-card">
+                                <!-- Store Image -->
+                                <img src="<%= storeImage %>" alt="<%= store.name %>" class="store-image" loading="lazy" onerror="this.onerror=null;this.src='<%= storeImages[index % storeImages.length] %>';">
+
+                                <div class="store-content p-4">
+                                    <h3 class="store-title">
+                                        <i class="fas fa-store me-2"></i><%= store.name %>
+                                    </h3>
+
+                                    <!-- Map Container -->
+                                    <div class="store-map" id="map-<%= store.id %>">
+                                        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="<%= mapSrc %>" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </div>
+
+                                    <!-- Address -->
+                                    <div class="store-info">
+                                        <div class="store-info-label">
+                                            <i class="fas fa-map-marker-alt me-2" style="color: var(--primary-blue);"></i>Dirección
+                                        </div>
+                                        <div class="store-info-content"><%= store.address %></div>
+                                    </div>
+
+                                    <!-- Phone -->
+                                    <div class="store-info">
+                                        <div class="store-info-label">
+                                            <i class="fas fa-phone me-2" style="color: var(--primary-blue);"></i>Teléfono
+                                        </div>
+                                        <div class="store-info-content">
+                                            <a href="tel:<%= store.phone %>"><%= store.phone %></a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Email -->
+                                    <div class="store-info">
+                                        <div class="store-info-label">
+                                            <i class="fas fa-envelope me-2" style="color: var(--primary-blue);"></i>Email
+                                        </div>
+                                        <div class="store-info-content">
+                                            <a href="mailto:<%= store.email %>"><%= store.email %></a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Hours -->
+                                    <div class="store-info">
+                                        <div class="store-info-label">
+                                            <i class="fas fa-clock me-2" style="color: var(--primary-blue);"></i>Horario de Atención
+                                        </div>
+                                        <table class="hours-table">
+                                            <tr>
+                                                <td>Lunes</td>
+                                                <td><%= store.hours.monday %></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Martes</td>
+                                                <td><%= store.hours.tuesday %></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Miércoles</td>
+                                                <td><%= store.hours.wednesday %></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jueves</td>
+                                                <td><%= store.hours.thursday %></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Viernes</td>
+                                                <td><%= store.hours.friday %></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sábado</td>
+                                                <td><%= store.hours.saturday %></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Domingo</td>
+                                                <td><%= store.hours.sunday %></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+                                    <!-- Action Buttons -->
+                                    <div class="store-buttons">
+                                        <a href="<%= store.googleMapsUrl || ('https://maps.google.com/?q=' + store.latitude + ',' + store.longitude) %>" target="_blank" class="btn store-button btn-store-primary">
+                                            <i class="fas fa-directions me-2"></i>Ubicación
+                                        </a>
+                                        <a href="https://wa.me/<%= (store.whatsapp || store.phone).replace(/[^0-9]/g, '') %>" target="_blank" class="btn store-button btn-store-secondary">
+                                            <i class="fab fa-whatsapp me-2"></i>WhatsApp
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <% }); %>
+                </div>
+            <% } else { %>
+                <div class="alert alert-info text-center py-5">
+                    <i class="fas fa-info-circle me-2"></i>No hay tiendas disponibles en este momento
+                </div>
+            <% } %>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h5 class="feature-title">Horario Extendido</h5>
+                        <p class="feature-text">Abierto de lunes a sábado para tu conveniencia</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h5 class="feature-title">Ubicación Accesible</h5>
+                        <p class="feature-text">Fácil acceso desde cualquier punto de Puebla</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h5 class="feature-title">Atención Profesional</h5>
+                        <p class="feature-text">Equipo capacitado para asesorarte</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h5 class="feature-title">Inventario Completo</h5>
+                        <p class="feature-text">Todos nuestros productos disponibles</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5" style="background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%); color: white;">
+        <div class="container text-center">
+            <h2 class="display-5 fw-bold mb-3">¿No encuentras lo que buscas?</h2>
+            <p class="lead mb-4">Contacta con nosotros a través de WhatsApp para consultas especiales</p>
+            <div class="d-flex gap-3 justify-content-center flex-wrap">
+                <% if (stores && stores.length > 0) { %>
+                    <% stores.forEach((store) => { %>
+                        <a href="https://wa.me/<%= (store.whatsapp || store.phone).replace(/[^0-9]/g, '') %>?text=Hola%20Pintumex,%20tengo%20una%20consulta" target="_blank" class="btn btn-light btn-lg fw-bold">
+                            <i class="fab fa-whatsapp me-2"></i><%= store.name %>: <%= store.phone %>
+                        </a>
+                    <% }); %>
+                <% } %>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-3 mb-4">
+                    <h5>Sobre Pintumex</h5>
+                    <p>Tu tienda de confianza para materiales de pintura profesionales y de calidad superior.</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Enlaces Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/" class="text-white-50 text-decoration-none">Inicio</a></li>
+                        <li><a href="/productos" class="text-white-50 text-decoration-none">Productos</a></li>
+                        <li><a href="/tiendas" class="text-white-50 text-decoration-none">Tiendas</a></li>
+                        <li><a href="/contacto" class="text-white-50 text-decoration-none">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Contacto Principal</h5>
+                    <p class="text-white-50 mb-1">
+                        <% if (stores && stores[0]) { %>
+                            <i class="fas fa-phone"></i> <%= stores[0].phone %>
+                        <% } %>
+                    </p>
+                    <p class="text-white-50 mb-1">
+                        <% if (stores && stores[1]) { %>
+                            <i class="fas fa-phone"></i> <%= stores[1].phone %>
+                        <% } %>
+                    </p>
+                    <p class="text-white-50">
+                        <i class="fas fa-map-marker-alt"></i> <%= stores && stores[0] ? stores[0].address : 'Puebla, México' %>
+                    </p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Síguenos</h5>
+                    <a href="#" class="text-white-50 me-3 text-decoration-none"><i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="#" class="text-white-50 me-3 text-decoration-none"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="https://wa.me/<%= stores && stores[0] ? (stores[0].whatsapp || stores[0].phone).replace(/[^0-9]/g, '') : '522222941010' %>" target="_blank" class="text-white-50 me-3 text-decoration-none"><i class="fab fa-whatsapp fa-lg"></i></a>
+                    <a href="#" class="text-white-50 text-decoration-none"><i class="fab fa-twitter fa-lg"></i></a>
+                </div>
+            </div>
+            <hr class="bg-white-50">
+            <div class="footer-bottom">
+                <p class="footer-legal">
+                    <span class="footer-legal-line">&copy; 2026 Pintumex Puebla | Diseñado por: Axel Gutiérrez</span>
+                    <span class="footer-legal-line">
+                        <a href="/terminos">Términos y Condiciones</a> | 
+                        <a href="/privacidad">Política de Privacidad</a>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

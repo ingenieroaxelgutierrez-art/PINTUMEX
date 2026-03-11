@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+        :root {
+            --primary-red: #1e40af;
+            --dark-red: #16a34a;
+            --primary-blue: #1976d2;
+            --accent-gold: #ffa000;
+            --light-bg: #f5f5f5;
+            --dark-text: #212121;
+        }
+
+        .product-hero {
+            background: linear-gradient(135deg, var(--light-bg) 0%, white 100%);
+            padding: 40px 0;
+        }
+
+        .breadcrumb {
+            background: none;
+            padding-left: 0;
+        }
+
+        .breadcrumb-item a {
+            color: var(--primary-red);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .breadcrumb-item.active {
+            color: var(--dark-text);
+            font-weight: 600;
+        }
+
+        .product-images {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .main-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+            transition: all 0.3s ease;
+        }
+
+        .product-images:hover .main-image {
+            box-shadow: 0 12px 40px rgba(30, 64, 175, 0.2);
+        }
+
+        .product-info {
+            padding: 30px;
+        }
+
+        .product-info-header {
+            margin-bottom: 30px;
+        }
+
+        .product-code {
+            color: var(--primary-red);
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+
+        .product-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--dark-text);
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        .product-category {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .price-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px 0;
+            border-top: 2px solid #eee;
+            border-bottom: 2px solid #eee;
+            margin: 20px 0;
+        }
+
+        .product-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-red);
+        }
+
+        .stock-badge {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stock-available {
+            background: #4caf50;
+            color: white;
+        }
+
+        .stock-low {
+            background: #ff9800;
+            color: white;
+        }
+
+        .stock-unavailable {
+            background: var(--primary-red);
+            color: white;
+        }
+
+        .product-description {
+            font-size: 1.05rem;
+            color: #555;
+            line-height: 1.6;
+            margin: 20px 0;
+            padding: 20px;
+            background: var(--light-bg);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-red);
+        }
+
+        .specifications {
+            margin: 30px 0;
+        }
+
+        .specifications-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--dark-text);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .spec-table tr {
+            border-bottom: 1px solid #eee;
+            transition: all 0.3s ease;
+        }
+
+        .spec-table tr:hover {
+            background: var(--light-bg);
+        }
+
+        .spec-table td {
+            padding: 15px;
+        }
+
+        .spec-label {
+            font-weight: 700;
+            color: var(--primary-red);
+            width: 40%;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+
+        .spec-value {
+            color: #333;
+            font-size: 1rem;
+        }
+
+        .purchase-options {
+            background: var(--light-bg);
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+
+        .size-selector {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .size-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .size-option-btn {
+            border: 2px solid #ddd;
+            background: white;
+            color: var(--dark-text);
+            padding: 10px 14px;
+            border-radius: 10px;
+            font-weight: 700;
+            min-width: 110px;
+            text-align: left;
+            transition: all 0.25s ease;
+        }
+
+        .size-option-btn small {
+            display: block;
+            font-weight: 600;
+            color: #666;
+        }
+
+        .size-option-btn.active,
+        .size-option-btn:hover {
+            border-color: var(--primary-red);
+            box-shadow: 0 8px 20px rgba(30, 64, 175, 0.15);
+        }
+
+        .colors-section {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .colors-section-title {
+            font-weight: 700;
+            color: var(--dark-text);
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .colors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .color-swatch {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            padding: 12px;
+            border: 2px solid #eee;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            background: white;
+        }
+
+        .color-swatch:hover {
+            border-color: var(--primary-red);
+            box-shadow: 0 4px 12px rgba(30, 64, 175, 0.1);
+        }
+
+        .color-box {
+            width: 50px;
+            height: 50px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .color-name {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #333;
+            text-align: center;
+            word-break: break-word;
+        }
+
+        .color-code {
+            font-size: 0.7rem;
+            color: #999;
+            text-align: center;
+        }
+
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .quantity-selector label {
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .quantity-input {
+            width: 100px;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .quantity-input:focus {
+            border-color: var(--primary-red);
+            outline: none;
+        }
+
+        .purchase-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-purchase {
+            flex: 1;
+            min-width: 200px;
+            padding: 15px 25px;
+            font-weight: 700;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-cart {
+            background: var(--primary-red);
+            color: white;
+            border-color: var(--primary-red);
+        }
+
+        .btn-cart:hover {
+            background: var(--dark-red);
+            border-color: var(--dark-red);
+            transform: scale(1.02);
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+            border-color: #25D366;
+        }
+
+        .btn-whatsapp:hover {
+            background: #1fbd56;
+            border-color: #1fbd56;
+            transform: scale(1.02);
+        }
+
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: start;
+            gap: 12px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #eee;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            border-color: var(--primary-red);
+            background: rgba(30, 64, 175, 0.05);
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            color: var(--primary-red);
+            min-width: 30px;
+        }
+
+        .feature-content h6 {
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .feature-content p {
+            font-size: 0.9rem;
+            color: #666;
+            margin: 0;
+        }
+
+        .related-products {
+            margin: 60px 0;
+            padding: 40px 0;
+            border-top: 2px solid #eee;
+        }
+
+        .related-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--dark-text);
+            margin-bottom: 30px;
+        }
+
+        .related-card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            height: 100%;
+        }
+
+        .related-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(30, 64, 175, 0.2);
+        }
+
+        .related-image {
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .related-card:hover .related-image {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 767px) {
+            .product-title {
+                font-size: 1.6rem;
+            }
+
+            .product-price {
+                font-size: 2rem;
+            }
+
+            .main-image {
+                height: 350px;
+            }
+
+            .features-list {
+                grid-template-columns: 1fr;
+            }
+
+            .purchase-buttons {
+                flex-direction: column;
+            }
+
+            .btn-purchase {
+                min-width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <% 
+        const primaryStore = (typeof stores !== 'undefined' && stores[0]) ? stores[0] : null;
+        const secondaryStore = (typeof stores !== 'undefined' && stores[1]) ? stores[1] : null;
+        const primaryWhatsapp = primaryStore ? (primaryStore.whatsapp || primaryStore.phone) : '522222941010';
+        const sizeOptions = product && product.sizes && product.sizes.length ? product.sizes : null;
+        const defaultSize = sizeOptions ? sizeOptions[0] : null;
+        const displayPrice = defaultSize ? defaultSize.price : product.price;
+        const categoryImageMap = {
+            'vinilicas-alto-desempeno': [
+                'https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?w=700&h=700&fit=crop'
+            ],
+            'vinilicas': [
+                'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=700&h=700&fit=crop'
+            ],
+            'selladores': [
+                'https://images.unsplash.com/photo-1523419409543-ff0dc2f2e2cf?w=700&h=700&fit=crop'
+            ],
+            'impermeabilizantes-fibratados': [
+                'https://images.unsplash.com/photo-1523419409543-ff0dc2f2e2cf?w=700&h=700&fit=crop'
+            ],
+            'cementosos-antihumedad': [
+                'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&h=700&fit=crop'
+            ],
+            'esmalte-base-agua': [
+                'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=700&h=700&fit=crop'
+            ],
+            'esmaltes-secado-rapido': [
+                'https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=700&h=700&fit=crop'
+            ],
+            'esmaltes-secado-normal': [
+                'https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=700&h=700&fit=crop'
+            ],
+            'primarios-alquidalicos': [
+                'https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=700&h=700&fit=crop'
+            ],
+            'aerosol-secado-rapido': [
+                'https://images.unsplash.com/photo-1496317899792-9d7dbcd928a1?w=700&h=700&fit=crop'
+            ],
+            'productos-para-madera': [
+                'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=700&h=700&fit=crop'
+            ],
+            'solventes': [
+                'https://images.unsplash.com/photo-1588854337115-1c67d9247e4c?w=700&h=700&fit=crop'
+            ],
+            'productos-para-construccion': [
+                'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&h=700&fit=crop'
+            ],
+            'conservacion-vial': [
+                'https://images.unsplash.com/photo-1496560736447-6af5c9b9a1da?w=700&h=700&fit=crop'
+            ],
+            'instalaciones-deportivas': [
+                'https://images.unsplash.com/photo-1504439468489-c8920d796a29?w=700&h=700&fit=crop'
+            ],
+            'preparacion-de-metales': [
+                'https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=700&h=700&fit=crop'
+            ],
+            'pegamentos': [
+                'https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?w=700&h=700&fit=crop'
+            ],
+            'pintura-dry-fall': [
+                'https://images.unsplash.com/photo-1496317899792-9d7dbcd928a1?w=700&h=700&fit=crop'
+            ],
+            'cero-antimicrobial-permanente': [
+                'https://images.unsplash.com/photo-1588854337115-1c67d9247e4c?w=700&h=700&fit=crop'
+            ],
+            'sanitizante-de-superficies': [
+                'https://images.unsplash.com/photo-1583947582886-f98b1f25b0f9?w=700&h=700&fit=crop'
+            ]
+        };
+        const defaultDetailImages = [
+            'https://images.unsplash.com/photo-1452860606245-08acc8bd41d3?w=700&h=700&fit=crop',
+            'https://images.unsplash.com/photo-1562259949-e8e7689d7825?w=700&h=700&fit=crop'
+        ];
+        const resolveDetailImage = (slug, indexOffset = 0) => {
+            const options = categoryImageMap[slug] || defaultDetailImages;
+            return options[indexOffset % options.length];
+        };
+        const mainImage = (product.image && product.image !== '/images/logo.webp')
+            ? product.image
+            : resolveDetailImage(product.category, 0);
+        
+        // Map products to their color catalog images
+        const catalogImages = {
+            'VINET': '/images/VINET.webp',
+            'KOLORTEX': '/images/KOLORTEX.webp',
+            'SUPERVIN ANTIBACTERIAL': '/images/SUPERVIN.webp',
+            'ACAPULCO': '/images/ACAPULCO.webp',
+            'ACAPULCO SATINADA': '/images/ACASATI.webp',
+            'OMAR': '/images/OMAR.webp',
+            'ULTRA LUMINOSA (COLOR BLANCO)': '/images/VINET.webp'
+        };
+        
+        const displayImage = catalogImages[product.name] || mainImage;
+    %>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="/">
+                <img src="/images/logo.webp" alt="Pintumex" height="36" class="me-2">
+                <span class="brand-text">PINTUMEX</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/productos">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/tiendas">Tiendas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/acerca-de">Acerca de</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contacto">Contacto</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="/carrito">
+                            <i class="fas fa-shopping-cart"></i> Carrito
+                            <span id="cartBadge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display: none;">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <section class="product-hero">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/"><i class="fas fa-home me-2"></i>Inicio</a></li>
+                    <li class="breadcrumb-item"><a href="/productos"><i class="fas fa-shopping-bag me-2"></i>Productos</a></li>
+                    <li class="breadcrumb-item active"><%= product.name %></li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Product Detail -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Product Image -->
+                <div class="col-lg-5">
+                    <div class="product-images">
+                        <img src="<%= displayImage %>" alt="<%= product.name %>" class="main-image">
+                    </div>
+                </div>
+
+                <!-- Product Information -->
+                <div class="col-lg-7">
+                    <div class="product-info">
+                        <div class="product-info-header">
+                            <div class="product-code">
+                                <i class="fas fa-barcode me-2"></i><%= product.code %>
+                            </div>
+                            <h1 class="product-title"><%= product.name %></h1>
+                            <p class="product-category">
+                                <i class="fas fa-tag me-2" style="color: var(--primary-red);"></i>
+                                <%= product.category %>
+                            </p>
+                        </div>
+
+                        <!-- Price & Stock -->
+                        <div class="price-section">
+                            <div class="product-price" id="productPrice" data-base-price="<%= displayPrice %>">$<%= displayPrice.toFixed(2) %></div>
+                            <% if(product.stock > 5) { %>
+                                <span class="stock-badge stock-available">
+                                    <i class="fas fa-check-circle me-2"></i>En Stock
+                                </span>
+                            <% } else if(product.stock > 0) { %>
+                                <span class="stock-badge stock-low">
+                                    <i class="fas fa-exclamation-triangle me-2"></i>Pocas unidades
+                                </span>
+                            <% } else { %>
+                                <span class="stock-badge stock-unavailable">
+                                    <i class="fas fa-times-circle me-2"></i>Agotado
+                                </span>
+                            <% } %>
+                        </div>
+
+                        <!-- Description -->
+                        <div class="product-description">
+                            <i class="fas fa-info-circle me-2" style="color: var(--primary-red);"></i>
+                            <%= product.description || 'Producto de alta calidad garantizado' %>
+                        </div>
+
+                        <!-- Specifications -->
+                        <% if(product.specifications) { %>
+                            <div class="specifications">
+                                <h3 class="specifications-title">
+                                    <i class="fas fa-clipboard-list"></i>Especificaciones
+                                </h3>
+                                <table class="spec-table">
+                                    <% Object.entries(product.specifications).forEach(([key, value]) => { %>
+                                        <tr>
+                                            <td class="spec-label"><%= key.charAt(0).toUpperCase() + key.slice(1).replace(/([A-Z])/g, ' $1') %></td>
+                                            <td class="spec-value"><%= value %></td>
+                                        </tr>
+                                    <% }); %>
+                                </table>
+                            </div>
+                        <% } %>
+
+                        <!-- Purchase Options -->
+                        <div class="purchase-options">
+                            <% if (sizeOptions) { %>
+                                <div class="size-selector">
+                                    <div style="font-weight: 700; color: var(--dark-text);">
+                                        <i class="fas fa-box me-2"></i>Presentacion:
+                                    </div>
+                                    <div class="size-options">
+                                        <% sizeOptions.forEach((size, index) => { %>
+                                            <button type="button" class="size-option-btn <%= index === 0 ? 'active' : '' %>" data-size="<%= size.size %>" data-price="<%= size.price %>">
+                                                <span><%= size.size %></span>
+                                                <small>$<%= size.price.toFixed(2) %></small>
+                                            </button>
+                                        <% }); %>
+                                    </div>
+                                    <input type="hidden" id="selectedSize" value="<%= defaultSize ? defaultSize.size : '' %>">
+                                    <input type="hidden" id="selectedPrice" value="<%= defaultSize ? defaultSize.price : product.price %>">
+                                </div>
+                            <% } %>
+                            
+                            <!-- Colors Section -->
+                            <% if (product.colors && product.colors.length > 0) { %>
+                                <div class="colors-section">
+                                    <div class="colors-section-title">
+                                        <i class="fas fa-palette me-2"></i>Colores Disponibles:
+                                    </div>
+                                    <div class="colors-grid">
+                                        <% 
+                                            const colorMap = {
+                                                'Blanco': '#FFFFFF', 'Blanco Ostión': '#F5F5DC', 'Blanco Osti\u00f3n': '#F5F5DC',
+                                                'Negro': '#2C2C2C', 'Gris': '#808080', 'Gris Claro': '#D3D3D3', 'Gris Niebla': '#B0C4DE', 'Gris Polar': '#E6E6FA', 'Gris Tornado': '#708090', 'Gris Tormenta': '#4F7942',
+                                                'Rojo': '#C41E3A', 'Rojo Granada': '#AD002A', 'Rojo Cereza': '#C81D25', 'Rojo \u00d3xido': '#A0522D', 'Rojo Fuego': '#FF4500', 'Rojo Pasi\u00f3n': '#C72C48', 'Rojo Teja': '#8B4513',
+                                                'Azul': '#003DA5', 'Azul Mónaco': '#002147', 'Azul M\u00f3naco': '#002147', 'Azul Colonial': '#003DA5', 'Azul Acapulco': '#0E7C86', 'Azul Lej\u00eda': '#4A90E2', 'Azul Navy': '#000080', 'Azul Oc\u00e9ano': '#004B87', 'Azul Pizarra': '#708090', 'Azul Art\u00edstico': '#1E90FF', 'Azul Nórdico': '#1E90FF', 'Azul Mediterr\u00e1neo': '#003DA5',
+                                                'Verde': '#228B22', 'Verde Pino': '#013220', 'Verde Limón': '#32CD32', 'Verde Lim\u00f3n': '#32CD32', 'Verde Olivo': '#6B8E23', 'Verde Olivo +': '#6B8E23', 'Verde Jungla': '#004D44', 'Verde Pintumex': '#228B22', 'Verde Manzana': '#7CB342', 'Verde Manzana +': '#7CB342', 'Verde Campestre': '#6FA86F', 'Verde Seco': '#617C58', 'Hierba Buena': '#90EE90',
+                                                'Amarillo': '#FFD700', 'Amarillo Trigo': '#DAA520', 'Amarillo Inglés': '#FFD700', 'Ingl\u00e9s': '#FFD700', 'Amarillo Sol': '#FFA500', 'Amarillo \u00d3xido': '#CD5C5C', 'Amarillo Octubre': '#FF8C00', 'Amarillo Oto\u00f1o': '#FF8C00', 'Amarillo Florentino': '#FFD700',
+                                                'Naranja': '#FF8C00', 'Naranja Atardecer': '#FF6347', 'Orange': '#FF8C00',
+                                                'Rosa': '#FFB6C1', 'Rosa Medusa': '#FF1493', 'Rosa Mexicano': '#E91E63', 'Rosa Mexicano +': '#E91E63', 'Rosa Candy': '#FFB6C1', 'Rosa Princesa': '#FFC0CB',
+                                                'Beige': '#F5F5DC', 'Crema': '#FFFDD0', 'Crema Casino': '#FFFACD', 'Crema Imperial': '#F5DEB3',
+                                                'Café': '#A0522D', 'Capuccino': '#8B4513', 'Café París': '#704214', 'Chocolate': '#4B0082', 'Tabaco': '#8B7355', 'Pale de Rosa': '#DB7093', 'Palo de Rosa': '#DB7093', 'Fango': '#8B7355', 'Hacienda': '#8B4513',
+                                                'Perla': '#E5E4E2', 'Aperlado': '#E5E4E2', 'Champaña': '#F5DEB3', 'Champañía': '#F5DEB3',
+                                                'Turquesa': '#40E0D0', 'Turquesa': '#40E0D0', 'Aquamarina': '#7FFFD4', 'Ladrillo': '#8B4513', 'Pistacho': '#93C572',
+                                                'Flán': '#FFE4C4', 'Arenilla': '#C2B280', 'Calabaza': '#FF7F50', 'Mandarina': '#FF8C00',
+                                                'Tangerina': '#FF8800', 'Lavanda': '#E6E6FA', 'Orquídea': '#DA70D6', 'Capri': '#00BFFF',
+                                                'Ostión': '#F5F5DC', 'Pistacho': '#93C572',
+                                                'Béige': '#F5F5DC', 'Verde Campestre': '#6FA86F', 'Béige': '#F5F5DC'
+                                            };
+                                            
+                                            const getColorHex = (colorName) => {
+                                                return colorMap[colorName] || '#CCCCCC';
+                                            };
+                                        %>
+                                        <% product.colors.forEach(color => { %>
+                                            <div class="color-swatch" title="<%= color.name %>">
+                                                <div class="color-box" style="background-color: <%= getColorHex(color.name) %>"></div>
+                                                <div class="color-name"><%= color.name %></div>
+                                                <div class="color-code">#<%= color.code %></div>
+                                            </div>
+                                        <% }); %>
+                                    </div>
+                                </div>
+                            <% } %>
+
+                            <div class="quantity-selector">
+                                <label for="quantity">
+                                    <i class="fas fa-box me-2"></i>Cantidad:
+                                </label>
+                                <input type="number" id="quantity" class="quantity-input" value="1" min="1" max="<%= product.stock %>" <%= product.stock === 0 ? 'disabled' : '' %>>
+                                <span style="color: #666; font-size: 0.9rem;">Disponibles: <strong><%= product.stock || 0 %></strong></span>
+                            </div>
+
+                            <div class="purchase-buttons">
+                                <button class="btn-purchase btn-cart add-single-product" data-product-id="<%= product.id %>" <% if(product.stock === 0) { %>disabled<% } %>>
+                                    <i class="fas fa-shopping-cart me-2"></i>Agregar al Carrito
+                                </button>
+                                <a href="https://wa.me/<%= primaryWhatsapp.replace(/[^0-9]/g, '') %>?text=Hola%20Pintumex,%20me%20interesa%20el%20producto%20<%= encodeURIComponent(product.name) %>%20(Código:%20<%= product.code %>)" 
+                                   target="_blank" class="btn-purchase btn-whatsapp">
+                                    <i class="fab fa-whatsapp me-2"></i>Consultar
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Features List -->
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h6>Producto Original</h6>
+                                    <p>100% garantizado</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-truck"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h6>Entrega Rápida</h6>
+                                    <p>A toda la zona</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-headset"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h6>Asesoría Técnica</h6>
+                                    <p>Profesionales disponibles</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h6>Garantía</h6>
+                                    <p>Seguridad en tu compra</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Products -->
+            <% if(product.sizes && product.sizes.length > 0) { %>
+                <div class="related-products">
+                    <h2 class="related-title">
+                        <i class="fas fa-cube me-3"></i>Presentaciones Disponibles
+                    </h2>
+                    <div class="row g-4">
+                        <% product.sizes.forEach((size, index) => { 
+                            const sizeImage = resolveDetailImage(product.category, index + 1);
+                        %>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="related-card">
+                                    <img src="<%= sizeImage %>" alt="<%= size.size %>" class="related-image">
+                                    <div class="p-3">
+                                        <h5 class="fw-bold" style="margin-bottom: 10px; color: var(--dark-text);">
+                                            <i class="fas fa-box me-2" style="color: var(--primary-red);"></i>
+                                            <%= size.size %>
+                                        </h5>
+                                        <p class="text-muted mb-3">Disponible en esta presentación</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="h5 mb-0" style="color: var(--primary-red); font-weight: 700;">$<%= size.price.toFixed(2) %></span>
+                                            <button class="btn btn-sm" style="background: var(--primary-red); color: white;">
+                                                <i class="fas fa-shopping-cart"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <% }); %>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-3 mb-4">
+                    <h5>Sobre Pintumex</h5>
+                    <p>Tu tienda de confianza para materiales de pintura profesionales y de calidad superior.</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Enlaces Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/" class="text-white-50 text-decoration-none">Inicio</a></li>
+                        <li><a href="/productos" class="text-white-50 text-decoration-none">Productos</a></li>
+                        <li><a href="/tiendas" class="text-white-50 text-decoration-none">Tiendas</a></li>
+                        <li><a href="/contacto" class="text-white-50 text-decoration-none">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Contacto Principal</h5>
+                    <p class="text-white-50 mb-1">
+                        <% if (primaryStore) { %>
+                            <i class="fas fa-phone"></i> <%= primaryStore.phone %>
+                        <% } %>
+                    </p>
+                    <p class="text-white-50 mb-1">
+                        <% if (secondaryStore) { %>
+                            <i class="fas fa-phone"></i> <%= secondaryStore.phone %>
+                        <% } %>
+                    </p>
+                    <p class="text-white-50">
+                        <i class="fas fa-map-marker-alt"></i> <%= primaryStore ? primaryStore.address : 'Puebla, México' %>
+                    </p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Síguenos</h5>
+                    <a href="#" class="text-white-50 me-3 text-decoration-none"><i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="#" class="text-white-50 me-3 text-decoration-none"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="https://wa.me/<%= primaryWhatsapp.replace(/[^0-9]/g, '') %>" target="_blank" class="text-white-50 me-3 text-decoration-none"><i class="fab fa-whatsapp fa-lg"></i></a>
+                    <a href="#" class="text-white-50 text-decoration-none"><i class="fab fa-twitter fa-lg"></i></a>
+                </div>
+            </div>
+            <hr class="bg-white-50">
+            <div class="footer-bottom">
+                <p class="footer-legal">
+                    <span class="footer-legal-line">&copy; 2026 Pintumex Puebla | Diseñado por: Axel Gutiérrez</span>
+                    <span class="footer-legal-line">
+                        <a href="/terminos">Términos y Condiciones</a> | 
+                        <a href="/privacidad">Política de Privacidad</a>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>
