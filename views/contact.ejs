@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -300,7 +300,7 @@
     <section class="contact-hero">
         <div class="container position-relative" style="z-index: 2;">
             <h1><i class="fas fa-headset me-3"></i>Contacto</h1>
-            <p class="mb-0">Estamos aquÃ­ para ayudarte en todo lo que necesites</p>
+            <p class="mb-0">Estamos aquí para ayudarte en todo lo que necesites</p>
         </div>
     </section>
 
@@ -314,7 +314,7 @@
                         <div class="contact-icon">
                             <i class="fas fa-phone"></i>
                         </div>
-                        <h3 class="contact-title">TelÃ©fono</h3>
+                        <h3 class="contact-title">Teléfono</h3>
                         <p class="contact-text">
                             <% if (primaryStore) { %>
                                 <%= primaryStore.name %>: <%= primaryStore.phone %><br>
@@ -338,7 +338,7 @@
                         <h3 class="contact-title">WhatsApp</h3>
                         <p class="contact-text">
                             Disponible las 24 horas<br>
-                            Respuesta rÃ¡pida garantizada
+                            Respuesta rápida garantizada
                         </p>
                         <a href="https://wa.me/<%= primaryWhatsapp.replace(/[^0-9]/g, '') %>?text=Hola%20Pintumex,%20tengo%20una%20consulta" 
                            target="_blank" class="contact-button" style="background: #25D366; border-color: #25D366;">
@@ -383,10 +383,10 @@
                         <div style="font-size: 0.95rem; color: #666; margin-bottom: 20px;">
                             <div><strong>Lunes:</strong> <%= primaryStore && primaryStore.hours ? primaryStore.hours.monday : '' %></div>
                             <div><strong>Martes:</strong> <%= primaryStore && primaryStore.hours ? primaryStore.hours.tuesday : '' %></div>
-                            <div><strong>MiÃ©rcoles:</strong> <%= primaryStore && primaryStore.hours ? primaryStore.hours.wednesday : '' %></div>
+                            <div><strong>Miércoles:</strong> <%= primaryStore && primaryStore.hours ? primaryStore.hours.wednesday : '' %></div>
                             <div><strong>Jueves:</strong> <%= primaryStore && primaryStore.hours ? primaryStore.hours.thursday : '' %></div>
                             <div><strong>Viernes:</strong> <%= primaryStore && primaryStore.hours ? primaryStore.hours.friday : '' %></div>
-                            <div><strong>SÃ¡bado:</strong> <%= primaryStore && primaryStore.hours ? primaryStore.hours.saturday : '' %></div>
+                            <div><strong>Sábado:</strong> <%= primaryStore && primaryStore.hours ? primaryStore.hours.saturday : '' %></div>
                             <div><strong>Domingo:</strong> <%= primaryStore && primaryStore.hours ? primaryStore.hours.sunday : '' %></div>
                         </div>
                         <a href="<%= primaryStore ? primaryStore.googleMapsUrl : 'https://maps.google.com/' %>" 
@@ -408,10 +408,10 @@
                         <div style="font-size: 0.95rem; color: #666; margin-bottom: 20px;">
                             <div><strong>Lunes:</strong> <%= secondaryStore && secondaryStore.hours ? secondaryStore.hours.monday : '' %></div>
                             <div><strong>Martes:</strong> <%= secondaryStore && secondaryStore.hours ? secondaryStore.hours.tuesday : '' %></div>
-                            <div><strong>MiÃ©rcoles:</strong> <%= secondaryStore && secondaryStore.hours ? secondaryStore.hours.wednesday : '' %></div>
+                            <div><strong>Miércoles:</strong> <%= secondaryStore && secondaryStore.hours ? secondaryStore.hours.wednesday : '' %></div>
                             <div><strong>Jueves:</strong> <%= secondaryStore && secondaryStore.hours ? secondaryStore.hours.thursday : '' %></div>
                             <div><strong>Viernes:</strong> <%= secondaryStore && secondaryStore.hours ? secondaryStore.hours.friday : '' %></div>
-                            <div><strong>SÃ¡bado:</strong> <%= secondaryStore && secondaryStore.hours ? secondaryStore.hours.saturday : '' %></div>
+                            <div><strong>Sábado:</strong> <%= secondaryStore && secondaryStore.hours ? secondaryStore.hours.saturday : '' %></div>
                             <div><strong>Domingo:</strong> <%= secondaryStore && secondaryStore.hours ? secondaryStore.hours.sunday : '' %></div>
                         </div>
                         <a href="<%= secondaryStore ? secondaryStore.googleMapsUrl : 'https://maps.google.com/' %>" target="_blank" class="contact-button" style="width: 100%;">
@@ -430,7 +430,7 @@
                 <div class="col-lg-8 mx-auto">
                     <div class="contact-form">
                         <h2 class="form-header">
-                            <i class="fas fa-envelope me-2" style="color: var(--primary-blue);"></i>EnvÃ­anos tu Mensaje
+                            <i class="fas fa-envelope me-2" style="color: var(--primary-blue);"></i>Envíanos tu Mensaje
                         </h2>
 
                         <form method="POST" action="/contacto">
@@ -445,7 +445,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="form-label">TelÃ©fono *</label>
+                                <label class="form-label">Teléfono *</label>
                                 <input type="tel" class="form-control" name="phone" placeholder="+52 1234567890" required>
                             </div>
 
@@ -454,7 +454,7 @@
                                 <select class="form-control" name="subject" required>
                                     <option value="">-- Seleccionar asunto --</option>
                                     <option value="consulta">Consulta General</option>
-                                    <option value="productos">InformaciÃ³n de Productos</option>
+                                    <option value="productos">Información de Productos</option>
                                     <option value="compra">Consulta sobre Compra</option>
                                     <option value="pedido">Estado de Pedido</option>
                                     <option value="reclamo">Reclamo o Sugerencia</option>
@@ -464,7 +464,7 @@
 
                             <div class="form-group">
                                 <label class="form-label">Mensaje *</label>
-                                <textarea class="form-control form-textarea" name="message" placeholder="CuÃ©ntanos cÃ³mo podemos ayudarte..." required></textarea>
+                                <textarea class="form-control form-textarea" name="message" placeholder="Cuéntanos cómo podemos ayudarte..." required></textarea>
                             </div>
 
                             <button type="submit" class="submit-button">
@@ -488,12 +488,12 @@
                             <h2 class="accordion-header">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
                                     <i class="fas fa-clock me-2" style="color: var(--primary-blue);"></i>
-                                    Â¿CuÃ¡l es el horario de atenciÃ³n?
+                                    ¿Cuál es el horario de atención?
                                 </button>
                             </h2>
                             <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    Lunes a Viernes: 8:00 AM a 6:00 PM | SÃ¡bados: 9:00 AM a 2:00 PM | Domingos: Cerrado
+                                    Lunes a Viernes: 8:00 AM a 6:00 PM | Sábados: 9:00 AM a 2:00 PM | Domingos: Cerrado
                                 </div>
                             </div>
                         </div>
@@ -502,12 +502,12 @@
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
                                     <i class="fas fa-truck me-2" style="color: var(--primary-blue);"></i>
-                                    Â¿Realizan entregas a domicilio?
+                                    ¿Realizan entregas a domicilio?
                                 </button>
                             </h2>
                             <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    SÃ­, realizamos entregas a toda la zona metropolitana de Puebla. Consulta con nosotros por WhatsApp o telÃ©fono para conocer costos y tiempos de entrega.
+                                    Sí, realizamos entregas a toda la zona metropolitana de Puebla. Consulta con nosotros por WhatsApp o teléfono para conocer costos y tiempos de entrega.
                                 </div>
                             </div>
                         </div>
@@ -516,12 +516,12 @@
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
                                     <i class="fas fa-credit-card me-2" style="color: var(--primary-blue);"></i>
-                                    Â¿QuÃ© mÃ©todos de pago aceptan?
+                                    ¿Qué métodos de pago aceptan?
                                 </button>
                             </h2>
                             <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    Aceptamos efectivo, tarjetas de crÃ©dito/dÃ©bito, transferencias bancarias. Contacta con nosotros para conocer las opciones de pago en lÃ­nea.
+                                    Aceptamos efectivo, tarjetas de crédito/débito, transferencias bancarias. Contacta con nosotros para conocer las opciones de pago en línea.
                                 </div>
                             </div>
                         </div>
@@ -530,12 +530,12 @@
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
                                     <i class="fas fa-check-circle me-2" style="color: var(--primary-blue);"></i>
-                                    Â¿Todos los productos tienen garantÃ­a?
+                                    ¿Todos los productos tienen garantía?
                                 </button>
                             </h2>
                             <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    SÃ­, todos nuestros productos son 100% originales y vienen con garantÃ­a del fabricante. En caso de defecto, te asesoraremos en todo el proceso.
+                                    Sí, todos nuestros productos son 100% originales y vienen con garantía del fabricante. En caso de defecto, te asesoraremos en todo el proceso.
                                 </div>
                             </div>
                         </div>
@@ -544,12 +544,12 @@
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
                                     <i class="fas fa-question-circle me-2" style="color: var(--primary-blue);"></i>
-                                    Â¿Puedo hacer pedidos en lÃ­nea?
+                                    ¿Puedo hacer pedidos en línea?
                                 </button>
                             </h2>
                             <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    Puedes explorar nuestro catÃ¡logo en lÃ­nea y hacer tu pedido directamente por WhatsApp. Nuestro equipo procesarÃ¡ tu orden y coordinarÃ¡ la entrega.
+                                    Puedes explorar nuestro catálogo en línea y hacer tu pedido directamente por WhatsApp. Nuestro equipo procesará tu orden y coordinará la entrega.
                                 </div>
                             </div>
                         </div>
@@ -568,7 +568,7 @@
                     <p>Tu tienda de confianza para materiales de pintura profesionales y de calidad superior.</p>
                 </div>
                 <div class="col-md-3 mb-4">
-                    <h5>Enlaces RÃ¡pidos</h5>
+                    <h5>Enlaces Rápidos</h5>
                     <ul class="list-unstyled">
                         <li><a href="/" class="text-white-50 text-decoration-none">Inicio</a></li>
                         <li><a href="/productos" class="text-white-50 text-decoration-none">Productos</a></li>
@@ -589,11 +589,11 @@
                         <% } %>
                     </p>
                     <p class="text-white-50">
-                        <i class="fas fa-map-marker-alt"></i> <%= primaryStore ? primaryStore.address : 'Puebla, MÃ©xico' %>
+                        <i class="fas fa-map-marker-alt"></i> <%= primaryStore ? primaryStore.address : 'Puebla, México' %>
                     </p>
                 </div>
                 <div class="col-md-3 mb-4">
-                    <h5>SÃ­guenos</h5>
+                    <h5>Síguenos</h5>
                     <a href="#" class="text-white-50 me-3 text-decoration-none"><i class="fab fa-facebook fa-lg"></i></a>
                     <a href="#" class="text-white-50 me-3 text-decoration-none"><i class="fab fa-instagram fa-lg"></i></a>
                     <a href="https://wa.me/<%= primaryWhatsapp.replace(/[^0-9]/g, '') %>" target="_blank" class="text-white-50 me-3 text-decoration-none"><i class="fab fa-whatsapp fa-lg"></i></a>
@@ -603,10 +603,10 @@
             <hr class="bg-white-50">
             <div class="footer-bottom">
                 <p class="footer-legal">
-                    <span class="footer-legal-line">&copy; 2026 Pintumex Puebla | DiseÃ±ado por: Axel GutiÃ©rrez</span>
+                    <span class="footer-legal-line">&copy; 2026 Pintumex Puebla | Diseñado por: Axel Gutiérrez</span>
                     <span class="footer-legal-line">
-                        <a href="/terminos">TÃ©rminos y Condiciones</a> | 
-                        <a href="/privacidad">PolÃ­tica de Privacidad</a>
+                        <a href="/terminos">Términos y Condiciones</a> | 
+                        <a href="/privacidad">Política de Privacidad</a>
                     </span>
                 </p>
             </div>

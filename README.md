@@ -1,44 +1,44 @@
 # Pintumex Web
 
-Sitio web profesional de Pintumex para catalogo de productos, carrito de compras y confirmacion de pedidos por WhatsApp.
+Sitio web profesional de Pintumex para catálogo de productos, carrito de compras y confirmación de pedidos por WhatsApp.
 
 ## Tabla de contenido
 
-- [Descripcion](#descripcion)
-- [Caracteristicas](#caracteristicas)
-- [Stack tecnologico](#stack-tecnologico)
+- [Descripción](#descripción)
+- [Características](#características)
+- [Stack tecnológico](#stack-tecnológico)
 - [Estructura del proyecto](#estructura-del-proyecto)
 - [Requisitos](#requisitos)
-- [Instalacion y ejecucion](#instalacion-y-ejecucion)
+- [Instalación y ejecución](#instalación-y-ejecución)
 - [Variables de entorno](#variables-de-entorno)
 - [Scripts disponibles](#scripts-disponibles)
 - [Rutas principales](#rutas-principales)
 - [Flujo del carrito y checkout](#flujo-del-carrito-y-checkout)
-- [SEO y archivos publicos](#seo-y-archivos-publicos)
+- [SEO y archivos públicos](#seo-y-archivos-públicos)
 - [Despliegue](#despliegue)
 - [Licencia](#licencia)
 
-## Descripcion
+## Descripción
 
 Este proyecto implementa una tienda web enfocada en productos de pintura y recubrimientos. Incluye:
 
-- Catalogo de productos por categorias.
+- Catálogo de productos por categorías.
 - Vista de detalle por producto.
-- Carrito con sesion del usuario.
+- Carrito con sesión del usuario.
 - Checkout con guardado de orden en `data/orders.json`.
-- Generacion de enlace `wa.me` para confirmar pedidos por WhatsApp.
-- Secciones informativas: servicios, tiendas, contacto, terminos y privacidad.
+- Generación de enlace `wa.me` para confirmar pedidos por WhatsApp.
+- Secciones informativas: servicios, tiendas, contacto, términos y privacidad.
 
-## Caracteristicas
+## Características
 
 - Backend en Node.js + Express.
 - Plantillas con EJS.
 - Estilos y comportamiento en `public/css/main.css` y `public/js/main.js`.
 - Persistencia simple en archivos JSON (`products`, `stores`, `orders`).
-- Integracion de Google Maps por API Key (opcional).
+- Integración de Google Maps por API Key (opcional).
 - SEO local con `robots.txt` y `sitemap.xml`.
 
-## Stack tecnologico
+## Stack tecnológico
 
 - Node.js
 - Express
@@ -102,7 +102,7 @@ PINTUMEX WEB/
 - Node.js 18 o superior recomendado.
 - npm 9 o superior recomendado.
 
-## Instalacion y ejecucion
+## Instalación y ejecución
 
 1. Clonar el repositorio.
 2. Instalar dependencias:
@@ -124,7 +124,7 @@ npm run dev
 http://localhost:3000
 ```
 
-Para produccion:
+Para producción:
 
 ```bash
 npm start
@@ -134,18 +134,18 @@ npm start
 
 Usa `.env.example` como referencia.
 
-| Variable | Descripcion | Ejemplo |
+| Variable | Descripción | Ejemplo |
 | --- | --- | --- |
 | `PORT` | Puerto del servidor | `3000` |
 | `NODE_ENV` | Entorno (`development` o `production`) | `development` |
 | `GOOGLE_MAPS_API_KEY` | API Key de Google Maps (opcional) | `tu_api_key` |
-| `WHATSAPP_PHONE_NUMBER` | Numero principal de WhatsApp | `522222941010` |
+| `WHATSAPP_PHONE_NUMBER` | Número principal de WhatsApp | `522222941010` |
 | `WHATSAPP_SUCURSAL_1` | WhatsApp sucursal 1 | `522222941010` |
 | `WHATSAPP_SUCURSAL_2` | WhatsApp sucursal 2 | `522226907000` |
 | `ADMIN_EMAIL` | Correo administrativo | `puebla@pintumex.com.mx` |
 | `SUPPORT_EMAIL` | Correo de soporte | `sclientes@pintumex.com.mx` |
 | `COMPANY_NAME` | Nombre de la empresa | `Pinturas Mexicanas...` |
-| `COMPANY_ADDRESS` | Direccion comercial | `Av. del Conde No. 1...` |
+| `COMPANY_ADDRESS` | Dirección comercial | `Av. del Conde No. 1...` |
 
 ## Scripts disponibles
 
@@ -158,15 +158,15 @@ Usa `.env.example` como referencia.
 ### Vistas
 
 - `GET /` Inicio.
-- `GET /productos` Catalogo.
+- `GET /productos` Catálogo.
 - `GET /productos/:id` Detalle de producto.
 - `GET /carrito` Carrito.
 - `GET /servicios` Servicios.
 - `GET /tiendas` Tiendas.
 - `GET /contacto` Contacto.
 - `GET /acerca-de` Acerca de.
-- `GET /terminos` Terminos y condiciones.
-- `GET /privacidad` Politica de privacidad.
+- `GET /terminos` Términos y condiciones.
+- `GET /privacidad` Política de privacidad.
 
 ### APIs / acciones
 
@@ -183,13 +183,13 @@ Usa `.env.example` como referencia.
 ## Flujo del carrito y checkout
 
 1. El usuario agrega productos al carrito.
-2. El carrito se mantiene en sesion (`express-session`).
+2. El carrito se mantiene en sesión (`express-session`).
 3. En checkout se capturan datos del cliente.
 4. La orden se guarda en `data/orders.json`.
 5. Se construye un mensaje con detalle del pedido.
 6. Se abre enlace de WhatsApp para confirmar la compra.
 
-## SEO y archivos publicos
+## SEO y archivos públicos
 
 - `public/robots.txt`: reglas de rastreo.
 - `public/sitemap.xml`: mapa del sitio.
@@ -197,7 +197,7 @@ Usa `.env.example` como referencia.
 
 ## Despliegue
 
-Recomendaciones para produccion:
+Recomendaciones para producción:
 
 - Configurar `NODE_ENV=production`.
 - Definir un `PORT` segun el proveedor de hosting.
