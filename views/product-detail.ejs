@@ -722,7 +722,7 @@
                                         %>
                                         <% product.colors.forEach(color => { %>
                                             <div class="color-swatch" title="<%= color.name %>">
-                                                <div class="color-box" style="background-color: <%= getColorHex(color.name) %>"></div>
+                                                <div class="color-box" data-hex="<%= getColorHex(color.name) %>"></div>
                                                 <div class="color-name"><%= color.name %></div>
                                                 <div class="color-code">#<%= color.code %></div>
                                             </div>
@@ -885,6 +885,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/js/main.js"></script>
+    <script>
+        document.querySelectorAll('.color-box[data-hex]').forEach((el) => {
+            el.style.backgroundColor = el.dataset.hex;
+        });
+    </script>
 </body>
 </html>
 
