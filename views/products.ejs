@@ -315,6 +315,89 @@
             }
         }
 
+        /* Search bar styles */
+        .search-wrapper {
+            max-width: 600px;
+            margin: 25px auto 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .search-input-group {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-input-group .search-icon {
+            position: absolute;
+            left: 18px;
+            color: #999;
+            font-size: 1.1rem;
+            pointer-events: none;
+            transition: color 0.3s;
+        }
+
+        .search-input-group input {
+            width: 100%;
+            padding: 14px 50px 14px 50px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.05rem;
+            font-family: 'Poppins', sans-serif;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            outline: none;
+            transition: box-shadow 0.3s;
+        }
+
+        .search-input-group input:focus {
+            box-shadow: 0 4px 25px rgba(30, 64, 175, 0.35);
+        }
+
+        .search-input-group input:focus ~ .search-icon {
+            color: var(--primary-red);
+        }
+
+        .search-clear-btn {
+            position: absolute;
+            right: 14px;
+            background: none;
+            border: none;
+            color: #999;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: none;
+            padding: 6px;
+            line-height: 1;
+            transition: color 0.3s;
+        }
+
+        .search-clear-btn:hover {
+            color: var(--primary-red);
+        }
+
+        .search-results-count {
+            text-align: center;
+            margin-top: 12px;
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.85);
+            z-index: 2;
+            position: relative;
+            display: none;
+        }
+
+        .no-search-results {
+            text-align: center;
+            padding: 60px 20px;
+            display: none;
+        }
+
+        .no-search-results .icon {
+            font-size: 4rem;
+            color: #ccc;
+            margin-bottom: 15px;
+        }
+
         @media (max-width: 767px) {
             .products-hero {
                 padding: 50px 0;
@@ -339,6 +422,16 @@
 
             .product-price {
                 font-size: 1.3rem;
+            }
+
+            .search-wrapper {
+                max-width: 100%;
+                margin-top: 20px;
+            }
+
+            .search-input-group input {
+                font-size: 0.95rem;
+                padding: 12px 45px 12px 45px;
             }
         }
     </style>
@@ -520,6 +613,17 @@
         <div class="container position-relative" style="z-index: 2;">
             <h1><i class="fas fa-palette me-3"></i>Catálogo de Productos</h1>
             <p class="mb-0">Descubre nuestra amplia variedad de pinturas y materiales profesionales</p>
+            <!-- Search Bar -->
+            <div class="search-wrapper">
+                <div class="search-input-group">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="productSearch" placeholder="Buscar producto por nombre, código o categoría..." autocomplete="off">
+                    <button type="button" class="search-clear-btn" id="searchClear" title="Limpiar búsqueda">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="search-results-count" id="searchResultsCount"></div>
+            </div>
         </div>
     </section>
 
@@ -666,6 +770,16 @@
                             </a>
                         </div>
                     <% } %>
+
+                    <!-- No search results message (hidden by default) -->
+                    <div class="no-search-results" id="noSearchResults">
+                        <div class="icon"><i class="fas fa-search"></i></div>
+                        <h3 class="text-dark mb-2">Sin resultados</h3>
+                        <p class="text-muted mb-4">No encontramos productos que coincidan con tu búsqueda</p>
+                        <button class="btn btn-danger btn-lg" id="clearSearchBtn">
+                            <i class="fas fa-arrow-left me-2"></i>Mostrar todos
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -748,6 +862,99 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/js/main.js"></script>
+
+    <!-- Product Search Script -->
+    <script>
+    (function() {
+        const searchInput = document.getElementById('productSearch');
+        const clearBtn = document.getElementById('searchClear');
+        const resultsCount = document.getElementById('searchResultsCount');
+        const noResults = document.getElementById('noSearchResults');
+        const clearSearchBtn = document.getElementById('clearSearchBtn');
+        if (!searchInput) return;
+
+        // Gather all product cards with their searchable text
+        const productCards = [];
+        document.querySelectorAll('.product-card').forEach(function(card) {
+            const col = card.closest('.col-lg-4, .col-md-6');
+            const section = card.closest('.mb-5[id^="categoria-"]');
+            const name = (card.querySelector('.product-title') || {}).textContent || '';
+            const code = (card.querySelector('.product-code') || {}).textContent || '';
+            const category = (card.querySelector('.product-category') || {}).textContent || '';
+            const description = (card.querySelector('.product-description') || {}).textContent || '';
+            const searchText = (name + ' ' + code + ' ' + category + ' ' + description).toLowerCase();
+            productCards.push({ col: col, section: section, searchText: searchText });
+        });
+
+        // Gather all category sections
+        const allSections = Array.from(document.querySelectorAll('.mb-5[id^="categoria-"]'));
+
+        function normalizeText(str) {
+            return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+        }
+
+        function performSearch() {
+            var query = normalizeText(searchInput.value.trim());
+            clearBtn.style.display = query.length > 0 ? 'block' : 'none';
+
+            if (query.length === 0) {
+                // Show all
+                productCards.forEach(function(item) {
+                    if (item.col) item.col.style.display = '';
+                });
+                allSections.forEach(function(sec) {
+                    sec.style.display = '';
+                });
+                resultsCount.style.display = 'none';
+                noResults.style.display = 'none';
+                return;
+            }
+
+            var terms = query.split(/\s+/);
+            var matchCount = 0;
+
+            productCards.forEach(function(item) {
+                var normalized = normalizeText(item.searchText);
+                var matches = terms.every(function(t) { return normalized.indexOf(t) !== -1; });
+                if (item.col) {
+                    item.col.style.display = matches ? '' : 'none';
+                }
+                if (matches) matchCount++;
+            });
+
+            // Show/hide category sections based on visible cards
+            allSections.forEach(function(sec) {
+                var visibleCards = sec.querySelectorAll('.col-lg-4:not([style*="display: none"]), .col-md-6:not([style*="display: none"])');
+                // Filter properly: check each col's display
+                var hasVisible = false;
+                sec.querySelectorAll('.col-lg-4, .col-md-6').forEach(function(col) {
+                    if (col.style.display !== 'none') hasVisible = true;
+                });
+                sec.style.display = hasVisible ? '' : 'none';
+            });
+
+            // Update results count
+            if (matchCount > 0) {
+                resultsCount.textContent = matchCount + (matchCount === 1 ? ' producto encontrado' : ' productos encontrados');
+                resultsCount.style.display = 'block';
+                noResults.style.display = 'none';
+            } else {
+                resultsCount.style.display = 'none';
+                noResults.style.display = 'block';
+            }
+        }
+
+        function clearSearch() {
+            searchInput.value = '';
+            performSearch();
+            searchInput.focus();
+        }
+
+        searchInput.addEventListener('input', performSearch);
+        clearBtn.addEventListener('click', clearSearch);
+        if (clearSearchBtn) clearSearchBtn.addEventListener('click', clearSearch);
+    })();
+    </script>
 </body>
 </html>
 
