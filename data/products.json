@@ -4,14 +4,20 @@
     "code": "250",
     "name": "SUPERVIN 20 AÑOS",
     "category": "vinilicas-alto-desempeno",
-    "price": 1111.00,
+    "price": 1111,
     "image": "/images/SUPERVIN.webp",
     "description": "Larga duración y excelente resistencia.",
     "stock": 50,
     "featured": true,
     "sizes": [
-      {"size": "4 L", "price": 1111.00},
-      {"size": "19 L", "price": 4632.00}
+      {
+        "size": "4 L",
+        "price": 1111
+      },
+      {
+        "size": "19 L",
+        "price": 4632
+      }
     ],
     "specifications": {
       "durability": "20 años",
@@ -24,14 +30,20 @@
     "code": "20200",
     "name": "CERO SUPERVIN 100% ACRÍLICA ANTIMICROBIAL PERMANENTE",
     "category": "cero-antimicrobial-permanente",
-    "price": 1058.00,
-    "image": "/images/SUPERVIN.webp",
+    "price": 1058,
+    "image": "/images/ANTIMICROBIAL.webp",
     "description": "Pintura de acabado satinado, cero tóxica, cumple estándares INIFED.",
     "stock": 35,
     "featured": true,
     "sizes": [
-      {"size": "4 L", "price": 1058.00},
-      {"size": "19 L", "price": 4260.00}
+      {
+        "size": "4 L",
+        "price": 1058
+      },
+      {
+        "size": "19 L",
+        "price": 4260
+      }
     ],
     "specifications": {
       "finish": "Satinado",
@@ -44,14 +56,20 @@
     "code": "260",
     "name": "SUPERVIN ONLY ONE",
     "category": "vinilicas-alto-desempeno",
-    "price": 868.00,
+    "price": 868,
     "image": "/images/SUPERVIN.webp",
     "description": "Pintura con un alto poder cubriente a una mano.",
     "stock": 40,
     "featured": true,
     "sizes": [
-      {"size": "4 L", "price": 868.00},
-      {"size": "19 L", "price": 3592.00}
+      {
+        "size": "4 L",
+        "price": 868
+      },
+      {
+        "size": "19 L",
+        "price": 3592
+      }
     ],
     "specifications": {
       "coverage": "Alto poder cubriente",
@@ -64,13 +82,19 @@
     "code": "270",
     "name": "SUPERVIN ECOLÓGICA",
     "category": "vinilicas-alto-desempeno",
-    "price": 742.00,
+    "price": 742,
     "image": "/images/SUPERVIN.webp",
     "description": "Bajo olor amigable con el medioambiente, libre de VOC.",
     "stock": 45,
     "sizes": [
-      {"size": "4 L", "price": 742.00},
-      {"size": "19 L", "price": 3341.00}
+      {
+        "size": "4 L",
+        "price": 742
+      },
+      {
+        "size": "19 L",
+        "price": 3341
+      }
     ],
     "specifications": {
       "eco": "Libre de VOC",
@@ -83,13 +107,19 @@
     "code": "1500A",
     "name": "VIP 100% ACRÍLICA",
     "category": "vinilicas-alto-desempeno",
-    "price": 597.00,
+    "price": 597,
     "image": "/images/VIP.webp",
     "description": "Mate de Gran Poder Cubriente, calidad 10 años.",
     "stock": 60,
     "sizes": [
-      {"size": "4 L", "price": 597.00},
-      {"size": "19 L", "price": 2405.00}
+      {
+        "size": "4 L",
+        "price": 597
+      },
+      {
+        "size": "19 L",
+        "price": 2405
+      }
     ],
     "specifications": {
       "durability": "10 años",
@@ -102,15 +132,24 @@
     "code": "TULB",
     "name": "ULTRA LUMINOSA (COLOR BLANCO)",
     "category": "vinilicas",
-    "price": 225.00,
+    "price": 225,
     "image": "/images/VINET.webp",
     "description": "Exteriores e interiores, acabado semi plástico, calidad 7 años.",
     "stock": 70,
     "featured": true,
     "sizes": [
-      {"size": "500 ML", "price": 225.00},
-      {"size": "1 L", "price": 785.00},
-      {"size": "4 L", "price": 2988.00}
+      {
+        "size": "500 ML",
+        "price": 225
+      },
+      {
+        "size": "1 L",
+        "price": 785
+      },
+      {
+        "size": "4 L",
+        "price": 2988
+      }
     ],
     "specifications": {
       "durability": "7 años",
@@ -118,7 +157,10 @@
       "use": "Interiores y Exteriores"
     },
     "colors": [
-      {"code": "3000", "name": "Blanco"}
+      {
+        "code": "3000",
+        "name": "Blanco"
+      }
     ]
   },
   {
@@ -126,17 +168,32 @@
     "code": "200",
     "name": "SUPERVIN ANTIBACTERIAL",
     "category": "vinilicas",
-    "price": 205.00,
+    "price": 205,
     "image": "/images/SUPERVIN.webp",
     "description": "100% lavable, exteriores e interiores, acabado satinado, calidad 12 años.",
     "stock": 80,
     "featured": true,
     "sizes": [
-      {"size": "500 ML", "price": 109.00},
-      {"size": "1 L", "price": 205.00},
-      {"size": "4 L", "price": 722.00},
-      {"size": "19 L", "price": 2950.00},
-      {"size": "200 L", "price": 32761.00}
+      {
+        "size": "500 ML",
+        "price": 109
+      },
+      {
+        "size": "1 L",
+        "price": 205
+      },
+      {
+        "size": "4 L",
+        "price": 722
+      },
+      {
+        "size": "19 L",
+        "price": 2950
+      },
+      {
+        "size": "200 L",
+        "price": 32761
+      }
     ],
     "specifications": {
       "durability": "12 años",
@@ -145,21 +202,66 @@
       "special": "Antibacterial"
     },
     "colors": [
-      {"code": "210", "name": "Blanco Ostión"},
-      {"code": "208", "name": "Aperlado"},
-      {"code": "214", "name": "Champaña"},
-      {"code": "213", "name": "Flán"},
-      {"code": "229", "name": "Amarillo Octubre"},
-      {"code": "202", "name": "Turrón"},
-      {"code": "231", "name": "Mandarina"},
-      {"code": "221", "name": "Tangerina"},
-      {"code": "225", "name": "Rojo Granada"},
-      {"code": "217", "name": "Rojo Óxido"},
-      {"code": "222", "name": "Rosa Mexicano"},
-      {"code": "247", "name": "Azul Pizarra"},
-      {"code": "238", "name": "Azul Colonial"},
-      {"code": "226", "name": "Hierba Buena"},
-      {"code": "3000", "name": "Blanco (disponible)"}
+      {
+        "code": "210",
+        "name": "Blanco Ostión"
+      },
+      {
+        "code": "208",
+        "name": "Aperlado"
+      },
+      {
+        "code": "214",
+        "name": "Champaña"
+      },
+      {
+        "code": "213",
+        "name": "Flán"
+      },
+      {
+        "code": "229",
+        "name": "Amarillo Octubre"
+      },
+      {
+        "code": "202",
+        "name": "Turrón"
+      },
+      {
+        "code": "231",
+        "name": "Mandarina"
+      },
+      {
+        "code": "221",
+        "name": "Tangerina"
+      },
+      {
+        "code": "225",
+        "name": "Rojo Granada"
+      },
+      {
+        "code": "217",
+        "name": "Rojo Óxido"
+      },
+      {
+        "code": "222",
+        "name": "Rosa Mexicano"
+      },
+      {
+        "code": "247",
+        "name": "Azul Pizarra"
+      },
+      {
+        "code": "238",
+        "name": "Azul Colonial"
+      },
+      {
+        "code": "226",
+        "name": "Hierba Buena"
+      },
+      {
+        "code": "3000",
+        "name": "Blanco (disponible)"
+      }
     ]
   },
   {
@@ -167,16 +269,24 @@
     "code": "100",
     "name": "ACAPULCO",
     "category": "vinilicas",
-    "price": 150.00,
+    "price": 150,
     "image": "/images/ACAPULCO.webp",
     "description": "100% lavable, exteriores e interiores, acabado mate, calidad 9 años.",
     "stock": 90,
     "featured": true,
     "sizes": [
-      {"size": "500 ML", "price": 150.00},
-      {"size": "1 L", "price": 540.00},
-      {"size": "4 L", "price": 2350.00},
-      {"size": "19 L", "price": 26098.00}
+      {
+        "size": "1 L",
+        "price": 540
+      },
+      {
+        "size": "4 L",
+        "price": 2350
+      },
+      {
+        "size": "19 L",
+        "price": 26098
+      }
     ],
     "specifications": {
       "durability": "9 años",
@@ -185,26 +295,86 @@
       "use": "Interiores y Exteriores"
     },
     "colors": [
-      {"code": "123", "name": "Blanco Ostión"},
-      {"code": "129", "name": "Champaña"},
-      {"code": "141", "name": "Beige"},
-      {"code": "167", "name": "Perla"},
-      {"code": "107", "name": "Crema Imperial"},
-      {"code": "113", "name": "Verde Olivo +"},
-      {"code": "130", "name": "Amarillo Otoño"},
-      {"code": "135", "name": "Amarillo Sol"},
-      {"code": "157", "name": "Amarillo Florentino"},
-      {"code": "122", "name": "Calabaza"},
-      {"code": "125", "name": "Rojo Cereza"},
-      {"code": "145", "name": "Amarillo Óxido"},
-      {"code": "116", "name": "Pale de Rosa"},
-      {"code": "128", "name": "Tabaco"},
-      {"code": "143", "name": "Gris Tornado"},
-      {"code": "139", "name": "Azul Acapulco"},
-      {"code": "120", "name": "Ladrillo"},
-      {"code": "162", "name": "Azul Nórdico"},
-      {"code": "112", "name": "Verde Pino"},
-      {"code": "3000", "name": "Blanco (disponible)"}
+      {
+        "code": "123",
+        "name": "Blanco Ostión"
+      },
+      {
+        "code": "129",
+        "name": "Champaña"
+      },
+      {
+        "code": "141",
+        "name": "Beige"
+      },
+      {
+        "code": "167",
+        "name": "Perla"
+      },
+      {
+        "code": "107",
+        "name": "Crema Imperial"
+      },
+      {
+        "code": "113",
+        "name": "Verde Olivo +"
+      },
+      {
+        "code": "130",
+        "name": "Amarillo Otoño"
+      },
+      {
+        "code": "135",
+        "name": "Amarillo Sol"
+      },
+      {
+        "code": "157",
+        "name": "Amarillo Florentino"
+      },
+      {
+        "code": "122",
+        "name": "Calabaza"
+      },
+      {
+        "code": "125",
+        "name": "Rojo Cereza"
+      },
+      {
+        "code": "145",
+        "name": "Amarillo Óxido"
+      },
+      {
+        "code": "116",
+        "name": "Pale de Rosa"
+      },
+      {
+        "code": "128",
+        "name": "Tabaco"
+      },
+      {
+        "code": "143",
+        "name": "Gris Tornado"
+      },
+      {
+        "code": "139",
+        "name": "Azul Acapulco"
+      },
+      {
+        "code": "120",
+        "name": "Ladrillo"
+      },
+      {
+        "code": "162",
+        "name": "Azul Nórdico"
+      },
+      {
+        "code": "112",
+        "name": "Verde Pino"
+      },
+      {
+        "code": "3000",
+        "name": "Blanco (disponible)"
+      }
     ]
   },
   {
@@ -212,13 +382,19 @@
     "code": "100S",
     "name": "ACAPULCO SATINADA",
     "category": "vinilicas",
-    "price": 540.00,
+    "price": 540,
     "image": "/images/ACAPULCO.webp",
     "description": "100% lavable, exteriores e interiores, acabado satinado, calidad 9 años.",
     "stock": 75,
     "sizes": [
-      {"size": "1 L", "price": 540.00},
-      {"size": "4 L", "price": 2350.00}
+      {
+        "size": "1 L",
+        "price": 540
+      },
+      {
+        "size": "19 L",
+        "price": 2350
+      }
     ],
     "specifications": {
       "durability": "9 años",
@@ -227,17 +403,10 @@
       "use": "Interiores y Exteriores"
     },
     "colors": [
-      {"code": "123", "name": "Blanco Ostión"},
-      {"code": "129", "name": "Champaña"},
-      {"code": "141", "name": "Beige"},
-      {"code": "167", "name": "Perla"},
-      {"code": "107", "name": "Crema Imperial"},
-      {"code": "113", "name": "Verde Olivo +"},
-      {"code": "130", "name": "Amarillo Otoño"},
-      {"code": "135", "name": "Amarillo Sol"},
-      {"code": "122", "name": "Calabaza"},
-      {"code": "125", "name": "Rojo Cereza"},
-      {"code": "3000", "name": "Blanco (disponible)"}
+      {
+        "code": "3000",
+        "name": "Blanco"
+      }
     ]
   },
   {
@@ -245,16 +414,23 @@
     "code": "500",
     "name": "OMAR",
     "category": "vinilicas",
-    "price": 100.00,
+    "price": 100,
     "image": "/images/OMAR.webp",
     "description": "Para uso profesional, comercial y doméstico. Exteriores e interiores, acabado mate, calidad 5 años.",
     "stock": 100,
     "sizes": [
-      {"size": "500 ML", "price": 59.00},
-      {"size": "1 L", "price": 100.00},
-      {"size": "4 L", "price": 350.00},
-      {"size": "19 L", "price": 1583.00},
-      {"size": "200 L", "price": 17580.00}
+      {
+        "size": "1 L",
+        "price": 100
+      },
+      {
+        "size": "4 L",
+        "price": 350
+      },
+      {
+        "size": "19 L",
+        "price": 1583
+      }
     ],
     "specifications": {
       "durability": "5 años",
@@ -262,49 +438,139 @@
       "use": "Profesional, comercial y doméstico"
     },
     "colors": [
-      {"code": "502", "name": "Blanco Ostión"},
-      {"code": "505", "name": "Ostión"},
-      {"code": "513", "name": "Pistacho"},
-      {"code": "536", "name": "Lima +"},
-      {"code": "528", "name": "Verde Pintumex"},
-      {"code": "510", "name": "Verde Jungla"},
-      {"code": "538", "name": "Rosa Medusa"},
-      {"code": "527", "name": "Capuccino"},
-      {"code": "524", "name": "Hacienda"},
-      {"code": "543", "name": "Fango"},
-      {"code": "515", "name": "Arenilla"},
-      {"code": "529", "name": "Orange"},
-      {"code": "525", "name": "Halloween"},
-      {"code": "531", "name": "Rojo Pasión"},
-      {"code": "521", "name": "Rojo Pasión"},
-      {"code": "532", "name": "Rosa Mexicano +"},
-      {"code": "512", "name": "Orquídea"},
-      {"code": "533", "name": "Uva"},
-      {"code": "537", "name": "Océano"},
-      {"code": "541", "name": "Capri"},
-      {"code": "520", "name": "Azul Navy"},
-      {"code": "540", "name": "Azul Artístico"},
-      {"code": "539", "name": "Gris Polar"},
-      {"code": "544", "name": "Gris Tormenta"},
-      {"code": "522", "name": "Negro"},
-      {"code": "3000", "name": "Blanco (disponible)"}
+      {
+        "code": "502",
+        "name": "Blanco Ostión"
+      },
+      {
+        "code": "505",
+        "name": "Ostión"
+      },
+      {
+        "code": "513",
+        "name": "Pistacho"
+      },
+      {
+        "code": "536",
+        "name": "Lima +"
+      },
+      {
+        "code": "528",
+        "name": "Verde Pintumex"
+      },
+      {
+        "code": "510",
+        "name": "Verde Jungla"
+      },
+      {
+        "code": "538",
+        "name": "Rosa Medusa"
+      },
+      {
+        "code": "527",
+        "name": "Capuccino"
+      },
+      {
+        "code": "524",
+        "name": "Hacienda"
+      },
+      {
+        "code": "543",
+        "name": "Fango"
+      },
+      {
+        "code": "515",
+        "name": "Arenilla"
+      },
+      {
+        "code": "529",
+        "name": "Orange"
+      },
+      {
+        "code": "525",
+        "name": "Halloween"
+      },
+      {
+        "code": "531",
+        "name": "Rojo Pasión"
+      },
+      {
+        "code": "521",
+        "name": "Rojo Pasión"
+      },
+      {
+        "code": "532",
+        "name": "Rosa Mexicano +"
+      },
+      {
+        "code": "512",
+        "name": "Orquídea"
+      },
+      {
+        "code": "533",
+        "name": "Uva"
+      },
+      {
+        "code": "537",
+        "name": "Océano"
+      },
+      {
+        "code": "541",
+        "name": "Capri"
+      },
+      {
+        "code": "520",
+        "name": "Azul Navy"
+      },
+      {
+        "code": "540",
+        "name": "Azul Artístico"
+      },
+      {
+        "code": "539",
+        "name": "Gris Polar"
+      },
+      {
+        "code": "544",
+        "name": "Gris Tormenta"
+      },
+      {
+        "code": "522",
+        "name": "Negro"
+      },
+      {
+        "code": "3000",
+        "name": "Blanco (disponible)"
+      }
     ]
   },
   {
     "id": 11,
     "code": "001",
-    "name": "SELLAVIN 7X1",
+    "name": "SELLAVIN 5X1",
     "category": "selladores",
-    "price": 104.00,
+    "price": 104,
     "image": "/images/SELLAVIN.webp",
     "description": "Sellador vinílico transparente para diferentes sustratos.",
     "stock": 85,
     "featured": true,
     "sizes": [
-      {"size": "1 L", "price": 104.00},
-      {"size": "4 L", "price": 335.00},
-      {"size": "19 L", "price": 1425.00},
-      {"size": "200 L", "price": 15825.00}
+      {
+        "size": "1 L",
+        "price": 104
+      },
+      {
+        "size": "4 L",
+        "price": 335
+      },
+      {
+        "size": "19 L",
+        "price": 1425
+      },
+      {
+        "size": "200 L",
+        "price": 15825
+      }
     ],
     "specifications": {
       "type": "Sellador vinílico",
@@ -317,14 +583,23 @@
     "code": "002",
     "name": "SELLAVIN ANTIALCALI-SALITRE",
     "category": "selladores",
-    "price": 138.00,
+    "price": 138,
     "image": "/images/SELLAV.webp",
     "description": "Sellador reforzado resistente a superficies alcalinas.",
     "stock": 60,
     "sizes": [
-      {"size": "1 L", "price": 138.00},
-      {"size": "4 L", "price": 473.00},
-      {"size": "19 L", "price": 2100.00}
+      {
+        "size": "1 L",
+        "price": 138
+      },
+      {
+        "size": "4 L",
+        "price": 473
+      },
+      {
+        "size": "19 L",
+        "price": 2100
+      }
     ],
     "specifications": {
       "type": "Sellador reforzado",
@@ -333,105 +608,359 @@
     }
   },
   {
+    "id": 111,
+    "code": "004",
+    "name": "SELLADOR ENTINTABLE",
+    "category": "selladores",
+    "price": 104,
+    "image": "/images/SELLAVIN.webp",
+    "description": "Sellador vinílico entintable, compatible con sistemas de color para interiores y exteriores.",
+    "stock": 60,
+    "sizes": [
+      {
+        "size": "1 L",
+        "price": 104
+      },
+      {
+        "size": "4 L",
+        "price": 335
+      },
+      {
+        "size": "19 L",
+        "price": 1425
+      }
+    ],
+    "specifications": {
+      "type": "Sellador entintable",
+      "use": "Interiores y Exteriores"
+    }
+  },
+  {
+    "id": 112,
+    "code": "006",
+    "name": "SELLADOR TRANSPARENTE",
+    "category": "selladores",
+    "price": 104,
+    "image": "/images/SELLAVIN.webp",
+    "description": "Sellador vinílico transparente de alto rendimiento para diferentes sustratos.",
+    "stock": 60,
+    "sizes": [
+      {
+        "size": "1 L",
+        "price": 104
+      },
+      {
+        "size": "4 L",
+        "price": 335
+      },
+      {
+        "size": "19 L",
+        "price": 1425
+      }
+    ],
+    "specifications": {
+      "type": "Sellador",
+      "transparency": "Transparente",
+      "use": "Diferentes sustratos"
+    }
+  },
+  {
+    "id": 113,
+    "code": "RVA",
+    "name": "RESIMEX RVA",
+    "category": "selladores",
+    "price": 138,
+    "image": "/images/SELLAV.webp",
+    "description": "Sellador acrílico para preparación y sellado de superficies porosas.",
+    "stock": 60,
+    "sizes": [
+      {
+        "size": "1 L",
+        "price": 138
+      },
+      {
+        "size": "4 L",
+        "price": 473
+      },
+      {
+        "size": "19 L",
+        "price": 2100
+      }
+    ],
+    "specifications": {
+      "type": "Sellador acrílico",
+      "use": "Preparación de superficies"
+    }
+  },
+  {
+    "id": 114,
+    "code": "600-REF",
+    "name": "SELLADOR CEMENTOSO 600-REF",
+    "category": "selladores",
+    "price": 130,
+    "image": "/images/SELLACEME.webp",
+    "description": "Sellador cementoso de acabado blanco para reparar fisuras y grietas.",
+    "stock": 60,
+    "sizes": [
+      {
+        "size": "600 G",
+        "price": 130
+      }
+    ],
+    "specifications": {
+      "type": "Cementoso",
+      "use": "Fisuras y grietas"
+    }
+  },
+  {
     "id": 13,
     "code": "812-813IF",
     "name": "IMPERFIBRA 7 AÑOS",
     "category": "impermeabilizantes-fibratados",
-    "price": 525.00,
+    "price": 525,
     "image": "/images/IMPER.webp",
     "description": "Impermeabilizante acrílico con tecnología fibratada mejorada.",
     "stock": 50,
     "featured": true,
     "sizes": [
-      {"size": "4 L", "price": 525.00},
-      {"size": "18 L", "price": 2338.00},
-      {"size": "200 L", "price": 27407.00}
+      {
+        "size": "4 L",
+        "price": 525
+      },
+      {
+        "size": "18 L",
+        "price": 2338
+      },
+      {
+        "size": "200 L",
+        "price": 27407
+      }
     ],
     "specifications": {
       "durability": "7 años",
       "technology": "Fibratada mejorada",
       "colors": "Terracota, Blanco"
-    }
+    },
+    "colors": [
+      {
+        "code": "Blanco",
+        "name": "Blanco"
+      },
+      {
+        "code": "Terracota",
+        "name": "Terracota"
+      }
+    ]
   },
   {
     "id": 14,
     "code": "802-803IF",
     "name": "IMPERFIBRA 10 AÑOS",
     "category": "impermeabilizantes-fibratados",
-    "price": 2558.00,
+    "price": 2558,
     "image": "/images/IMPER.webp",
     "description": "Impermeabilizante acrílico con tecnología fibratada mejorada de máxima duración.",
     "stock": 40,
     "featured": true,
     "sizes": [
-      {"size": "18 L", "price": 2558.00}
+      {
+        "size": "18 L",
+        "price": 2558
+      }
     ],
     "specifications": {
       "durability": "10 años",
       "technology": "Fibratada mejorada",
       "colors": "Terracota, Blanco"
-    }
+    },
+    "colors": [
+      {
+        "code": "Blanco",
+        "name": "Blanco"
+      },
+      {
+        "code": "Terracota",
+        "name": "Terracota"
+      }
+    ]
   },
   {
     "id": 15,
     "code": "600SR",
     "name": "ESMALUX SR ACABADO BRILLANTE",
     "category": "esmaltes-secado-rapido",
-    "price": 263.00,
+    "price": 263,
     "image": "/images/ESMALUXSR.webp",
     "description": "Esmalte de secado rápido ideal para exteriores.",
     "stock": 70,
     "featured": true,
     "sizes": [
-      {"size": "250 ML", "price": 90.00},
-      {"size": "500 ML", "price": 151.00},
-      {"size": "1 L", "price": 263.00},
-      {"size": "4 L", "price": 909.00},
-      {"size": "19 L", "price": 4232.00},
-      {"size": "200 L", "price": 46998.00}
+      {
+        "size": "250 ML",
+        "price": 90
+      },
+      {
+        "size": "500 ML",
+        "price": 151
+      },
+      {
+        "size": "1 L",
+        "price": 263
+      },
+      {
+        "size": "4 L",
+        "price": 909
+      },
+      {
+        "size": "19 L",
+        "price": 4232
+      },
+      {
+        "size": "200 L",
+        "price": 46998
+      }
     ],
     "specifications": {
       "drying": "Secado rápido",
       "finish": "Brillante",
       "use": "Ideal para exteriores"
-    }
+    },
+    "colors": [
+      {
+        "code": "600-BL",
+        "name": "Blanco"
+      },
+      {
+        "code": "600-NG",
+        "name": "Negro"
+      },
+      {
+        "code": "600-GR",
+        "name": "Gris Plata"
+      },
+      {
+        "code": "600-RT",
+        "name": "Rojo Tráfico"
+      },
+      {
+        "code": "600-AM",
+        "name": "Amarillo"
+      },
+      {
+        "code": "600-VP",
+        "name": "Verde Pasto"
+      },
+      {
+        "code": "600-AC",
+        "name": "Azul Cielo"
+      },
+      {
+        "code": "600-AM2",
+        "name": "Azul Marino"
+      },
+      {
+        "code": "600-CA",
+        "name": "Café"
+      },
+      {
+        "code": "600-RO",
+        "name": "Rojo Óxido"
+      },
+      {
+        "code": "600-NA",
+        "name": "Naranja"
+      },
+      {
+        "code": "600-CR",
+        "name": "Crema"
+      },
+      {
+        "code": "600-VB",
+        "name": "Verde Bandera"
+      },
+      {
+        "code": "600-RM",
+        "name": "Rosa Mexicano"
+      },
+      {
+        "code": "600-AP",
+        "name": "Amarillo Canario"
+      }
+    ]
   },
   {
     "id": 16,
     "code": "1900",
     "name": "BIO ESMALUX ECOLÓGICO",
     "category": "esmalte-base-agua",
-    "price": 223.00,
+    "price": 223,
     "image": "/images/BIOESMALUX.webp",
     "description": "Esmalte base agua sin olor ideal para espacios cerrados.",
     "stock": 55,
     "sizes": [
-      {"size": "250 ML", "price": 76.00},
-      {"size": "500 ML", "price": 131.00},
-      {"size": "1 L", "price": 223.00},
-      {"size": "4 L", "price": 790.00},
-      {"size": "19 L", "price": 3465.00}
+      {
+        "size": "250 ML",
+        "price": 76
+      },
+      {
+        "size": "500 ML",
+        "price": 131
+      },
+      {
+        "size": "1 L",
+        "price": 223
+      },
+      {
+        "size": "4 L",
+        "price": 790
+      },
+      {
+        "size": "19 L",
+        "price": 3465
+      }
     ],
     "specifications": {
       "base": "Agua",
       "odor": "Sin olor",
       "use": "Cocinas, baños, espacios cerrados"
-    }
+    },
+    "colors": [
+      {
+        "code": "Blanco",
+        "name": "Blanco"
+      },
+      {
+        "code": "Champaña",
+        "name": "Champaña"
+      }
+    ]
   },
   {
     "id": 17,
     "code": "1401",
     "name": "SPAR SR TRANSPARENTE",
     "category": "productos-para-madera",
-    "price": 244.00,
-    "image": "/images/SPAR.webp",
+    "price": 244,
+    "image": "/images/SPARSR.webp",
     "description": "Barniz alquidálico de alto brillo para madera secado rápido.",
     "stock": 45,
     "sizes": [
-      {"size": "250 ML", "price": 90.00},
-      {"size": "500 ML", "price": 146.00},
-      {"size": "1 L", "price": 244.00},
-      {"size": "4 L", "price": 779.00}
+      {
+        "size": "250 ML",
+        "price": 90
+      },
+      {
+        "size": "500 ML",
+        "price": 146
+      },
+      {
+        "size": "1 L",
+        "price": 244
+      },
+      {
+        "size": "4 L",
+        "price": 779
+      }
     ],
     "specifications": {
       "type": "Barniz alquidálico",
@@ -444,15 +973,27 @@
     "code": "890",
     "name": "CEMENTO PLÁSTICO",
     "category": "impermeabilizantes-fibratados",
-    "price": 140.00,
+    "price": 140,
     "image": "/images/CEMENTO_PLASTICO.webp",
     "description": "Reparador fibratado para grietas y fisuras. (Paso 1)",
     "stock": 65,
     "sizes": [
-      {"size": "1 L", "price": 140.00},
-      {"size": "4 L", "price": 450.00},
-      {"size": "18 L", "price": 1774.00},
-      {"size": "200 L", "price": 20514.00}
+      {
+        "size": "1 L",
+        "price": 140
+      },
+      {
+        "size": "4 L",
+        "price": 450
+      },
+      {
+        "size": "18 L",
+        "price": 1774
+      },
+      {
+        "size": "200 L",
+        "price": 20514
+      }
     ],
     "specifications": {
       "use": "Reparador de grietas",
@@ -465,14 +1006,23 @@
     "code": "870",
     "name": "SELLADOR ACRÍLICO",
     "category": "impermeabilizantes-fibratados",
-    "price": 91.00,
+    "price": 91,
     "image": "/images/SELLACRILICO.webp",
     "description": "Sellador concentrado para sistema de impermeabilización. (Paso 2)",
     "stock": 70,
     "sizes": [
-      {"size": "1 L", "price": 91.00},
-      {"size": "4 L", "price": 315.00},
-      {"size": "19 L", "price": 1077.00}
+      {
+        "size": "1 L",
+        "price": 91
+      },
+      {
+        "size": "4 L",
+        "price": 315
+      },
+      {
+        "size": "19 L",
+        "price": 1077
+      }
     ],
     "specifications": {
       "type": "Sellador concentrado",
@@ -485,15 +1035,27 @@
     "code": "20700",
     "name": "SANITIZANTE",
     "category": "sanitizante-de-superficies",
-    "price": 51.00,
-    "image": "/images/LOGO2.png",
+    "price": 51,
+    "image": "/images/SANITIZANTE.webp",
     "description": "Saneamiento de superficies y ambientes con aroma fresco.",
     "stock": 100,
     "sizes": [
-      {"size": "60 ML", "price": 51.00},
-      {"size": "250 ML", "price": 73.00},
-      {"size": "1 L", "price": 145.00},
-      {"size": "4 L", "price": 340.00}
+      {
+        "size": "60 ML",
+        "price": 51
+      },
+      {
+        "size": "250 ML",
+        "price": 73
+      },
+      {
+        "size": "1 L",
+        "price": 145
+      },
+      {
+        "size": "4 L",
+        "price": 340
+      }
     ],
     "specifications": {
       "use": "Superficies y ambientes",
@@ -506,31 +1068,15 @@
     "code": "280",
     "name": "SUPERVIN 100% ACRILICA",
     "category": "vinilicas-alto-desempeno",
-    "price": 3342.00,
+    "price": 3342,
     "image": "/images/SUPERVIN.webp",
     "description": "Cumple estandares INIFED.",
     "stock": 40,
     "sizes": [
-      {"size": "19 L", "price": 3342.00}
-    ],
-    "specifications": {
-      "composition": "100% Acrilica",
-      "use": "Interiores y Exteriores"
-    }
-  },
-  {
-    "id": 22,
-    "code": "TIPM1",
-    "name": "IMPER PARA MUROS 3 EN 1",
-    "category": "vinilicas",
-    "price": 163.00,
-    "image": "/images/IMPER.webp",
-    "description": "Pintura 100% acrilica que sella, pinta e impermeabiliza.",
-    "stock": 40,
-    "sizes": [
-      {"size": "1 L", "price": 163.00},
-      {"size": "4 L", "price": 597.00},
-      {"size": "19 L", "price": 2630.00}
+      {
+        "size": "19 L",
+        "price": 3342
+      }
     ],
     "specifications": {
       "composition": "100% Acrilica",
@@ -542,21 +1088,33 @@
     "code": "1500",
     "name": "VIP (UNICAMENTE COLOR BLANCO)",
     "category": "vinilicas",
-    "price": 542.00,
+    "price": 542,
     "image": "/images/VIP.webp",
     "description": "Acabado semi plastico, calidad 7 anos.",
     "stock": 40,
     "sizes": [
-      {"size": "4 L", "price": 542.00},
-      {"size": "19 L", "price": 2186.00},
-      {"size": "200 L", "price": 24277.00}
+      {
+        "size": "4 L",
+        "price": 542
+      },
+      {
+        "size": "19 L",
+        "price": 2186
+      },
+      {
+        "size": "200 L",
+        "price": 24277
+      }
     ],
     "specifications": {
       "finish": "Semi plastico",
       "use": "Interiores y Exteriores"
     },
     "colors": [
-      {"code": "3000", "name": "Blanco"}
+      {
+        "code": "3000",
+        "name": "Blanco"
+      }
     ]
   },
   {
@@ -564,41 +1122,109 @@
     "code": "700",
     "name": "KOLORTEX",
     "category": "vinilicas",
-    "price": 297.00,
+    "price": 297,
     "image": "/images/KOLORTEX.webp",
     "description": "La mejor relacion costo beneficio, calidad 3 anos.",
     "stock": 40,
     "sizes": [
-      {"size": "4 L", "price": 297.00},
-      {"size": "19 L", "price": 1260.00},
-      {"size": "200 L", "price": 13993.00}
+      {
+        "size": "4 L",
+        "price": 297
+      },
+      {
+        "size": "19 L",
+        "price": 1260
+      }
     ],
     "specifications": {
       "finish": "Mate",
       "use": "Interiores y Exteriores"
     },
     "colors": [
-      {"code": "702", "name": "Champaña"},
-      {"code": "701", "name": "Blanco Ostión"},
-      {"code": "714", "name": "Gris Niebla"},
-      {"code": "724", "name": "Aquamarina"},
-      {"code": "713", "name": "Almendra"},
-      {"code": "706", "name": "Turquesa"},
-      {"code": "704", "name": "Marfil"},
-      {"code": "725", "name": "Rosa Mexicano +"},
-      {"code": "722", "name": "Mandarina"},
-      {"code": "720", "name": "Amarillo Óxido"},
-      {"code": "716", "name": "Amarillo Sol"},
-      {"code": "718", "name": "Rojo Fuego"},
-      {"code": "715", "name": "Rosa Mexicano +"},
-      {"code": "707", "name": "Azul Mediterráneo"},
-      {"code": "717", "name": "Azul Océano"},
-      {"code": "719", "name": "Verde Campestre"},
-      {"code": "710", "name": "Verde Manzana +"},
-      {"code": "712", "name": "Rojo Teja"},
-      {"code": "711", "name": "Rojo Teja"},
-      {"code": "723", "name": "Naranja Atardecer"},
-      {"code": "3000", "name": "Blanco (disponible)"}
+      {
+        "code": "702",
+        "name": "Champaña"
+      },
+      {
+        "code": "701",
+        "name": "Blanco Ostión"
+      },
+      {
+        "code": "714",
+        "name": "Gris Niebla"
+      },
+      {
+        "code": "724",
+        "name": "Aquamarina"
+      },
+      {
+        "code": "713",
+        "name": "Almendra"
+      },
+      {
+        "code": "706",
+        "name": "Turquesa"
+      },
+      {
+        "code": "704",
+        "name": "Marfil"
+      },
+      {
+        "code": "725",
+        "name": "Rosa Mexicano +"
+      },
+      {
+        "code": "722",
+        "name": "Mandarina"
+      },
+      {
+        "code": "720",
+        "name": "Amarillo Óxido"
+      },
+      {
+        "code": "716",
+        "name": "Amarillo Sol"
+      },
+      {
+        "code": "718",
+        "name": "Rojo Fuego"
+      },
+      {
+        "code": "715",
+        "name": "Rosa Mexicano +"
+      },
+      {
+        "code": "707",
+        "name": "Azul Mediterráneo"
+      },
+      {
+        "code": "717",
+        "name": "Azul Océano"
+      },
+      {
+        "code": "719",
+        "name": "Verde Campestre"
+      },
+      {
+        "code": "710",
+        "name": "Verde Manzana +"
+      },
+      {
+        "code": "712",
+        "name": "Rojo Teja"
+      },
+      {
+        "code": "711",
+        "name": "Rojo Teja"
+      },
+      {
+        "code": "723",
+        "name": "Naranja Atardecer"
+      },
+      {
+        "code": "3000",
+        "name": "Blanco (disponible)"
+      }
     ]
   },
   {
@@ -606,20 +1232,29 @@
     "code": "4000",
     "name": "CLASIKA (UNICAMENTE COLOR BLANCO)",
     "category": "vinilicas",
-    "price": 224.00,
+    "price": 224,
     "image": "/images/CLASIKA.webp",
     "description": "Buena duracion y poder cubriente.",
     "stock": 40,
     "sizes": [
-      {"size": "4 L", "price": 224.00},
-      {"size": "19 L", "price": 970.00}
+      {
+        "size": "4 L",
+        "price": 224
+      },
+      {
+        "size": "19 L",
+        "price": 970
+      }
     ],
     "specifications": {
       "finish": "Mate",
       "use": "Interiores y Exteriores"
     },
     "colors": [
-      {"code": "3000", "name": "Blanco"}
+      {
+        "code": "3000",
+        "name": "Blanco"
+      }
     ]
   },
   {
@@ -627,35 +1262,89 @@
     "code": "3000",
     "name": "VINET",
     "category": "vinilicas",
-    "price": 213.00,
+    "price": 213,
     "image": "/images/VINET.webp",
     "description": "No lavable, interiores, acabado mate, calidad 1 ano.",
     "stock": 40,
     "sizes": [
-      {"size": "4 L", "price": 213.00},
-      {"size": "19 L", "price": 881.00},
-      {"size": "200 L", "price": 9784.00}
+      {
+        "size": "4 L",
+        "price": 213
+      },
+      {
+        "size": "19 L",
+        "price": 881
+      },
+      {
+        "size": "200 L",
+        "price": 9784
+      }
     ],
     "specifications": {
       "finish": "Mate",
       "use": "Interiores"
     },
     "colors": [
-      {"code": "3013", "name": "Amarillo Trigo"},
-      {"code": "3016", "name": "Blanco Ostión"},
-      {"code": "3018", "name": "Verde Limón"},
-      {"code": "3017", "name": "Amarillo Inglés"},
-      {"code": "3002", "name": "Turquesa"},
-      {"code": "3020", "name": "Azul Mónaco"},
-      {"code": "3006", "name": "Lavanda"},
-      {"code": "3023", "name": "Gris"},
-      {"code": "3004", "name": "Crema Casino"},
-      {"code": "3021", "name": "Capuccino"},
-      {"code": "3008", "name": "Azul Lejía"},
-      {"code": "3009", "name": "Buen Rendimiento"},
-      {"code": "3014", "name": "Poder Cubriente"},
-      {"code": "3015", "name": "Acabado Mate"},
-      {"code": "3000", "name": "Blanco"}
+      {
+        "code": "3013",
+        "name": "Amarillo Trigo"
+      },
+      {
+        "code": "3016",
+        "name": "Blanco Ostión"
+      },
+      {
+        "code": "3018",
+        "name": "Verde Limón"
+      },
+      {
+        "code": "3017",
+        "name": "Amarillo Inglés"
+      },
+      {
+        "code": "3002",
+        "name": "Turquesa"
+      },
+      {
+        "code": "3020",
+        "name": "Azul Mónaco"
+      },
+      {
+        "code": "3006",
+        "name": "Lavanda"
+      },
+      {
+        "code": "3023",
+        "name": "Gris"
+      },
+      {
+        "code": "3004",
+        "name": "Crema Casino"
+      },
+      {
+        "code": "3021",
+        "name": "Capuccino"
+      },
+      {
+        "code": "3008",
+        "name": "Azul Lejía"
+      },
+      {
+        "code": "3009",
+        "name": "Buen Rendimiento"
+      },
+      {
+        "code": "3014",
+        "name": "Poder Cubriente"
+      },
+      {
+        "code": "3015",
+        "name": "Acabado Mate"
+      },
+      {
+        "code": "3000",
+        "name": "Blanco"
+      }
     ]
   },
   {
@@ -663,29 +1352,76 @@
     "code": "3500",
     "name": "CH14",
     "category": "vinilicas",
-    "price": 520.00,
+    "price": 520,
     "image": "/images/CH14.webp",
     "description": "Linea basica a tu alcance.",
     "stock": 40,
     "sizes": [
-      {"size": "18 L", "price": 520.00}
+      {
+        "size": "18 L",
+        "price": 520
+      }
     ],
     "specifications": {
       "use": "Interiores"
-    }
+    },
+    "colors": [
+      {
+        "code": "3501",
+        "name": "Blanco"
+      },
+      {
+        "code": "3502",
+        "name": "Blanco Ostión"
+      },
+      {
+        "code": "3503",
+        "name": "Champaña"
+      },
+      {
+        "code": "3504",
+        "name": "Beige"
+      },
+      {
+        "code": "3505",
+        "name": "Amarillo Trigo"
+      },
+      {
+        "code": "3506",
+        "name": "Rosa Bebé"
+      },
+      {
+        "code": "3507",
+        "name": "Azul Celeste"
+      },
+      {
+        "code": "3508",
+        "name": "Verde Menta"
+      },
+      {
+        "code": "3509",
+        "name": "Durazno"
+      }
+    ]
   },
   {
     "id": 28,
     "code": "20000",
     "name": "CERO SUPERVIN BASICA ANTIMICROBIAL PERMANENTE",
     "category": "cero-antimicrobial-permanente",
-    "price": 777.00,
+    "price": 777,
     "image": "/images/SUPERVIN.webp",
     "description": "Pintura de acabado semi mate, cero toxica.",
     "stock": 35,
     "sizes": [
-      {"size": "4 L", "price": 777.00},
-      {"size": "19 L", "price": 3383.00}
+      {
+        "size": "4 L",
+        "price": 777
+      },
+      {
+        "size": "19 L",
+        "price": 3383
+      }
     ],
     "specifications": {
       "finish": "Semi mate",
@@ -697,13 +1433,19 @@
     "code": "20100",
     "name": "CERO SUPERVIN A.ECOLOGICA ANTIMICROBIAL PERMANENTE",
     "category": "cero-antimicrobial-permanente",
-    "price": 1058.00,
+    "price": 1058,
     "image": "/images/SUPERVIN.webp",
     "description": "Pintura de acabado mate, cero toxica.",
     "stock": 35,
     "sizes": [
-      {"size": "4 L", "price": 1058.00},
-      {"size": "19 L", "price": 4260.00}
+      {
+        "size": "4 L",
+        "price": 1058
+      },
+      {
+        "size": "19 L",
+        "price": 4260
+      }
     ],
     "specifications": {
       "finish": "Mate",
@@ -715,12 +1457,15 @@
     "code": "20900",
     "name": "CERO BIO ESMALUX ANTIMICROBIAL PERMANENTE BASE AGUA",
     "category": "cero-antimicrobial-permanente",
-    "price": 1544.00,
+    "price": 1544,
     "image": "/images/ESMALUXSR.webp",
     "description": "Esmalte ideal para lugares cerrados o poco ventilados.",
     "stock": 35,
     "sizes": [
-      {"size": "4 L", "price": 1544.00}
+      {
+        "size": "4 L",
+        "price": 1544
+      }
     ],
     "specifications": {
       "base": "Agua",
@@ -732,13 +1477,19 @@
     "code": "20006",
     "name": "CERO ACABADO TRANSPARENTE PARA MUROS ANTIMICROBIAL PERMANENTE BASE AGUA",
     "category": "cero-antimicrobial-permanente",
-    "price": 796.00,
+    "price": 796,
     "image": "/images/LOGO2.png",
     "description": "Recubre, protege y realza el color de tu superficie.",
     "stock": 35,
     "sizes": [
-      {"size": "4 L", "price": 796.00},
-      {"size": "19 L", "price": 3614.00}
+      {
+        "size": "4 L",
+        "price": 796
+      },
+      {
+        "size": "19 L",
+        "price": 3614
+      }
     ],
     "specifications": {
       "base": "Agua",
@@ -750,13 +1501,19 @@
     "code": "20642SR",
     "name": "CERO ESMALTE SR TRANSPARENTE ANTIMICROBIAL PERMANENTE",
     "category": "cero-antimicrobial-permanente",
-    "price": 353.00,
+    "price": 353,
     "image": "/images/LOGO2.png",
     "description": "Esmalte de secado rapido para superficies de contacto.",
     "stock": 35,
     "sizes": [
-      {"size": "1 L", "price": 353.00},
-      {"size": "4 L", "price": 1105.00}
+      {
+        "size": "1 L",
+        "price": 353
+      },
+      {
+        "size": "4 L",
+        "price": 1105
+      }
     ],
     "specifications": {
       "drying": "Secado rapido",
@@ -768,12 +1525,15 @@
     "code": "20400",
     "name": "CERO POLIURETANO ANTIMICROBIAL PERMANENTE",
     "category": "cero-antimicrobial-permanente",
-    "price": 1810.00,
+    "price": 1810,
     "image": "/images/LOGO2.png",
     "description": "Recubrimiento de alta resistencia para superficies de uso industrial y comercial.",
     "stock": 35,
     "sizes": [
-      {"size": "3 L", "price": 1810.00}
+      {
+        "size": "3 L",
+        "price": 1810
+      }
     ],
     "specifications": {
       "special": "Antimicrobial Permanente"
@@ -784,12 +1544,15 @@
     "code": "001-PRA28",
     "name": "CATALIZADOR PRA28 (RELACION 3 A 1)",
     "category": "cero-antimicrobial-permanente",
-    "price": 823.00,
+    "price": 823,
     "image": "/images/LOGO2.png",
     "description": "Catalizador para sistemas antimicrobial permanente.",
     "stock": 35,
     "sizes": [
-      {"size": "Kit", "price": 823.00}
+      {
+        "size": "Kit",
+        "price": 823
+      }
     ],
     "specifications": {
       "use": "Relacion de mezcla 3 a 1"
@@ -800,12 +1563,15 @@
     "code": "20800",
     "name": "CERO EPOXICO ANTIMICROBIAL PERMANENTE",
     "category": "cero-antimicrobial-permanente",
-    "price": 2025.00,
+    "price": 2025,
     "image": "/images/LOGO2.png",
     "description": "Recubrimiento antimicrobial de uso industrial y comercial.",
     "stock": 35,
     "sizes": [
-      {"size": "4 L", "price": 2025.00}
+      {
+        "size": "4 L",
+        "price": 2025
+      }
     ],
     "specifications": {
       "special": "Antimicrobial Permanente"
@@ -816,12 +1582,15 @@
     "code": "001-PRA21",
     "name": "CATALIZADOR PRA21 (RELACION 2 A 1)",
     "category": "cero-antimicrobial-permanente",
-    "price": 553.00,
+    "price": 553,
     "image": "/images/LOGO2.png",
     "description": "Catalizador para sistemas antimicrobial permanente.",
     "stock": 35,
     "sizes": [
-      {"size": "Kit", "price": 553.00}
+      {
+        "size": "Kit",
+        "price": 553
+      }
     ],
     "specifications": {
       "use": "Relacion de mezcla 2 a 1"
@@ -832,12 +1601,15 @@
     "code": "002-CUBR",
     "name": "PAQUETE DOS CUBREBOCAS ANTIMICROBIALES PERMANENTE",
     "category": "cero-antimicrobial-permanente",
-    "price": 67.00,
+    "price": 67,
     "image": "/images/LOGO2.png",
     "description": "Cubrebocas lavables hasta 50 veces con efecto antimicrobial.",
     "stock": 100,
     "sizes": [
-      {"size": "Paquete", "price": 67.00}
+      {
+        "size": "Paquete",
+        "price": 67
+      }
     ],
     "specifications": {
       "special": "Antimicrobial Permanente"
@@ -848,14 +1620,23 @@
     "code": "8701F",
     "name": "SELLADOR ACRILICO IMPERFIBRA",
     "category": "impermeabilizantes-fibratados",
-    "price": 91.00,
+    "price": 91,
     "image": "/images/SELLACRILICO.webp",
     "description": "Sellador concentrado para sistema de impermeabilizacion. (Paso 2)",
     "stock": 70,
     "sizes": [
-      {"size": "1 L", "price": 91.00},
-      {"size": "4 L", "price": 315.00},
-      {"size": "19 L", "price": 985.00}
+      {
+        "size": "1 L",
+        "price": 91
+      },
+      {
+        "size": "4 L",
+        "price": 315
+      },
+      {
+        "size": "19 L",
+        "price": 985
+      }
     ],
     "specifications": {
       "type": "Sellador concentrado",
@@ -867,109 +1648,213 @@
     "code": "812-813",
     "name": "AQUAMAR 7 ANOS",
     "category": "impermeabilizantes-fibratados",
-    "price": 514.00,
+    "price": 514,
     "image": "/images/AQUAMAR.webp",
     "description": "Impermeabilizante acrilico con tecnologia fibratada. (Paso 3)",
     "stock": 50,
     "sizes": [
-      {"size": "4 L", "price": 514.00},
-      {"size": "18 L", "price": 2224.00},
-      {"size": "200 L", "price": 26071.00}
+      {
+        "size": "4 L",
+        "price": 514
+      },
+      {
+        "size": "18 L",
+        "price": 2224
+      },
+      {
+        "size": "200 L",
+        "price": 26071
+      }
     ],
     "specifications": {
       "durability": "7 anos",
       "technology": "Fibratada"
-    }
+    },
+    "colors": [
+      {
+        "code": "Blanco",
+        "name": "Blanco"
+      },
+      {
+        "code": "Terracota",
+        "name": "Terracota"
+      }
+    ]
   },
   {
     "id": 40,
     "code": "852IF-854IF",
     "name": "IMPERFIBRA 5 ANOS",
     "category": "impermeabilizantes-fibratados",
-    "price": 118.00,
-    "image": "/images/IMPER.webP",
+    "price": 430,
+    "image": "/images/IMPER.webp",
     "description": "Impermeabilizante acrilico con tecnologia fibratada mejorada. (Paso 3)",
     "stock": 50,
     "sizes": [
-      {"size": "4 L", "price": 118.00},
-      {"size": "18 L", "price": 1710.00},
-      {"size": "200 L", "price": 20405.00}
+      {
+        "size": "4 L",
+        "price": 430
+      },
+      {
+        "size": "18 L",
+        "price": 1710
+      },
+      {
+        "size": "200 L",
+        "price": 20405
+      }
     ],
     "specifications": {
       "durability": "5 anos",
       "technology": "Fibratada mejorada"
-    }
+    },
+    "colors": [
+      {
+        "code": "Blanco",
+        "name": "Blanco"
+      },
+      {
+        "code": "Terracota",
+        "name": "Terracota"
+      }
+    ]
   },
   {
     "id": 41,
     "code": "852-853",
     "name": "AQUAMAR 5 ANOS",
     "category": "impermeabilizantes-fibratados",
-    "price": 413.00,
+    "price": 413,
     "image": "/images/AQUAMAR.webp",
     "description": "Impermeabilizante acrilico con tecnologia fibratada. (Paso 3)",
     "stock": 50,
     "sizes": [
-      {"size": "4 L", "price": 413.00},
-      {"size": "18 L", "price": 1602.00},
-      {"size": "200 L", "price": 18779.00}
+      {
+        "size": "4 L",
+        "price": 413
+      },
+      {
+        "size": "18 L",
+        "price": 1602
+      },
+      {
+        "size": "200 L",
+        "price": 18779
+      }
     ],
     "specifications": {
       "durability": "5 anos",
       "technology": "Fibratada"
-    }
+    },
+    "colors": [
+      {
+        "code": "Blanco",
+        "name": "Blanco"
+      },
+      {
+        "code": "Terracota",
+        "name": "Terracota"
+      }
+    ]
   },
   {
     "id": 42,
     "code": "862-863IF",
     "name": "IMPERFIBRA 3 ANOS",
     "category": "impermeabilizantes-fibratados",
-    "price": 370.00,
-    "image": "/images/IMPER.webP",
+    "price": 370,
+    "image": "/images/IMPER.webp",
     "description": "Impermeabilizante acrilico con tecnologia fibratada mejorada. (Paso 3)",
     "stock": 50,
     "sizes": [
-      {"size": "4 L", "price": 370.00},
-      {"size": "18 L", "price": 1346.00},
-      {"size": "200 L", "price": 15779.00}
+      {
+        "size": "4 L",
+        "price": 370
+      },
+      {
+        "size": "18 L",
+        "price": 1346
+      },
+      {
+        "size": "200 L",
+        "price": 15779
+      }
     ],
     "specifications": {
       "durability": "3 anos",
       "technology": "Fibratada mejorada"
-    }
+    },
+    "colors": [
+      {
+        "code": "Blanco",
+        "name": "Blanco"
+      },
+      {
+        "code": "Terracota",
+        "name": "Terracota"
+      }
+    ]
   },
   {
     "id": 43,
     "code": "862-863",
     "name": "AQUAMAR 3 ANOS",
     "category": "impermeabilizantes-fibratados",
-    "price": 363.00,
+    "price": 363,
     "image": "/images/AQUAMAR.webp",
     "description": "Impermeabilizante acrilico con tecnologia fibratada. (Paso 3)",
     "stock": 50,
     "sizes": [
-      {"size": "4 L", "price": 363.00},
-      {"size": "18 L", "price": 1226.00},
-      {"size": "200 L", "price": 14372.00}
+      {
+        "size": "4 L",
+        "price": 363
+      },
+      {
+        "size": "18 L",
+        "price": 1226
+      },
+      {
+        "size": "200 L",
+        "price": 14372
+      }
     ],
     "specifications": {
       "durability": "3 anos",
       "technology": "Fibratada"
-    }
+    },
+    "colors": [
+      {
+        "code": "Blanco",
+        "name": "Blanco"
+      },
+      {
+        "code": "Terracota",
+        "name": "Terracota"
+      }
+    ]
   },
   {
     "id": 44,
     "code": "850-851",
     "name": "AQUAMAR SIN FIBRA 5 ANOS (BAJO PEDIDO)",
     "category": "impermeabilizantes-fibratados",
-    "price": 335.00,
+    "price": 335,
     "image": "/images/AQUAMAR.webp",
     "description": "Impermeabilizante acrilico sin fibra. (Paso 3)",
     "stock": 50,
     "sizes": [
-      {"size": "4 L", "price": 335.00},
-      {"size": "18 L", "price": 1344.00},
-      {"size": "200 L", "price": 15755.00}
+      {
+        "size": "4 L",
+        "price": 335
+      },
+      {
+        "size": "18 L",
+        "price": 1344
+      },
+      {
+        "size": "200 L",
+        "price": 15755
+      }
     ],
     "specifications": {
       "durability": "5 anos",
@@ -977,67 +1862,22 @@
     }
   },
   {
-    "id": 45,
-    "code": "MIST327",
-    "name": "MEMBRANA SENCILLA POLIESTER",
-    "category": "impermeabilizantes-fibratados",
-    "price": 7.00,
-    "image": "/images/LOGO2.png",
-    "description": "Malla de refuerzo para sistema de impermeabilizacion. (Antes de Paso 3)",
-    "stock": 100,
-    "sizes": [
-      {"size": "M LINEAL", "price": 7.00}
-    ],
-    "specifications": {
-      "use": "Refuerzo"
-    }
-  },
-  {
     "id": 46,
     "code": "MIRP69",
     "name": "MEMBRANA REFORZADA POLIESTER",
     "category": "impermeabilizantes-fibratados",
-    "price": 20.00,
+    "price": 24,
     "image": "/images/LOGO2.png",
     "description": "Malla reforzada para sistema de impermeabilizacion. (Antes de Paso 3)",
     "stock": 100,
     "sizes": [
-      {"size": "M LINEAL", "price": 20.00}
+      {
+        "size": "M LINEAL",
+        "price": 24
+      }
     ],
     "specifications": {
       "use": "Refuerzo"
-    }
-  },
-  {
-    "id": 47,
-    "code": "010-SIC",
-    "name": "SELLADOR IMPERMEABLE CEMENTOSO",
-    "category": "cementosos-antihumedad",
-    "price": 1294.00,
-    "image": "/images/SELLACEME.webp",
-    "description": "Aplicable en humedo acabado blanco, resistente a la intemperie.",
-    "stock": 50,
-    "sizes": [
-      {"size": "10 KG", "price": 1294.00}
-    ],
-    "specifications": {
-      "use": "Exterior e interior"
-    }
-  },
-  {
-    "id": 48,
-    "code": "012-IMPC",
-    "name": "IMPERMEABILIZANTE CEMENTOSO",
-    "category": "cementosos-antihumedad",
-    "price": 2888.00,
-    "image": "/images/IMPER.webp",
-    "description": "Aplicable en humedo acabado blanco, rendimiento de 24 m2 por cubeta.",
-    "stock": 50,
-    "sizes": [
-      {"size": "12 KG", "price": 2888.00}
-    ],
-    "specifications": {
-      "use": "Exterior e interior"
     }
   },
   {
@@ -1045,183 +1885,572 @@
     "code": "1900M",
     "name": "BIO ESMALUX ECOLOGICO MATE",
     "category": "esmalte-base-agua",
-    "price": 76.00,
+    "price": 76,
     "image": "/images/BIOESMALUX.webp",
     "description": "Esmalte base agua sin olor ideal para espacios cerrados.",
     "stock": 55,
     "sizes": [
-      {"size": "250 ML", "price": 76.00},
-      {"size": "500 ML", "price": 131.00},
-      {"size": "1 L", "price": 223.00},
-      {"size": "4 L", "price": 790.00},
-      {"size": "19 L", "price": 3465.00}
+      {
+        "size": "250 ML",
+        "price": 76
+      },
+      {
+        "size": "500 ML",
+        "price": 131
+      },
+      {
+        "size": "1 L",
+        "price": 223
+      },
+      {
+        "size": "4 L",
+        "price": 790
+      },
+      {
+        "size": "19 L",
+        "price": 3465
+      }
     ],
     "specifications": {
       "base": "Agua",
       "finish": "Mate"
-    }
+    },
+    "colors": [
+      {
+        "code": "Blanco",
+        "name": "Blanco"
+      },
+      {
+        "code": "Champaña",
+        "name": "Champaña"
+      }
+    ]
   },
   {
     "id": 50,
     "code": "624SR",
     "name": "ESMALUX SR ACABADO MATE TERSO",
     "category": "esmaltes-secado-rapido",
-    "price": 90.00,
+    "price": 90,
     "image": "/images/ESMALUXSR.webp",
     "description": "Esmalte de secado rapido ideal para exteriores.",
     "stock": 70,
     "sizes": [
-      {"size": "250 ML", "price": 90.00},
-      {"size": "500 ML", "price": 151.00},
-      {"size": "1 L", "price": 263.00},
-      {"size": "4 L", "price": 909.00},
-      {"size": "19 L", "price": 4232.00}
+      {
+        "size": "250 ML",
+        "price": 90
+      },
+      {
+        "size": "500 ML",
+        "price": 151
+      },
+      {
+        "size": "1 L",
+        "price": 263
+      },
+      {
+        "size": "4 L",
+        "price": 909
+      },
+      {
+        "size": "19 L",
+        "price": 4232
+      }
     ],
     "specifications": {
       "drying": "Secado rapido",
       "finish": "Mate terso"
-    }
+    },
+    "colors": [
+      {
+        "code": "600-BL",
+        "name": "Blanco"
+      },
+      {
+        "code": "600-NG",
+        "name": "Negro"
+      },
+      {
+        "code": "600-GR",
+        "name": "Gris Plata"
+      },
+      {
+        "code": "600-RT",
+        "name": "Rojo Tráfico"
+      },
+      {
+        "code": "600-AM",
+        "name": "Amarillo"
+      },
+      {
+        "code": "600-VP",
+        "name": "Verde Pasto"
+      },
+      {
+        "code": "600-AC",
+        "name": "Azul Cielo"
+      },
+      {
+        "code": "600-AM2",
+        "name": "Azul Marino"
+      },
+      {
+        "code": "600-CA",
+        "name": "Café"
+      },
+      {
+        "code": "600-RO",
+        "name": "Rojo Óxido"
+      },
+      {
+        "code": "600-NA",
+        "name": "Naranja"
+      },
+      {
+        "code": "600-CR",
+        "name": "Crema"
+      },
+      {
+        "code": "600-VB",
+        "name": "Verde Bandera"
+      },
+      {
+        "code": "600-RM",
+        "name": "Rosa Mexicano"
+      },
+      {
+        "code": "600-AP",
+        "name": "Amarillo Canario"
+      }
+    ]
   },
   {
     "id": 51,
     "code": "626SR",
     "name": "ESMALUX SR ACABADO METALICO",
     "category": "esmaltes-secado-rapido",
-    "price": 112.00,
+    "price": 112,
     "image": "/images/ESMALUXSR.webp",
     "description": "Esmalte de secado rapido con acabado metalico real.",
     "stock": 70,
     "sizes": [
-      {"size": "250 ML", "price": 112.00},
-      {"size": "500 ML", "price": 163.00},
-      {"size": "1 L", "price": 311.00},
-      {"size": "4 L", "price": 1073.00},
-      {"size": "19 L", "price": 4929.00},
-      {"size": "200 L", "price": 54738.00}
+      {
+        "size": "250 ML",
+        "price": 112
+      },
+      {
+        "size": "500 ML",
+        "price": 163
+      },
+      {
+        "size": "1 L",
+        "price": 311
+      },
+      {
+        "size": "4 L",
+        "price": 1073
+      },
+      {
+        "size": "19 L",
+        "price": 4929
+      },
+      {
+        "size": "200 L",
+        "price": 54738
+      }
     ],
     "specifications": {
       "drying": "Secado rapido",
       "finish": "Metalico"
-    }
+    },
+    "colors": [
+      {
+        "code": "MET-OR",
+        "name": "Oro"
+      },
+      {
+        "code": "MET-PL",
+        "name": "Plata"
+      },
+      {
+        "code": "MET-BR",
+        "name": "Bronce"
+      },
+      {
+        "code": "MET-CO",
+        "name": "Cobre"
+      },
+      {
+        "code": "MET-GF",
+        "name": "Grafito"
+      }
+    ]
   },
   {
     "id": 52,
     "code": "450SR-470SR",
     "name": "DRY LUX SR",
     "category": "esmaltes-secado-rapido",
-    "price": 65.00,
+    "price": 65,
     "image": "/images/DRYLUX.webp",
     "description": "Esmalte economico de secado ultra rapido.",
     "stock": 70,
     "sizes": [
-      {"size": "0.946 L", "price": 65.00},
-      {"size": "3.785 L", "price": 125.00},
-      {"size": "18 L", "price": 650.00},
-      {"size": "200 L", "price": 34090.00}
+      {
+        "size": "0.946 L",
+        "price": 65
+      },
+      {
+        "size": "3.785 L",
+        "price": 125
+      },
+      {
+        "size": "18 L",
+        "price": 650
+      },
+      {
+        "size": "200 L",
+        "price": 34090
+      }
     ],
     "specifications": {
       "drying": "Secado ultra rapido"
-    }
+    },
+    "colors": [
+      {
+        "code": "600-BL",
+        "name": "Blanco"
+      },
+      {
+        "code": "600-NG",
+        "name": "Negro"
+      },
+      {
+        "code": "600-GR",
+        "name": "Gris Plata"
+      },
+      {
+        "code": "600-RT",
+        "name": "Rojo Tráfico"
+      },
+      {
+        "code": "600-AM",
+        "name": "Amarillo"
+      },
+      {
+        "code": "600-VP",
+        "name": "Verde Pasto"
+      },
+      {
+        "code": "600-AC",
+        "name": "Azul Cielo"
+      },
+      {
+        "code": "600-AM2",
+        "name": "Azul Marino"
+      },
+      {
+        "code": "600-CA",
+        "name": "Café"
+      },
+      {
+        "code": "600-RO",
+        "name": "Rojo Óxido"
+      },
+      {
+        "code": "600-NA",
+        "name": "Naranja"
+      },
+      {
+        "code": "600-CR",
+        "name": "Crema"
+      },
+      {
+        "code": "600-VB",
+        "name": "Verde Bandera"
+      },
+      {
+        "code": "600-RM",
+        "name": "Rosa Mexicano"
+      },
+      {
+        "code": "600-AP",
+        "name": "Amarillo Canario"
+      }
+    ]
   },
   {
     "id": 53,
     "code": "300",
     "name": "ESMAFLEX ACABADO BRILLANTE",
     "category": "esmaltes-secado-normal",
-    "price": 75.00,
+    "price": 75,
     "image": "/images/ESMAFLEX.webp",
     "description": "Esmalte de secado normal ideal para acabados detallados.",
     "stock": 70,
     "sizes": [
-      {"size": "250 ML", "price": 75.00},
-      {"size": "500 ML", "price": 120.00},
-      {"size": "1 L", "price": 210.00},
-      {"size": "4 L", "price": 770.00},
-      {"size": "19 L", "price": 3538.00},
-      {"size": "200 L", "price": 39291.00}
+      {
+        "size": "250 ML",
+        "price": 75
+      },
+      {
+        "size": "500 ML",
+        "price": 120
+      },
+      {
+        "size": "1 L",
+        "price": 210
+      },
+      {
+        "size": "4 L",
+        "price": 770
+      },
+      {
+        "size": "19 L",
+        "price": 3538
+      },
+      {
+        "size": "200 L",
+        "price": 39291
+      }
     ],
     "specifications": {
       "finish": "Brillante",
       "drying": "Secado normal"
-    }
+    },
+    "colors": [
+      {
+        "code": "300-BL",
+        "name": "Blanco"
+      },
+      {
+        "code": "300-NG",
+        "name": "Negro"
+      },
+      {
+        "code": "300-GR",
+        "name": "Gris Plata"
+      },
+      {
+        "code": "300-RT",
+        "name": "Rojo Tráfico"
+      },
+      {
+        "code": "300-AM",
+        "name": "Amarillo"
+      },
+      {
+        "code": "300-VP",
+        "name": "Verde Pasto"
+      },
+      {
+        "code": "300-AC",
+        "name": "Azul Cielo"
+      },
+      {
+        "code": "300-AM2",
+        "name": "Azul Marino"
+      },
+      {
+        "code": "300-CA",
+        "name": "Café"
+      },
+      {
+        "code": "300-RO",
+        "name": "Rojo Óxido"
+      },
+      {
+        "code": "300-NA",
+        "name": "Naranja"
+      },
+      {
+        "code": "300-CR",
+        "name": "Crema"
+      },
+      {
+        "code": "300-VB",
+        "name": "Verde Bandera"
+      },
+      {
+        "code": "300-RM",
+        "name": "Rosa Mexicano"
+      }
+    ]
   },
   {
     "id": 54,
     "code": "332",
     "name": "ESMAFLEX ACABADO MATE TERSO",
     "category": "esmaltes-secado-normal",
-    "price": 75.00,
+    "price": 75,
     "image": "/images/ESMAFLEX.webp",
     "description": "Esmalte de secado normal ideal para acabados detallados.",
     "stock": 70,
     "sizes": [
-      {"size": "250 ML", "price": 75.00},
-      {"size": "500 ML", "price": 120.00},
-      {"size": "1 L", "price": 210.00},
-      {"size": "4 L", "price": 770.00},
-      {"size": "19 L", "price": 3538.00}
+      {
+        "size": "250 ML",
+        "price": 75
+      },
+      {
+        "size": "500 ML",
+        "price": 120
+      },
+      {
+        "size": "1 L",
+        "price": 210
+      },
+      {
+        "size": "4 L",
+        "price": 770
+      },
+      {
+        "size": "19 L",
+        "price": 3538
+      }
     ],
     "specifications": {
       "finish": "Mate terso",
       "drying": "Secado normal"
-    }
+    },
+    "colors": [
+      {
+        "code": "300-BL",
+        "name": "Blanco"
+      },
+      {
+        "code": "300-NG",
+        "name": "Negro"
+      },
+      {
+        "code": "300-GR",
+        "name": "Gris Plata"
+      },
+      {
+        "code": "300-RT",
+        "name": "Rojo Tráfico"
+      },
+      {
+        "code": "300-AM",
+        "name": "Amarillo"
+      },
+      {
+        "code": "300-VP",
+        "name": "Verde Pasto"
+      },
+      {
+        "code": "300-AC",
+        "name": "Azul Cielo"
+      },
+      {
+        "code": "300-AM2",
+        "name": "Azul Marino"
+      },
+      {
+        "code": "300-CA",
+        "name": "Café"
+      },
+      {
+        "code": "300-RO",
+        "name": "Rojo Óxido"
+      },
+      {
+        "code": "300-NA",
+        "name": "Naranja"
+      },
+      {
+        "code": "300-CR",
+        "name": "Crema"
+      },
+      {
+        "code": "300-VB",
+        "name": "Verde Bandera"
+      },
+      {
+        "code": "300-RM",
+        "name": "Rosa Mexicano"
+      }
+    ]
   },
   {
     "id": 55,
     "code": "338",
     "name": "ESMAFLEX ACABADO METALICO",
     "category": "esmaltes-secado-normal",
-    "price": 106.00,
+    "price": 106,
     "image": "/images/ESMAFLEX.webp",
     "description": "Esmalte de secado normal con acabado metalico real.",
     "stock": 70,
     "sizes": [
-      {"size": "250 ML", "price": 106.00},
-      {"size": "500 ML", "price": 151.00},
-      {"size": "1 L", "price": 292.00},
-      {"size": "4 L", "price": 1064.00},
-      {"size": "19 L", "price": 4680.00}
+      {
+        "size": "250 ML",
+        "price": 106
+      },
+      {
+        "size": "500 ML",
+        "price": 151
+      },
+      {
+        "size": "1 L",
+        "price": 292
+      },
+      {
+        "size": "4 L",
+        "price": 1064
+      },
+      {
+        "size": "19 L",
+        "price": 4680
+      }
     ],
     "specifications": {
       "finish": "Metalico",
       "drying": "Secado normal"
-    }
-  },
-  {
-    "id": 56,
-    "code": "350",
-    "name": "PINTAMAR",
-    "category": "esmaltes-secado-normal",
-    "price": 49.00,
-    "image": "/images/PINTAMAR.webp",
-    "description": "Esmalte alquidalico tipo economico.",
-    "stock": 70,
-    "sizes": [
-      {"size": "250 ML", "price": 49.00},
-      {"size": "500 ML", "price": 95.00},
-      {"size": "1 L", "price": 175.00},
-      {"size": "4 L", "price": 598.00},
-      {"size": "19 L", "price": 2763.00},
-      {"size": "200 L", "price": 30684.00}
-    ],
-    "specifications": {
-      "finish": "Economico",
-      "drying": "Secado normal"
-    }
+    },
+    "colors": [
+      {
+        "code": "MET-OR",
+        "name": "Oro"
+      },
+      {
+        "code": "MET-PL",
+        "name": "Plata"
+      },
+      {
+        "code": "MET-BR",
+        "name": "Bronce"
+      },
+      {
+        "code": "MET-CO",
+        "name": "Cobre"
+      },
+      {
+        "code": "MET-GF",
+        "name": "Grafito"
+      }
+    ]
   },
   {
     "id": 57,
     "code": "MULTIPRIMLTX",
     "name": "MULTIPRIMER LATEX BASE AGUA",
     "category": "primarios-alquidalicos",
-    "price": 259.00,
+    "price": 259,
     "image": "/images/MULTIPREMI.webp",
     "description": "Primer multisuperficies compatible con diversas pinturas.",
     "stock": 60,
     "sizes": [
-      {"size": "1 L", "price": 259.00},
-      {"size": "4 L", "price": 922.00},
-      {"size": "19 L", "price": 4089.00}
+      {
+        "size": "1 L",
+        "price": 259
+      },
+      {
+        "size": "4 L",
+        "price": 922
+      },
+      {
+        "size": "19 L",
+        "price": 4089
+      }
     ],
     "specifications": {
       "base": "Agua",
@@ -1233,36 +2462,77 @@
     "code": "640SR",
     "name": "ESMALUX SR PRIMARIO",
     "category": "primarios-alquidalicos",
-    "price": 83.00,
+    "price": 83,
     "image": "/images/ESMALUXSR.webp",
     "description": "Primario alquidalico anticorrosivo de secado rapido.",
     "stock": 60,
     "sizes": [
-      {"size": "250 ML", "price": 83.00},
-      {"size": "500 ML", "price": 122.00},
-      {"size": "1 L", "price": 229.00},
-      {"size": "4 L", "price": 816.00},
-      {"size": "19 L", "price": 3075.00},
-      {"size": "200 L", "price": 34149.00}
+      {
+        "size": "250 ML",
+        "price": 83
+      },
+      {
+        "size": "500 ML",
+        "price": 122
+      },
+      {
+        "size": "1 L",
+        "price": 229
+      },
+      {
+        "size": "4 L",
+        "price": 816
+      },
+      {
+        "size": "19 L",
+        "price": 3075
+      },
+      {
+        "size": "200 L",
+        "price": 34149
+      }
     ],
     "specifications": {
       "drying": "Secado rapido",
       "use": "Anticorrosivo"
-    }
+    },
+    "colors": [
+      {
+        "code": "640-BL",
+        "name": "Blanco"
+      },
+      {
+        "code": "640-RO",
+        "name": "Rojo Óxido"
+      },
+      {
+        "code": "640-NG",
+        "name": "Negro"
+      }
+    ]
   },
   {
     "id": 59,
     "code": "650",
     "name": "ESMALUX (BAJO PEDIDO)",
     "category": "primarios-alquidalicos",
-    "price": 325.00,
+    "price": 325,
     "image": "/images/BAJOPE.webp",
     "description": "Primario alquidalico anticorrosivo de secado normal.",
     "stock": 60,
     "sizes": [
-      {"size": "1 L", "price": 325.00},
-      {"size": "4 L", "price": 1119.00},
-      {"size": "19 L", "price": 5111.00}
+      {
+        "size": "1 L",
+        "price": 325
+      },
+      {
+        "size": "4 L",
+        "price": 1119
+      },
+      {
+        "size": "19 L",
+        "price": 5111
+      }
     ],
     "specifications": {
       "drying": "Secado normal",
@@ -1274,14 +2544,23 @@
     "code": "690",
     "name": "MINIO GENUINO",
     "category": "primarios-alquidalicos",
-    "price": 252.00,
+    "price": 252,
     "image": "/images/LOGO2.png",
     "description": "Primario alquidalico anticorrosivo, minio genuino.",
     "stock": 60,
     "sizes": [
-      {"size": "1 L", "price": 252.00},
-      {"size": "4 L", "price": 902.00},
-      {"size": "19 L", "price": 3973.00}
+      {
+        "size": "1 L",
+        "price": 252
+      },
+      {
+        "size": "4 L",
+        "price": 902
+      },
+      {
+        "size": "19 L",
+        "price": 3973
+      }
     ],
     "specifications": {
       "use": "Anticorrosivo"
@@ -1292,56 +2571,122 @@
     "code": "370",
     "name": "ESMAFLEX PRIMARIO",
     "category": "primarios-alquidalicos",
-    "price": 69.00,
+    "price": 69,
     "image": "/images/ESMAFLEX.webp",
     "description": "Primario alquidalico anticorrosivo de secado normal.",
     "stock": 60,
     "sizes": [
-      {"size": "250 ML", "price": 69.00},
-      {"size": "500 ML", "price": 108.00},
-      {"size": "1 L", "price": 200.00},
-      {"size": "4 L", "price": 686.00},
-      {"size": "19 L", "price": 2708.00},
-      {"size": "200 L", "price": 30074.00}
+      {
+        "size": "250 ML",
+        "price": 69
+      },
+      {
+        "size": "500 ML",
+        "price": 108
+      },
+      {
+        "size": "1 L",
+        "price": 200
+      },
+      {
+        "size": "4 L",
+        "price": 686
+      },
+      {
+        "size": "19 L",
+        "price": 2708
+      },
+      {
+        "size": "200 L",
+        "price": 30074
+      }
     ],
     "specifications": {
       "drying": "Secado normal",
       "use": "Anticorrosivo"
-    }
+    },
+    "colors": [
+      {
+        "code": "370-BL",
+        "name": "Blanco"
+      },
+      {
+        "code": "370-RO",
+        "name": "Rojo Óxido"
+      },
+      {
+        "code": "370-NG",
+        "name": "Negro"
+      }
+    ]
   },
   {
     "id": 62,
     "code": "449SR",
     "name": "DRY LUX SR PRIMARIO",
     "category": "primarios-alquidalicos",
-    "price": 65.00,
+    "price": 65,
     "image": "/images/DRYLUX.webp",
     "description": "Primario alquidalico economico de secado ultra rapido.",
     "stock": 60,
     "sizes": [
-      {"size": "0.946 L", "price": 65.00},
-      {"size": "3.785 L", "price": 105.00},
-      {"size": "18 L", "price": 602.00},
-      {"size": "200 L", "price": 2259.00}
+      {
+        "size": "0.946 L",
+        "price": 65
+      },
+      {
+        "size": "3.785 L",
+        "price": 105
+      },
+      {
+        "size": "18 L",
+        "price": 602
+      },
+      {
+        "size": "200 L",
+        "price": 2259
+      }
     ],
     "specifications": {
       "drying": "Secado ultra rapido"
-    }
+    },
+    "colors": [
+      {
+        "code": "449-GR",
+        "name": "Gris"
+      },
+      {
+        "code": "449-RO",
+        "name": "Rojo Óxido"
+      }
+    ]
   },
   {
     "id": 63,
     "code": "394-395",
     "name": "PINTAMAR PRIMARIO ESTRUCTURAL",
     "category": "primarios-alquidalicos",
-    "price": 87.00,
+    "price": 87,
     "image": "/images/PINTAMAR.webp",
     "description": "Primario para evitar el deterioro de superficies.",
     "stock": 60,
     "sizes": [
-      {"size": "250 ML", "price": 87.00},
-      {"size": "500 ML", "price": 145.00},
-      {"size": "1 L", "price": 527.00},
-      {"size": "4 L", "price": 2205.00}
+      {
+        "size": "250 ML",
+        "price": 87
+      },
+      {
+        "size": "500 ML",
+        "price": 145
+      },
+      {
+        "size": "1 L",
+        "price": 527
+      },
+      {
+        "size": "4 L",
+        "price": 2205
+      }
     ],
     "specifications": {
       "use": "Estructural"
@@ -1352,15 +2697,27 @@
     "code": "390-393",
     "name": "PINTAMAR PRIMARIO ESTRUCTURAL (MINIO/OTROS)",
     "category": "primarios-alquidalicos",
-    "price": 79.00,
+    "price": 79,
     "image": "/images/PINTAMAR.webp",
     "description": "Primario para evitar el deterioro de superficies.",
     "stock": 60,
     "sizes": [
-      {"size": "250 ML", "price": 79.00},
-      {"size": "500 ML", "price": 131.00},
-      {"size": "1 L", "price": 479.00},
-      {"size": "4 L", "price": 2004.00}
+      {
+        "size": "250 ML",
+        "price": 79
+      },
+      {
+        "size": "500 ML",
+        "price": 131
+      },
+      {
+        "size": "1 L",
+        "price": 479
+      },
+      {
+        "size": "4 L",
+        "price": 2004
+      }
     ],
     "specifications": {
       "use": "Estructural"
@@ -1371,46 +2728,139 @@
     "code": "340-7000",
     "name": "AEROSOL (SPRAY) ACABADO BRILLANTE",
     "category": "aerosol-secado-rapido",
-    "price": 80.00,
+    "price": 80,
     "image": "/images/SPRAY.webp",
     "description": "Esmalte en aerosol de secado rapido, aplicacion directa.",
     "stock": 80,
     "sizes": [
-      {"size": "400 ML (340 G)", "price": 80.00}
+      {
+        "size": "400 ML (340 G)",
+        "price": 80
+      }
     ],
     "specifications": {
       "finish": "Brillante",
       "drying": "Secado rapido"
-    }
+    },
+    "colors": [
+      {
+        "code": "SPR-BL",
+        "name": "Blanco"
+      },
+      {
+        "code": "SPR-NG",
+        "name": "Negro"
+      },
+      {
+        "code": "SPR-GR",
+        "name": "Gris"
+      },
+      {
+        "code": "SPR-RT",
+        "name": "Rojo Tráfico"
+      },
+      {
+        "code": "SPR-AM",
+        "name": "Amarillo"
+      },
+      {
+        "code": "SPR-VP",
+        "name": "Verde Pasto"
+      },
+      {
+        "code": "SPR-VB",
+        "name": "Verde Bandera"
+      },
+      {
+        "code": "SPR-AC",
+        "name": "Azul Cielo"
+      },
+      {
+        "code": "SPR-AN",
+        "name": "Azul Marino"
+      },
+      {
+        "code": "SPR-CA",
+        "name": "Café"
+      },
+      {
+        "code": "SPR-NA",
+        "name": "Naranja"
+      },
+      {
+        "code": "SPR-RM",
+        "name": "Rosa Mexicano"
+      },
+      {
+        "code": "SPR-AP",
+        "name": "Amarillo Canario"
+      },
+      {
+        "code": "SPR-CR",
+        "name": "Crema"
+      }
+    ]
   },
   {
     "id": 66,
     "code": "7000-7001M",
     "name": "AEROSOL (SPRAY) ACABADO MATE",
     "category": "aerosol-secado-rapido",
-    "price": 80.00,
+    "price": 80,
     "image": "/images/SPRAY.webp",
     "description": "Esmalte en aerosol de secado rapido, aplicacion directa.",
     "stock": 80,
     "sizes": [
-      {"size": "400 ML (340 G)", "price": 80.00}
+      {
+        "size": "400 ML (340 G)",
+        "price": 80
+      }
     ],
     "specifications": {
       "finish": "Mate",
       "drying": "Secado rapido"
-    }
+    },
+    "colors": [
+      {
+        "code": "SPM-BL",
+        "name": "Blanco Mate"
+      },
+      {
+        "code": "SPM-NG",
+        "name": "Negro Mate"
+      },
+      {
+        "code": "SPM-GR",
+        "name": "Gris Mate"
+      },
+      {
+        "code": "SPM-RO",
+        "name": "Rojo Mate"
+      },
+      {
+        "code": "SPM-AZ",
+        "name": "Azul Mate"
+      },
+      {
+        "code": "SPM-VD",
+        "name": "Verde Mate"
+      }
+    ]
   },
   {
     "id": 67,
     "code": "7030-7031",
     "name": "AEROSOL (SPRAY) PRIMER",
     "category": "aerosol-secado-rapido",
-    "price": 85.00,
+    "price": 85,
     "image": "/images/SPRAY.webp",
     "description": "Aerosol primer para metales y superficies diversas.",
     "stock": 80,
     "sizes": [
-      {"size": "400 ML (340 G)", "price": 85.00}
+      {
+        "size": "400 ML (340 G)",
+        "price": 85
+      }
     ],
     "specifications": {
       "use": "Primer"
@@ -1421,28 +2871,56 @@
     "code": "7013-7025",
     "name": "AEROSOL (SPRAY) ACABADO METALICO",
     "category": "aerosol-secado-rapido",
-    "price": 85.00,
+    "price": 85,
     "image": "/images/SPRAY.webp",
     "description": "Esmalte en aerosol con acabado metalico.",
     "stock": 80,
     "sizes": [
-      {"size": "400 ML (340 G)", "price": 85.00}
+      {
+        "size": "400 ML (340 G)",
+        "price": 85
+      }
     ],
     "specifications": {
       "finish": "Metalico"
-    }
+    },
+    "colors": [
+      {
+        "code": "MET-OR",
+        "name": "Oro"
+      },
+      {
+        "code": "MET-PL",
+        "name": "Plata"
+      },
+      {
+        "code": "MET-BR",
+        "name": "Bronce"
+      },
+      {
+        "code": "MET-CO",
+        "name": "Cobre"
+      },
+      {
+        "code": "MET-GF",
+        "name": "Grafito"
+      }
+    ]
   },
   {
     "id": 69,
     "code": "7005-7024",
     "name": "AEROSOL (SPRAY) ACABADO NIQUELADO",
     "category": "aerosol-secado-rapido",
-    "price": 94.00,
+    "price": 94,
     "image": "/images/SPRAY.webp",
     "description": "Esmalte en aerosol con acabado niquelado.",
     "stock": 80,
     "sizes": [
-      {"size": "400 ML (340 G)", "price": 94.00}
+      {
+        "size": "400 ML (340 G)",
+        "price": 94
+      }
     ],
     "specifications": {
       "finish": "Niquelado"
@@ -1453,12 +2931,15 @@
     "code": "7043-7044",
     "name": "AEROSOL (SPRAY) ALTA TEMPERATURA NEGRO-ALUMINIO",
     "category": "aerosol-secado-rapido",
-    "price": 160.00,
+    "price": 160,
     "image": "/images/SPRAY.webp",
     "description": "Esmalte en aerosol que soporta temperaturas de hasta 650 C.",
     "stock": 80,
     "sizes": [
-      {"size": "400 ML (340 G)", "price": 160.00}
+      {
+        "size": "400 ML (340 G)",
+        "price": 160
+      }
     ],
     "specifications": {
       "use": "Alta temperatura"
@@ -1469,16 +2950,31 @@
     "code": "1000",
     "name": "SPAR (SECADO NORMAL)",
     "category": "productos-para-madera",
-    "price": 80.00,
+    "price": 80,
     "image": "/images/SPAR.webp",
     "description": "Barniz alquidalico de alto brillo para madera secado normal.",
     "stock": 45,
     "sizes": [
-      {"size": "250 ML", "price": 80.00},
-      {"size": "500 ML", "price": 126.00},
-      {"size": "1 L", "price": 198.00},
-      {"size": "4 L", "price": 733.00},
-      {"size": "19 L", "price": 3447.00}
+      {
+        "size": "250 ML",
+        "price": 80
+      },
+      {
+        "size": "500 ML",
+        "price": 126
+      },
+      {
+        "size": "1 L",
+        "price": 198
+      },
+      {
+        "size": "4 L",
+        "price": 733
+      },
+      {
+        "size": "19 L",
+        "price": 3447
+      }
     ],
     "specifications": {
       "finish": "Alto brillo",
@@ -1490,33 +2986,85 @@
     "code": "1122-1129",
     "name": "SPAR (COLORES)",
     "category": "productos-para-madera",
-    "price": 80.00,
+    "price": 80,
     "image": "/images/SPAR.webp",
     "description": "Barniz alquidalico con colores para madera secado normal.",
     "stock": 45,
     "sizes": [
-      {"size": "250 ML", "price": 80.00},
-      {"size": "500 ML", "price": 126.00},
-      {"size": "1 L", "price": 198.00},
-      {"size": "4 L", "price": 733.00},
-      {"size": "19 L", "price": 3551.00}
+      {
+        "size": "250 ML",
+        "price": 80
+      },
+      {
+        "size": "500 ML",
+        "price": 126
+      },
+      {
+        "size": "1 L",
+        "price": 198
+      },
+      {
+        "size": "4 L",
+        "price": 733
+      },
+      {
+        "size": "19 L",
+        "price": 3551
+      }
     ],
     "specifications": {
       "finish": "Alto brillo",
       "drying": "Secado normal"
-    }
+    },
+    "colors": [
+      {
+        "code": "1122",
+        "name": "Cerezo"
+      },
+      {
+        "code": "1123",
+        "name": "Caoba"
+      },
+      {
+        "code": "1124",
+        "name": "Nogal"
+      },
+      {
+        "code": "1125",
+        "name": "Pino"
+      },
+      {
+        "code": "1126",
+        "name": "Cedro"
+      },
+      {
+        "code": "1127",
+        "name": "Roble"
+      },
+      {
+        "code": "1128",
+        "name": "Natural"
+      },
+      {
+        "code": "1129",
+        "name": "Teca"
+      }
+    ]
   },
   {
     "id": 73,
     "code": "1717",
     "name": "RESANADOR PARA MADERA",
     "category": "productos-para-madera",
-    "price": 161.00,
+    "price": 161,
     "image": "/images/RESANADOR.webp",
     "description": "Pasta suave para reparar imperfecciones en la madera.",
     "stock": 45,
     "sizes": [
-      {"size": "1 L", "price": 161.00}
+      {
+        "size": "1 L",
+        "price": 161
+      }
     ],
     "specifications": {
       "use": "Reparacion"
@@ -1527,14 +3075,23 @@
     "code": "1148",
     "name": "SELLADOR DE NITROCELULOSA",
     "category": "productos-para-madera",
-    "price": 253.00,
+    "price": 253,
     "image": "/images/NITROCELULOSA.webp",
     "description": "Sellador transparente para madera.",
     "stock": 45,
     "sizes": [
-      {"size": "1 L", "price": 253.00},
-      {"size": "4 L", "price": 923.00},
-      {"size": "19 L", "price": 3924.00}
+      {
+        "size": "1 L",
+        "price": 253
+      },
+      {
+        "size": "4 L",
+        "price": 923
+      },
+      {
+        "size": "19 L",
+        "price": 3924
+      }
     ],
     "specifications": {
       "type": "Sellador"
@@ -1545,13 +3102,19 @@
     "code": "TAE",
     "name": "THINNER AMERICANO",
     "category": "solventes",
-    "price": 72.00,
+    "price": 72,
     "image": "/images/LOGO2.png",
     "description": "Disolvente o adelgazador de pinturas.",
     "stock": 80,
     "sizes": [
-      {"size": "1 L", "price": 72.00},
-      {"size": "4 L", "price": 258.00}
+      {
+        "size": "1 L",
+        "price": 72
+      },
+      {
+        "size": "4 L",
+        "price": 258
+      }
     ],
     "specifications": {
       "use": "Disolvente"
@@ -1562,15 +3125,27 @@
     "code": "SXI",
     "name": "XILOL X-2000",
     "category": "solventes",
-    "price": 245.00,
+    "price": 245,
     "image": "/images/XILOL.webp",
     "description": "Disolvente para pinturas (Albermar y Pintura de Trafico).",
     "stock": 80,
     "sizes": [
-      {"size": "1 L", "price": 245.00},
-      {"size": "4 L", "price": 846.00},
-      {"size": "19 L", "price": 3929.00},
-      {"size": "200 L", "price": 43633.00}
+      {
+        "size": "1 L",
+        "price": 245
+      },
+      {
+        "size": "4 L",
+        "price": 846
+      },
+      {
+        "size": "19 L",
+        "price": 3929
+      },
+      {
+        "size": "200 L",
+        "price": 43633
+      }
     ],
     "specifications": {
       "use": "Disolvente"
@@ -1581,14 +3156,23 @@
     "code": "SOLEPX",
     "name": "SOLVENTE PARA EPOXICO",
     "category": "solventes",
-    "price": 327.00,
+    "price": 327,
     "image": "/images/LOGO2.png",
     "description": "Diluyente de primarios y acabados epoxicos.",
     "stock": 80,
     "sizes": [
-      {"size": "1 L", "price": 327.00},
-      {"size": "4 L", "price": 1263.00},
-      {"size": "20 L", "price": 6003.00}
+      {
+        "size": "1 L",
+        "price": 327
+      },
+      {
+        "size": "4 L",
+        "price": 1263
+      },
+      {
+        "size": "20 L",
+        "price": 6003
+      }
     ],
     "specifications": {
       "use": "Diluyente"
@@ -1599,12 +3183,15 @@
     "code": "SOL28",
     "name": "SOLVENTE PARA POLIURETANO",
     "category": "solventes",
-    "price": 251.00,
+    "price": 251,
     "image": "/images/LOGO2.png",
     "description": "Diluyente para poliuretanos.",
     "stock": 80,
     "sizes": [
-      {"size": "20 L", "price": 251.00}
+      {
+        "size": "20 L",
+        "price": 251
+      }
     ],
     "specifications": {
       "use": "Diluyente"
@@ -1615,15 +3202,27 @@
     "code": "902",
     "name": "COLOR CEM",
     "category": "productos-para-construccion",
-    "price": 137.00,
+    "price": 137,
     "image": "/images/CEM.webp",
     "description": "Polvo pigmentado para cambiar el color del cemento.",
     "stock": 70,
     "sizes": [
-      {"size": "1 KG", "price": 137.00},
-      {"size": "35 KG", "price": 3177.00},
-      {"size": "50 KG", "price": 4537.00},
-      {"size": "150 KG", "price": 11747.00}
+      {
+        "size": "1 KG",
+        "price": 137
+      },
+      {
+        "size": "35 KG",
+        "price": 3177
+      },
+      {
+        "size": "50 KG",
+        "price": 4537
+      },
+      {
+        "size": "150 KG",
+        "price": 11747
+      }
     ],
     "specifications": {
       "use": "Coloracion de cemento"
@@ -1634,12 +3233,15 @@
     "code": "250-003",
     "name": "RESANAMAS",
     "category": "productos-para-construccion",
-    "price": 54.00,
+    "price": 54,
     "image": "/images/RESANAMAS.webp",
     "description": "Resanador acrilico ligero para yeso, madera y muros.",
     "stock": 70,
     "sizes": [
-      {"size": "250 ML", "price": 54.00}
+      {
+        "size": "250 ML",
+        "price": 54
+      }
     ],
     "specifications": {
       "use": "Resane"
@@ -1650,15 +3252,27 @@
     "code": "005",
     "name": "ADHEBOND",
     "category": "productos-para-construccion",
-    "price": 195.00,
+    "price": 195,
     "image": "/images/ADHEBOND.webp",
     "description": "Adhesivo para usos multiples.",
     "stock": 70,
     "sizes": [
-      {"size": "1 L", "price": 195.00},
-      {"size": "4 L", "price": 588.00},
-      {"size": "19 L", "price": 2350.00},
-      {"size": "200 L", "price": 26098.00}
+      {
+        "size": "1 L",
+        "price": 195
+      },
+      {
+        "size": "4 L",
+        "price": 588
+      },
+      {
+        "size": "19 L",
+        "price": 2350
+      },
+      {
+        "size": "200 L",
+        "price": 26098
+      }
     ],
     "specifications": {
       "use": "Adhesivo"
@@ -1669,12 +3283,15 @@
     "code": "600-RESF",
     "name": "RESANADOR CEMENTOSO",
     "category": "productos-para-construccion",
-    "price": 130.00,
+    "price": 130,
     "image": "/images/RESANADOR.webp",
     "description": "Base cemento de acabado blanco para reparar fisuras y grietas.",
     "stock": 70,
     "sizes": [
-      {"size": "600 G", "price": 130.00}
+      {
+        "size": "600 G",
+        "price": 130
+      }
     ],
     "specifications": {
       "use": "Resane"
@@ -1684,14 +3301,20 @@
     "id": 83,
     "code": "RECA",
     "name": "REPARADOR DE GRIETAS",
-    "category": "productos-para-construccion",
-    "price": 658.00,
+    "category": "cementosos-antihumedad",
+    "price": 658,
     "image": "/images/GRIETAS.webp",
     "description": "Aplicable en humedo acabado blanco, rendimiento de 12 m2.",
     "stock": 70,
     "sizes": [
-      {"size": "2.5 KG", "price": 658.00},
-      {"size": "6 KG", "price": 1574.00}
+      {
+        "size": "2.5 KG",
+        "price": 658
+      },
+      {
+        "size": "6 KG",
+        "price": 1574
+      }
     ],
     "specifications": {
       "use": "Resane"
@@ -1701,13 +3324,16 @@
     "id": 84,
     "code": "006-RECM",
     "name": "CISTERNAS Y MUROS CEMENTOSO",
-    "category": "productos-para-construccion",
-    "price": 1098.00,
+    "category": "cementosos-antihumedad",
+    "price": 1098,
     "image": "/images/CISTERNAS.webp",
     "description": "Aplicable en humedo, resistente a presiones hidrostaticas.",
     "stock": 70,
     "sizes": [
-      {"size": "6 KG", "price": 1098.00}
+      {
+        "size": "6 KG",
+        "price": 1098
+      }
     ],
     "specifications": {
       "use": "Presiones hidrostaticas"
@@ -1718,12 +3344,15 @@
     "code": "READYMIX05",
     "name": "READY MIX",
     "category": "productos-para-construccion",
-    "price": 210.00,
+    "price": 210,
     "image": "/images/LOGO2.png",
     "description": "Trabajos de resane o relleno de juntas.",
     "stock": 70,
     "sizes": [
-      {"size": "5 KG", "price": 210.00}
+      {
+        "size": "5 KG",
+        "price": 210
+      }
     ],
     "specifications": {
       "use": "Resane"
@@ -1734,14 +3363,23 @@
     "code": "ADB",
     "name": "ADIOS BACHE (25 Y 500 KG BAJO PEDIDO)",
     "category": "conservacion-vial",
-    "price": 558.00,
+    "price": 558,
     "image": "/images/LOGO2.png",
     "description": "Mezcla asfaltica en frio para tapar baches en cualquier via.",
     "stock": 50,
     "sizes": [
-      {"size": "25 KG", "price": 558.00},
-      {"size": "250 KG", "price": 4703.00},
-      {"size": "500 KG", "price": 8795.00}
+      {
+        "size": "25 KG",
+        "price": 558
+      },
+      {
+        "size": "250 KG",
+        "price": 4703
+      },
+      {
+        "size": "500 KG",
+        "price": 8795
+      }
     ],
     "specifications": {
       "use": "Reparacion vial"
@@ -1752,12 +3390,15 @@
     "code": "ADB-1000",
     "name": "ADIOS BACHE (TONELADA BAJO PEDIDO)",
     "category": "conservacion-vial",
-    "price": 16435.00,
+    "price": 16435,
     "image": "/images/LOGO2.png",
     "description": "Mezcla asfaltica en frio para tapar baches en cualquier via.",
     "stock": 50,
     "sizes": [
-      {"size": "1000 KG", "price": 16435.00}
+      {
+        "size": "1000 KG",
+        "price": 16435
+      }
     ],
     "specifications": {
       "use": "Reparacion vial"
@@ -1768,161 +3409,331 @@
     "code": "2009BA-2010BA",
     "name": "TRANSL-KAR SCT BASE AGUA",
     "category": "conservacion-vial",
-    "price": 847.00,
+    "price": 847,
     "image": "/images/TRAFICO.webp",
     "description": "Pintura de trafico de alto desempeno (Parametros S.C.T.).",
     "stock": 50,
     "sizes": [
-      {"size": "1 L", "price": 847.00},
-      {"size": "4 L", "price": 4068.00},
-      {"size": "19 L", "price": 45177.00}
+      {
+        "size": "1 L",
+        "price": 847
+      },
+      {
+        "size": "4 L",
+        "price": 4068
+      },
+      {
+        "size": "19 L",
+        "price": 45177
+      }
     ],
     "specifications": {
       "base": "Agua",
       "use": "Trafico"
-    }
+    },
+    "colors": [
+      {
+        "code": "Blanco",
+        "name": "Blanco"
+      },
+      {
+        "code": "Amarillo",
+        "name": "Amarillo"
+      }
+    ]
   },
   {
     "id": 89,
     "code": "2009-2010",
     "name": "TRANSL-KAR SCT BASE SOLVENTE",
     "category": "conservacion-vial",
-    "price": 1035.00,
+    "price": 1035,
     "image": "/images/TRAFICO.webp",
     "description": "Pintura de trafico de alto desempeno (Parametros S.C.T.).",
     "stock": 50,
     "sizes": [
-      {"size": "1 L", "price": 1035.00},
-      {"size": "4 L", "price": 4635.00},
-      {"size": "19 L", "price": 51473.00}
+      {
+        "size": "1 L",
+        "price": 1035
+      },
+      {
+        "size": "4 L",
+        "price": 4635
+      },
+      {
+        "size": "19 L",
+        "price": 51473
+      }
     ],
     "specifications": {
       "base": "Solvente",
       "use": "Trafico"
-    }
+    },
+    "colors": [
+      {
+        "code": "Blanco",
+        "name": "Blanco"
+      },
+      {
+        "code": "Amarillo",
+        "name": "Amarillo"
+      }
+    ]
   },
   {
     "id": 90,
     "code": "2016BA-2017BA",
     "name": "PINTURA PARA TRAFICO BASE AGUA",
     "category": "conservacion-vial",
-    "price": 743.00,
+    "price": 743,
     "image": "/images/TRAFICO.webp",
     "description": "Pintura para senalamiento horizontal (S.C.T.).",
     "stock": 50,
     "sizes": [
-      {"size": "1 L", "price": 743.00},
-      {"size": "4 L", "price": 3408.00},
-      {"size": "19 L", "price": 37847.00}
+      {
+        "size": "1 L",
+        "price": 743
+      },
+      {
+        "size": "4 L",
+        "price": 3408
+      },
+      {
+        "size": "19 L",
+        "price": 37847
+      }
     ],
     "specifications": {
       "base": "Agua",
       "use": "Trafico"
-    }
+    },
+    "colors": [
+      {
+        "code": "Blanco",
+        "name": "Blanco"
+      },
+      {
+        "code": "Amarillo",
+        "name": "Amarillo"
+      }
+    ]
   },
   {
     "id": 91,
     "code": "2016-2018",
     "name": "PINTURA PARA TRAFICO BASE SOLVENTE",
     "category": "conservacion-vial",
-    "price": 218.00,
+    "price": 218,
     "image": "/images/TRAFICO.webp",
     "description": "Pintura para senalamiento horizontal (S.C.T.).",
     "stock": 50,
     "sizes": [
-      {"size": "1 L", "price": 218.00},
-      {"size": "4 L", "price": 837.00},
-      {"size": "19 L", "price": 3722.00},
-      {"size": "200 L", "price": 41334.00}
+      {
+        "size": "1 L",
+        "price": 218
+      },
+      {
+        "size": "4 L",
+        "price": 837
+      },
+      {
+        "size": "19 L",
+        "price": 3722
+      },
+      {
+        "size": "200 L",
+        "price": 41334
+      }
     ],
     "specifications": {
       "base": "Solvente",
       "use": "Trafico"
-    }
+    },
+    "colors": [
+      {
+        "code": "Blanco",
+        "name": "Blanco"
+      },
+      {
+        "code": "Amarillo",
+        "name": "Amarillo"
+      }
+    ]
   },
   {
     "id": 92,
     "code": "2011-2015BA",
     "name": "TRANSLTEX BASE AGUA",
     "category": "conservacion-vial",
-    "price": 556.00,
+    "price": 556,
     "image": "/images/TRAFICO.webp",
     "description": "Pintura para senalizacion de guarniciones y pasos peatonales.",
     "stock": 50,
     "sizes": [
-      {"size": "1 L", "price": 556.00},
-      {"size": "4 L", "price": 2562.00},
-      {"size": "19 L", "price": 28452.00}
+      {
+        "size": "1 L",
+        "price": 556
+      },
+      {
+        "size": "4 L",
+        "price": 2562
+      },
+      {
+        "size": "19 L",
+        "price": 28452
+      }
     ],
     "specifications": {
       "base": "Agua",
       "use": "Senalizacion"
-    }
+    },
+    "colors": [
+      {
+        "code": "Blanco",
+        "name": "Blanco"
+      },
+      {
+        "code": "Amarillo",
+        "name": "Amarillo"
+      },
+      {
+        "code": "Verde",
+        "name": "Verde"
+      },
+      {
+        "code": "Rojo",
+        "name": "Rojo"
+      },
+      {
+        "code": "Azul",
+        "name": "Azul"
+      }
+    ]
   },
   {
     "id": 93,
     "code": "2011-2015",
     "name": "TRANSLTEX BASE SOLVENTE",
     "category": "conservacion-vial",
-    "price": 556.00,
+    "price": 556,
     "image": "/images/TRAFICO.webp",
     "description": "Pintura para senalizacion de guarniciones y pasos peatonales.",
     "stock": 50,
     "sizes": [
-      {"size": "1 L", "price": 556.00},
-      {"size": "4 L", "price": 2562.00},
-      {"size": "19 L", "price": 28452.00}
+      {
+        "size": "1 L",
+        "price": 556
+      },
+      {
+        "size": "4 L",
+        "price": 2562
+      },
+      {
+        "size": "19 L",
+        "price": 28452
+      }
     ],
     "specifications": {
       "base": "Solvente",
       "use": "Senalizacion"
-    }
+    },
+    "colors": [
+      {
+        "code": "Blanco",
+        "name": "Blanco"
+      },
+      {
+        "code": "Amarillo",
+        "name": "Amarillo"
+      },
+      {
+        "code": "Verde",
+        "name": "Verde"
+      },
+      {
+        "code": "Rojo",
+        "name": "Rojo"
+      },
+      {
+        "code": "Azul",
+        "name": "Azul"
+      }
+    ]
   },
   {
     "id": 94,
     "code": "2003-2004BA",
     "name": "PINTURA DE SENALAMIENTO BASE AGUA",
     "category": "conservacion-vial",
-    "price": 1750.00,
+    "price": 1750,
     "image": "/images/SENALAWA.webp",
     "description": "Pintura economica para senalizacion.",
     "stock": 50,
     "sizes": [
-      {"size": "1 L", "price": 1750.00}
+      {
+        "size": "1 L",
+        "price": 1750
+      }
     ],
     "specifications": {
       "base": "Agua",
       "use": "Senalizacion"
-    }
+    },
+    "colors": [
+      {
+        "code": "Blanco",
+        "name": "Blanco"
+      },
+      {
+        "code": "Amarillo",
+        "name": "Amarillo"
+      }
+    ]
   },
   {
     "id": 95,
     "code": "2003-2004",
     "name": "PINTURA DE SENALAMIENTO BASE SOLVENTE",
     "category": "conservacion-vial",
-    "price": 1989.00,
+    "price": 1989,
     "image": "/images/SENAL.webp",
     "description": "Pintura economica para senalizacion.",
     "stock": 50,
     "sizes": [
-      {"size": "1 L", "price": 1989.00}
+      {
+        "size": "1 L",
+        "price": 1989
+      }
     ],
     "specifications": {
       "base": "Solvente",
       "use": "Senalizacion"
-    }
+    },
+    "colors": [
+      {
+        "code": "Blanco",
+        "name": "Blanco"
+      },
+      {
+        "code": "Amarillo",
+        "name": "Amarillo"
+      }
+    ]
   },
   {
     "id": 96,
     "code": "2007-2008",
     "name": "PINTURA TERMOPLASTICA (BAJO PEDIDO)",
     "category": "conservacion-vial",
-    "price": 2059.00,
+    "price": 2059,
     "image": "/images/TERMOPLASTICA.webp",
     "description": "Pintura de senalamiento para extrusion de gran resistencia y durabilidad.",
     "stock": 50,
     "sizes": [
-      {"size": "25 KG", "price": 2059.00}
+      {
+        "size": "25 KG",
+        "price": 2059
+      }
     ],
     "specifications": {
       "use": "Senalizacion"
@@ -1933,12 +3744,15 @@
     "code": "25KG-NCMT",
     "name": "MICRO ESFERA REFLEJANTE",
     "category": "conservacion-vial",
-    "price": 1140.00,
+    "price": 1140,
     "image": "/images/LOGO2.png",
     "description": "Micro esfera de vidrio reflejante que facilita la visualizacion nocturna.",
     "stock": 50,
     "sizes": [
-      {"size": "25 KG", "price": 1140.00}
+      {
+        "size": "25 KG",
+        "price": 1140
+      }
     ],
     "specifications": {
       "use": "Senalizacion"
@@ -1949,50 +3763,101 @@
     "code": "2000/2001",
     "name": "ALBERMAR",
     "category": "instalaciones-deportivas",
-    "price": 351.00,
-    "image": "/images/LOGO2.png",
+    "price": 351,
+    "image": "/images/ALBEMAR.webp",
     "description": "Pintura para albercas, banos, estanques, fuentes y piletas.",
     "stock": 50,
     "sizes": [
-      {"size": "1 L", "price": 351.00},
-      {"size": "4 L", "price": 1208.00},
-      {"size": "19 L", "price": 5351.00}
+      {
+        "size": "1 L",
+        "price": 351
+      },
+      {
+        "size": "4 L",
+        "price": 1208
+      },
+      {
+        "size": "19 L",
+        "price": 5351
+      }
     ],
     "specifications": {
       "use": "Instalaciones deportivas"
-    }
+    },
+    "colors": [
+      {
+        "code": "Blanco",
+        "name": "Blanco"
+      },
+      {
+        "code": "Azul",
+        "name": "Azul"
+      }
+    ]
   },
   {
     "id": 99,
     "code": "8200",
     "name": "AQUASPORT",
     "category": "instalaciones-deportivas",
-    "price": 754.00,
+    "price": 754,
     "image": "/images/AQUASPORT.webp",
     "description": "Recubrimiento antiderrapante para canchas y pistas al aire libre.",
     "stock": 50,
     "sizes": [
-      {"size": "4 L", "price": 754.00},
-      {"size": "19 L", "price": 3373.00}
+      {
+        "size": "4 L",
+        "price": 754
+      },
+      {
+        "size": "19 L",
+        "price": 3373
+      }
     ],
     "specifications": {
       "use": "Instalaciones deportivas"
-    }
+    },
+    "colors": [
+      {
+        "code": "Verde",
+        "name": "Verde"
+      },
+      {
+        "code": "Amarillo",
+        "name": "Amarillo"
+      },
+      {
+        "code": "Rojo",
+        "name": "Rojo"
+      }
+    ]
   },
   {
     "id": 100,
     "code": "SXI",
     "name": "XILOL X-2000 (INSTALACIONES DEPORTIVAS)",
     "category": "instalaciones-deportivas",
-    "price": 245.00,
+    "price": 245,
     "image": "/images/XILOL.webp",
     "description": "Disolvente para pinturas (Albermar y Pintura de Trafico).",
     "stock": 80,
     "sizes": [
-      {"size": "1 L", "price": 245.00},
-      {"size": "4 L", "price": 846.00},
-      {"size": "19 L", "price": 3929.00},
-      {"size": "200 L", "price": 43633.00}
+      {
+        "size": "1 L",
+        "price": 245
+      },
+      {
+        "size": "4 L",
+        "price": 846
+      },
+      {
+        "size": "19 L",
+        "price": 3929
+      },
+      {
+        "size": "200 L",
+        "price": 43633
+      }
     ],
     "specifications": {
       "use": "Disolvente"
@@ -2003,14 +3868,23 @@
     "code": "2222",
     "name": "REMOVEDOR ECOLOGICO PINT OFF",
     "category": "preparacion-de-metales",
-    "price": 82.00,
+    "price": 82,
     "image": "/images/LOGO2.png",
     "description": "Removedor de pintura.",
     "stock": 60,
     "sizes": [
-      {"size": "250 ML", "price": 82.00},
-      {"size": "1 L", "price": 241.00},
-      {"size": "4 L", "price": 902.00}
+      {
+        "size": "250 ML",
+        "price": 82
+      },
+      {
+        "size": "1 L",
+        "price": 241
+      },
+      {
+        "size": "4 L",
+        "price": 902
+      }
     ],
     "specifications": {
       "use": "Preparacion"
@@ -2021,12 +3895,15 @@
     "code": "9222",
     "name": "REMOVEDOR DE OXIDOS",
     "category": "preparacion-de-metales",
-    "price": 401.00,
+    "price": 401,
     "image": "/images/REMOX.webp",
     "description": "Removedor de oxidos y residuos sobre superficies.",
     "stock": 60,
     "sizes": [
-      {"size": "4 L", "price": 401.00}
+      {
+        "size": "4 L",
+        "price": 401
+      }
     ],
     "specifications": {
       "use": "Preparacion"
@@ -2037,16 +3914,31 @@
     "code": "888",
     "name": "PEGAVIN",
     "category": "pegamentos",
-    "price": 72.00,
+    "price": 72,
     "image": "/images/PEGAVIN.webp",
     "description": "Pegamento profesional poderoso para uso rudo.",
     "stock": 60,
     "sizes": [
-      {"size": "250 G", "price": 72.00},
-      {"size": "500 G", "price": 116.00},
-      {"size": "1 KG", "price": 171.00},
-      {"size": "4 KG", "price": 615.00},
-      {"size": "20 KG", "price": 2727.00}
+      {
+        "size": "250 G",
+        "price": 72
+      },
+      {
+        "size": "500 G",
+        "price": 116
+      },
+      {
+        "size": "1 KG",
+        "price": 171
+      },
+      {
+        "size": "4 KG",
+        "price": 615
+      },
+      {
+        "size": "20 KG",
+        "price": 2727
+      }
     ],
     "specifications": {
       "use": "Pegamento"
@@ -2057,16 +3949,31 @@
     "code": "666",
     "name": "PEGATEX",
     "category": "pegamentos",
-    "price": 53.00,
+    "price": 53,
     "image": "/images/PEGATEX.webp",
     "description": "Pegamento multimaterial para uso domestico y escolar.",
     "stock": 60,
     "sizes": [
-      {"size": "250 G", "price": 53.00},
-      {"size": "500 G", "price": 70.00},
-      {"size": "1 KG", "price": 109.00},
-      {"size": "4 KG", "price": 392.00},
-      {"size": "20 KG", "price": 1633.00}
+      {
+        "size": "250 G",
+        "price": 53
+      },
+      {
+        "size": "500 G",
+        "price": 70
+      },
+      {
+        "size": "1 KG",
+        "price": 109
+      },
+      {
+        "size": "4 KG",
+        "price": 392
+      },
+      {
+        "size": "20 KG",
+        "price": 1633
+      }
     ],
     "specifications": {
       "use": "Pegamento"
@@ -2077,12 +3984,15 @@
     "code": "1100",
     "name": "DRY-FALL BASE AGUA (BAJO PEDIDO)",
     "category": "pintura-dry-fall",
-    "price": 2186.00,
+    "price": 2186,
     "image": "/images/DRYFALL.webp",
     "description": "Pintura por aspersion convencional con caida en polvo.",
     "stock": 50,
     "sizes": [
-      {"size": "19 L", "price": 2186.00}
+      {
+        "size": "19 L",
+        "price": 2186
+      }
     ],
     "specifications": {
       "use": "Dry fall"
@@ -2093,12 +4003,15 @@
     "code": "1950",
     "name": "DRY-FALL BASE SOLVENTE (BAJO PEDIDO)",
     "category": "pintura-dry-fall",
-    "price": 3611.00,
+    "price": 3611,
     "image": "/images/DRYFALL.webp",
     "description": "Pintura por aspersion convencional con caida en polvo.",
     "stock": 50,
     "sizes": [
-      {"size": "19 L", "price": 3611.00}
+      {
+        "size": "19 L",
+        "price": 3611
+      }
     ],
     "specifications": {
       "use": "Dry fall"

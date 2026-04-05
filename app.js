@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Sesiones
 app.use(session({
-  secret: 'pintumex-secret-key-2024',
+  secret: process.env.SESSION_SECRET || 'pintumex-secret-2026',
   resave: false,
   saveUninitialized: true,
   cookie: { secure: process.env.NODE_ENV === 'production' }

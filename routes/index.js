@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
   try {
     const products = getProducts();
     const stores = getStores();
-    const featuredProducts = products.slice(0, 6);
+    const featuredProducts = products.filter(p => p.featured === true).slice(0, 6);
     
     res.render('index', {
       title: 'Pintumex - Materiales de Pintura Profesionales',
@@ -29,30 +29,51 @@ router.get('/contacto', (req, res) => {
 
 router.post('/contacto', (req, res) => {
   const { name, email, message } = req.body;
-  
-  // Guardar mensaje en un archivo JSON simple
-  const fs = require('fs');
+
+  // Validación server-side
+  const nameClean    = (name    || '').toString().trim();
+  const emailClean   = (email   || '').toString().trim().toLowerCase();
+  const messageClean = (message || '').toString().trim();
+
+  if (!nameClean || nameClean.length < 2 || nameClean.length > 100) {
+    return res.status(400).render('contact', {
+      title: 'Contacto - Pintumex',
+      error: 'El nombre debe tener entre 2 y 100 caracteres.'
+    });
+  }
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(emailClean)) {
+    return res.status(400).render('contact', {
+      title: 'Contacto - Pintumex',
+      error: 'Por favor ingresa un correo electrónico válido.'
+    });
+  }
+  if (!messageClean || messageClean.length < 10 || messageClean.length > 2000) {
+    return res.status(400).render('contact', {
+      title: 'Contacto - Pintumex',
+      error: 'El mensaje debe tener entre 10 y 2000 caracteres.'
+    });
+  }
+
+  const fs   = require('fs');
   const path = require('path');
   const messagesPath = path.join(__dirname, '../data/messages.json');
-  
+
   try {
     let messages = [];
     if (fs.existsSync(messagesPath)) {
       const data = fs.readFileSync(messagesPath, 'utf-8');
       messages = JSON.parse(data);
     }
-    
     messages.push({
-      id: Date.now(),
-      name,
-      email,
-      message,
-      date: new Date().toISOString()
+      id:      Date.now(),
+      name:    nameClean,
+      email:   emailClean,
+      message: messageClean,
+      date:    new Date().toISOString()
     });
-    
     fs.writeFileSync(messagesPath, JSON.stringify(messages, null, 2));
-    
-    res.redirect('/?message=Gracias%20por%20tu%20mensaje');
+    res.redirect('/?message=Gracias%20por%20tu%20mensaje.%20Te%20contactaremos%20pronto');
   } catch (error) {
     console.error('Error saving message:', error);
     res.status(500).render('error', { title: 'Error', message: 'Error guardando el mensaje' });

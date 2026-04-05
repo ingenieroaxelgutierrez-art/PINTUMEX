@@ -47,6 +47,7 @@ $(document).on('click', '.add-single-product', function(e) {
     const quantity = parseInt($('#quantity').val()) || 1;
     const selectedSize = $('#selectedSize').val() || null;
     const selectedPrice = parseFloat($('#selectedPrice').val());
+    const selectedColor = $('#selectedColor').val() || null;
 
     if (!productId) {
         showNotification('No se pudo identificar el producto', 'danger');
@@ -60,7 +61,8 @@ $(document).on('click', '.add-single-product', function(e) {
             productId: productId,
             quantity: quantity,
             size: selectedSize,
-            price: Number.isFinite(selectedPrice) ? selectedPrice : undefined
+            price: Number.isFinite(selectedPrice) ? selectedPrice : undefined,
+            color: selectedColor
         },
         success: function(response) {
             if(response.success) {
@@ -306,6 +308,32 @@ function formatPrice(price) {
         currency: 'MXN'
     }).format(price);
 }
+
+// ─── SELECTOR DE COLOR ────────────────────────────────────────────────────────
+function selectColor(swatchEl, colorName) {
+    // Quitar selección anterior
+    document.querySelectorAll('.color-swatch').forEach(s => s.classList.remove('selected'));
+    // Marcar el seleccionado
+    swatchEl.classList.add('selected');
+    // Guardar en el hidden input
+    const input = document.getElementById('selectedColor');
+    if (input) input.value = colorName;
+}
+
+// Inicializar color-box con su color hex al cargar la página
+$(document).ready(function () {
+    document.querySelectorAll('.color-box[data-hex]').forEach(function (box) {
+        const hex = box.getAttribute('data-hex');
+        if (hex) {
+            box.style.background = hex;
+            // Borde oscuro para colores muy claros
+            if (hex.toUpperCase() === '#FFFFFF' || hex.toUpperCase() === '#F5F5DC' ||
+                hex.toUpperCase() === '#F5DEB3' || hex.toUpperCase() === '#FFFDD0') {
+                box.style.border = '1px solid #bbb';
+            }
+        }
+    });
+});
 
 // Inicialización al cargar el documento
 $(document).ready(function() {

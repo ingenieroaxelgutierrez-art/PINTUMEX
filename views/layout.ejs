@@ -175,66 +175,45 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white mt-5 py-5">
-        <div class="container">
-            <div class="row mb-4">
-                <div class="col-md-3 mb-4">
-                    <h5><img src="/images/logo.webp" alt="Pintumex" height="30" class="mb-2"></h5>
-                    <p class="text-white-50">Pinturas Mexicanas de Puebla S.A. de C.V. Tu proveedor de confianza en pinturas y recubrimientos de la más alta calidad.</p>
+    <footer>
+        <div class="container py-5">
+            <div class="row mb-4 justify-content-between">
+                <div class="col-md-4 mb-4">
+                    <h5><i class="fas fa-paint-brush me-2"></i>Pintumex</h5>
+                    <p>Pinturas Mexicanas de Puebla S.A. de C.V.<br>Tu proveedor de confianza en pinturas y recubrimientos de la más alta calidad desde 2010.</p>
                 </div>
-                <div class="col-md-3 mb-4">
-                    <h5>Enlaces Rápidos</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="/productos" class="text-white-50 text-decoration-none hover-link">Productos</a></li>
-                        <li><a href="/tiendas" class="text-white-50 text-decoration-none hover-link">Tiendas</a></li>
-                        <li><a href="/acerca-de" class="text-white-50 text-decoration-none hover-link">Acerca de</a></li>
-                        <li><a href="/contacto" class="text-white-50 text-decoration-none hover-link">Contacto</a></li>
+                <div class="col-md-3 col-lg-2 mb-4">
+                    <h5>Navegación</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="/">Inicio</a></li>
+                        <li><a href="/productos">Productos</a></li>
+                        <li><a href="/servicios">Servicios</a></li>
+                        <li><a href="/tiendas">Tiendas</a></li>
+                        <li><a href="/acerca-de">Acerca de</a></li>
+                        <li><a href="/contacto">Contacto</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3 mb-4">
+                <div class="col-md-4 mb-4">
                     <h5>Contacto</h5>
-                    <p class="text-white-50">
+                    <p>
                         <% if (primaryStore) { %>
-                            <i class="fas fa-phone"></i> <%= primaryStore.phone %><br>
+                            <i class="fas fa-phone me-2"></i><%= primaryStore.phone %><br>
                         <% } %>
                         <% if (secondaryStore) { %>
-                            <i class="fas fa-phone"></i> <%= secondaryStore.phone %><br>
+                            <i class="fas fa-phone me-2"></i><%= secondaryStore.phone %><br>
                         <% } %>
                         <% if (primaryStore) { %>
-                            <i class="fas fa-envelope"></i> <%= primaryStore.email %><br>
-                            <i class="fas fa-map-marker-alt"></i> <%= primaryStore.address %>
+                            <i class="fas fa-envelope me-2"></i><%= primaryStore.email %><br>
+                            <i class="fas fa-map-marker-alt me-2"></i><%= primaryStore.address %>
                         <% } %>
                     </p>
                 </div>
-                <div class="col-md-3 mb-4">
-                    <h5>Contáctanos por WhatsApp</h5>
-                    <div class="mb-2">
-                        <% if (primaryStore) { %>
-                            <a href="https://wa.me/<%= primaryWhatsapp.replace(/[^0-9]/g, '') %>" target="_blank" class="btn btn-success btn-sm w-100 mb-2">
-                                <i class="fab fa-whatsapp"></i> <%= primaryStore.name %>
-                            </a>
-                        <% } %>
-                        <% if (secondaryStore) { %>
-                            <a href="https://wa.me/<%= secondaryWhatsapp.replace(/[^0-9]/g, '') %>" target="_blank" class="btn btn-success btn-sm w-100">
-                                <i class="fab fa-whatsapp"></i> <%= secondaryStore.name %>
-                            </a>
-                        <% } %>
-                    </div>
-                    <div class="mt-3">
-                        <h6>Síguenos</h6>
-                        <a href="#" class="text-white-50 me-3"><i class="fab fa-facebook fa-lg"></i></a>
-                        <a href="#" class="text-white-50 me-3"><i class="fab fa-instagram fa-lg"></i></a>
-                    </div>
-                </div>
             </div>
-            <hr class="bg-white-50">
+            <hr style="border-color: rgba(255,255,255,0.15); margin-bottom: 1.5rem;">
             <div class="footer-bottom">
                 <p class="footer-legal">
                     <span class="footer-legal-line">&copy; 2026 Pintumex Puebla | Diseñado por: Axel Gutiérrez</span>
-                    <span class="footer-legal-line">
-                        <a href="/terminos">Términos y Condiciones</a> | 
-                        <a href="/privacidad">Política de Privacidad</a>
-                    </span>
+                    <span class="footer-legal-line"><span class="footer-legal-links"><a href="/terminos">Términos y Condiciones</a> <span style="opacity:0.5">|</span> <a href="/privacidad">Política de Privacidad</a></span></span>
                 </p>
             </div>
         </div>

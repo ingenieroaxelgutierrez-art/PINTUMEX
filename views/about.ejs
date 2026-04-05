@@ -152,62 +152,96 @@
             line-height: 1.6;
         }
 
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+        .team-gallery-wrapper {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.18);
+        }
+
+        .team-carousel .carousel-item img {
+            width: 100%;
+            height: 520px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .team-carousel .carousel-caption {
+            background: linear-gradient(0deg, rgba(0,0,0,0.65) 0%, transparent 100%);
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 30px 40px 25px;
+            text-align: left;
+            border-radius: 0;
+        }
+
+        .team-carousel .carousel-caption h5 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .team-carousel .carousel-caption p {
+            font-size: 0.95rem;
+            opacity: 0.88;
+            margin: 0;
+        }
+
+        .team-carousel .carousel-control-prev,
+        .team-carousel .carousel-control-next {
+            width: 52px;
+            height: 52px;
+            background: rgba(30,64,175,0.75);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            margin: 0 12px;
+        }
+
+        .team-carousel .carousel-indicators [data-bs-target] {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.7);
+        }
+
+        .team-carousel .carousel-indicators .active {
+            background-color: #fff;
+        }
+
+        .team-intro-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
             margin-bottom: 40px;
         }
 
-        .team-card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-
-        .team-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(30, 64, 175, 0.15);
-        }
-
-        .team-avatar {
-            width: 100%;
-            height: 250px;
-            background: linear-gradient(135deg, #1e40af, #16a34a);
-            display: flex;
+        .team-badge {
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 4rem;
-        }
-
-        .team-content {
-            padding: 25px;
-        }
-
-        .team-name {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--dark-text);
-            margin-bottom: 10px;
-        }
-
-        .team-role {
+            gap: 8px;
+            background: white;
+            border: 2px solid #1e40af;
             color: #1e40af;
+            padding: 8px 22px;
+            border-radius: 50px;
             font-weight: 600;
             font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 10px;
+            box-shadow: 0 3px 10px rgba(30,64,175,0.1);
         }
 
-        .team-bio {
-            color: #666;
-            font-size: 0.95rem;
-            line-height: 1.5;
+        @media (max-width: 767px) {
+            .team-carousel .carousel-item img {
+                height: 280px;
+            }
+            .team-carousel .carousel-caption {
+                padding: 16px 20px 14px;
+            }
+            .team-carousel .carousel-caption h5 {
+                font-size: 1rem;
+            }
         }
 
         .stats-section {
@@ -476,53 +510,80 @@
     <section class="py-5" style="background: var(--light-bg);">
         <div class="container">
             <h2 class="section-title">Nuestro Equipo</h2>
-            <div class="team-grid">
-                <div class="team-card">
-                    <div class="team-avatar">
-                        <i class="fas fa-user-tie"></i>
-                    </div>
-                    <div class="team-content">
-                        <div class="team-name">Dirección General</div>
-                        <div class="team-role">Administración</div>
-                        <p class="team-bio">
-                            Con más de 15 años de experiencia en la industria de materiales de construcción y pinturas profesionales.
-                        </p>
-                    </div>
-                </div>
 
-                <div class="team-card">
-                    <div class="team-avatar">
-                        <i class="fas fa-user-hard-hat"></i>
-                    </div>
-                    <div class="team-content">
-                        <div class="team-name">Asesor Técnico</div>
-                        <div class="team-role">Especialista</div>
-                        <p class="team-bio">
-                            Especialista certificado en aplicación de pintura y soluciones técnicas para proyectos comerciales y residenciales.
-                        </p>
-                    </div>
-                </div>
+            <!-- Badges de especialidad -->
+            <div class="team-intro-badges">
+                <span class="team-badge"><i class="fas fa-certificate"></i> Especialistas Certificados</span>
+                <span class="team-badge"><i class="fas fa-paint-roller"></i> Asesores Técnicos</span>
+                <span class="team-badge"><i class="fas fa-headset"></i> Atención Personalizada</span>
+                <span class="team-badge"><i class="fas fa-store"></i> 2 Sucursales en Puebla</span>
+            </div>
 
-                <div class="team-card">
-                    <div class="team-avatar">
-                        <i class="fas fa-user-headset"></i>
+            <!-- Galería carousel -->
+            <div class="team-gallery-wrapper">
+                <div id="teamCarousel" class="carousel slide team-carousel" data-bs-ride="carousel" data-bs-interval="4000">
+
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="3"></button>
+                        <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="4"></button>
                     </div>
-                    <div class="team-content">
-                        <div class="team-name">Atención al Cliente</div>
-                        <div class="team-role">Servicio</div>
-                        <p class="team-bio">
-                            Disponible para resolver todas tus dudas y proporcionar la mejor asesoría en la selección de productos.
-                        </p>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="/images/EQUIPO.webp" alt="Equipo Pintumex">
+                            <div class="carousel-caption">
+                                <h5><i class="fas fa-users me-2"></i>Nuestro Equipo</h5>
+                                <p>Un equipo comprometido con la calidad y la atención al cliente.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/images/EQUIPO2.webp" alt="Equipo Pintumex">
+                            <div class="carousel-caption">
+                                <h5><i class="fas fa-award me-2"></i>Especialistas en Pintura</h5>
+                                <p>Más de 13 años formando profesionales en el ramo.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/images/TIENDA.webp" alt="Sucursal Pintumex">
+                            <div class="carousel-caption">
+                                <h5><i class="fas fa-store me-2"></i>Sucursal Cuautlancingo</h5>
+                                <p>Amplio catálogo y asesoría técnica en piso de venta.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/images/TIENDA2.webp" alt="Sucursal Pintumex">
+                            <div class="carousel-caption">
+                                <h5><i class="fas fa-map-marker-alt me-2"></i>Sucursal San Pedro Cholula</h5>
+                                <p>Tu segunda opción para productos de la más alta calidad.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/images/TIENDA3.webp" alt="Tienda Pintumex">
+                            <div class="carousel-caption">
+                                <h5><i class="fas fa-paint-brush me-2"></i>Listos para Asesorarte</h5>
+                                <p>Visítanos y encuentra la solución perfecta para tu proyecto.</p>
+                            </div>
+                        </div>
                     </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#teamCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#teamCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
                 </div>
             </div>
 
-            <div style="background: white; padding: 40px; border-radius: 12px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                <p style="color: #666; font-size: 1.05rem; margin-bottom: 20px;">
-                    Nuestro equipo está comprometido con tu satisfacción. Cada miembro trae experiencia, dedicación y profesionalismo al servicio.
+            <div style="background: white; padding: 35px 40px; border-radius: 12px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08); margin-top: 30px;">
+                <p style="color: #555; font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
+                    Contamos con un equipo de <strong>especialistas certificados</strong> en aplicación y asesoría de pinturas, listos para guiarte desde la elección del producto hasta el resultado final. Tu satisfacción es nuestra prioridad.
                 </p>
-                <a href="/contacto" class="btn" style="background: var(--primary-red); color: white; padding: 12px 30px; border-radius: 6px; text-decoration: none; font-weight: 700;">
-                    <i class="fas fa-envelope me-2"></i>Conoce a Nuestro Equipo
+                <a href="/contacto" class="btn" style="background: #1e40af; color: white; padding: 12px 30px; border-radius: 6px; text-decoration: none; font-weight: 700;">
+                    <i class="fas fa-envelope me-2"></i>Contáctanos
                 </a>
             </div>
         </div>
@@ -554,54 +615,45 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-5">
-        <div class="container">
-            <div class="row mb-4">
-                <div class="col-md-3 mb-4">
-                    <h5>Sobre Pintumex</h5>
-                    <p>Tu tienda de confianza para materiales de pintura profesionales y de calidad superior.</p>
+    <footer>
+        <div class="container py-5">
+            <div class="row mb-4 justify-content-between">
+                <div class="col-md-4 mb-4">
+                    <h5><i class="fas fa-paint-brush me-2"></i>Pintumex</h5>
+                    <p>Pinturas Mexicanas de Puebla S.A. de C.V.<br>Tu proveedor de confianza en pinturas y recubrimientos de la más alta calidad desde 2010.</p>
                 </div>
-                <div class="col-md-3 mb-4">
-                    <h5>Enlaces Rápidos</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="/" class="text-white-50 text-decoration-none">Inicio</a></li>
-                        <li><a href="/productos" class="text-white-50 text-decoration-none">Productos</a></li>
-                        <li><a href="/tiendas" class="text-white-50 text-decoration-none">Tiendas</a></li>
-                        <li><a href="/contacto" class="text-white-50 text-decoration-none">Contacto</a></li>
+                <div class="col-md-3 col-lg-2 mb-4">
+                    <h5>Navegación</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="/">Inicio</a></li>
+                        <li><a href="/productos">Productos</a></li>
+                        <li><a href="/servicios">Servicios</a></li>
+                        <li><a href="/tiendas">Tiendas</a></li>
+                        <li><a href="/acerca-de">Acerca de</a></li>
+                        <li><a href="/contacto">Contacto</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3 mb-4">
-                    <h5>Contacto Principal</h5>
-                    <p class="text-white-50 mb-1">
+                <div class="col-md-4 mb-4">
+                    <h5>Contacto</h5>
+                    <p>
                         <% if (primaryStore) { %>
-                            <i class="fas fa-phone"></i> <%= primaryStore.phone %>
+                            <i class="fas fa-phone me-2"></i><%= primaryStore.phone %><br>
                         <% } %>
-                    </p>
-                    <p class="text-white-50 mb-1">
                         <% if (secondaryStore) { %>
-                            <i class="fas fa-phone"></i> <%= secondaryStore.phone %>
+                            <i class="fas fa-phone me-2"></i><%= secondaryStore.phone %><br>
+                        <% } %>
+                        <% if (primaryStore) { %>
+                            <i class="fas fa-envelope me-2"></i><%= primaryStore.email %><br>
+                            <i class="fas fa-map-marker-alt me-2"></i><%= primaryStore.address %>
                         <% } %>
                     </p>
-                    <p class="text-white-50">
-                        <i class="fas fa-map-marker-alt"></i> <%= primaryStore ? primaryStore.address : 'Puebla, México' %>
-                    </p>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <h5>Síguenos</h5>
-                    <a href="#" class="text-white-50 me-3 text-decoration-none"><i class="fab fa-facebook fa-lg"></i></a>
-                    <a href="#" class="text-white-50 me-3 text-decoration-none"><i class="fab fa-instagram fa-lg"></i></a>
-                    <a href="https://wa.me/<%= primaryWhatsapp.replace(/[^0-9]/g, '') %>" target="_blank" class="text-white-50 me-3 text-decoration-none"><i class="fab fa-whatsapp fa-lg"></i></a>
-                    <a href="#" class="text-white-50 text-decoration-none"><i class="fab fa-twitter fa-lg"></i></a>
                 </div>
             </div>
-            <hr class="bg-white-50">
+            <hr style="border-color: rgba(255,255,255,0.15); margin-bottom: 1.5rem;">
             <div class="footer-bottom">
                 <p class="footer-legal">
                     <span class="footer-legal-line">&copy; 2026 Pintumex Puebla | Diseñado por: Axel Gutiérrez</span>
-                    <span class="footer-legal-line">
-                        <a href="/terminos">Términos y Condiciones</a> | 
-                        <a href="/privacidad">Política de Privacidad</a>
-                    </span>
+                    <span class="footer-legal-line"><span class="footer-legal-links"><a href="/terminos">Términos y Condiciones</a> <span style="opacity:0.5">|</span> <a href="/privacidad">Política de Privacidad</a></span></span>
                 </p>
             </div>
         </div>

@@ -50,6 +50,9 @@ function generateOrderMessage(order) {
     if (item.size) {
       message += `   Presentacion: ${item.size}\n`;
     }
+    if (item.color) {
+      message += `   Color: ${item.color}\n`;
+    }
     message += `   Cantidad: ${item.quantity}\n`;
     message += `   Precio: $${item.price.toFixed(2)}\n`;
     message += `   Subtotal: $${(item.price * item.quantity).toFixed(2)}\n`;

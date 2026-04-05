@@ -271,6 +271,12 @@
             box-shadow: 0 4px 12px rgba(30, 64, 175, 0.1);
         }
 
+        .color-swatch.selected {
+            border-color: var(--primary-red);
+            background: rgba(30, 64, 175, 0.06);
+            box-shadow: 0 4px 14px rgba(30, 64, 175, 0.2);
+        }
+
         .color-box {
             width: 50px;
             height: 50px;
@@ -400,43 +406,6 @@
             font-size: 0.9rem;
             color: #666;
             margin: 0;
-        }
-
-        .related-products {
-            margin: 60px 0;
-            padding: 40px 0;
-            border-top: 2px solid #eee;
-        }
-
-        .related-title {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--dark-text);
-            margin-bottom: 30px;
-        }
-
-        .related-card {
-            border: none;
-            border-radius: 12px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            height: 100%;
-        }
-
-        .related-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 35px rgba(30, 64, 175, 0.2);
-        }
-
-        .related-image {
-            height: 250px;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .related-card:hover .related-image {
-            transform: scale(1.05);
         }
 
         @media (max-width: 767px) {
@@ -690,11 +659,23 @@
                             <% } %>
                             
                             <!-- Colors Section -->
-                            <% if (product.colors && product.colors.length > 0) { %>
+                            <%
+                                const displayColors = (product.colors && product.colors.length > 0)
+                                    ? product.colors
+                                    : (sharedColors || null);
+                                const isSharedPalette = !(product.colors && product.colors.length > 0) && !!displayColors;
+                            %>
+                            <% if (displayColors) { %>
                                 <div class="colors-section">
                                     <div class="colors-section-title">
-                                        <i class="fas fa-palette me-2"></i>Colores Disponibles:
+                                        <i class="fas fa-palette me-2"></i>Selecciona un Color:
+                                        <% if (isSharedPalette) { %>
+                                            <small class="text-muted ms-2" style="font-size:0.8rem;font-weight:normal;">
+                                                (Gama compartida con <%= colorSourceName %>)
+                                            </small>
+                                        <% } %>
                                     </div>
+                                    <input type="hidden" id="selectedColor" value="">
                                     <div class="colors-grid">
                                         <% 
                                             const colorMap = {
@@ -720,8 +701,10 @@
                                                 return colorMap[colorName] || '#CCCCCC';
                                             };
                                         %>
-                                        <% product.colors.forEach(color => { %>
-                                            <div class="color-swatch" title="<%= color.name %>">
+                                        <% displayColors.forEach(color => { %>
+                                            <div class="color-swatch" title="<%= color.name %>"
+                                                 data-color-name="<%= color.name %>"
+                                                 onclick="selectColor(this, '<%= color.name %>')">
                                                 <div class="color-box" data-hex="<%= getColorHex(color.name) %>"></div>
                                                 <div class="color-name"><%= color.name %></div>
                                                 <div class="color-code">#<%= color.code %></div>
@@ -793,90 +776,50 @@
                 </div>
             </div>
 
-            <!-- Related Products -->
-            <% if(product.sizes && product.sizes.length > 0) { %>
-                <div class="related-products">
-                    <h2 class="related-title">
-                        <i class="fas fa-cube me-3"></i>Presentaciones Disponibles
-                    </h2>
-                    <div class="row g-4">
-                        <% product.sizes.forEach((size, index) => { 
-                            const sizeImage = resolveDetailImage(product.category, index + 1);
-                        %>
-                            <div class="col-md-6 col-lg-3">
-                                <div class="related-card">
-                                    <img src="<%= sizeImage %>" alt="<%= size.size %>" class="related-image">
-                                    <div class="p-3">
-                                        <h5 class="fw-bold" style="margin-bottom: 10px; color: var(--dark-text);">
-                                            <i class="fas fa-box me-2" style="color: var(--primary-red);"></i>
-                                            <%= size.size %>
-                                        </h5>
-                                        <p class="text-muted mb-3">Disponible en esta presentación</p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <span class="h5 mb-0" style="color: var(--primary-red); font-weight: 700;">$<%= size.price.toFixed(2) %></span>
-                                            <button class="btn btn-sm" style="background: var(--primary-red); color: white;">
-                                                <i class="fas fa-shopping-cart"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        <% }); %>
-                    </div>
-                </div>
-            <% } %>
+
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-5 mt-5">
-        <div class="container">
-            <div class="row mb-4">
-                <div class="col-md-3 mb-4">
-                    <h5>Sobre Pintumex</h5>
-                    <p>Tu tienda de confianza para materiales de pintura profesionales y de calidad superior.</p>
+    <footer>
+        <div class="container py-5">
+            <div class="row mb-4 justify-content-between">
+                <div class="col-md-4 mb-4">
+                    <h5><i class="fas fa-paint-brush me-2"></i>Pintumex</h5>
+                    <p>Pinturas Mexicanas de Puebla S.A. de C.V.<br>Tu proveedor de confianza en pinturas y recubrimientos de la más alta calidad desde 2010.</p>
                 </div>
-                <div class="col-md-3 mb-4">
-                    <h5>Enlaces Rápidos</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="/" class="text-white-50 text-decoration-none">Inicio</a></li>
-                        <li><a href="/productos" class="text-white-50 text-decoration-none">Productos</a></li>
-                        <li><a href="/tiendas" class="text-white-50 text-decoration-none">Tiendas</a></li>
-                        <li><a href="/contacto" class="text-white-50 text-decoration-none">Contacto</a></li>
+                <div class="col-md-3 col-lg-2 mb-4">
+                    <h5>Navegación</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="/">Inicio</a></li>
+                        <li><a href="/productos">Productos</a></li>
+                        <li><a href="/servicios">Servicios</a></li>
+                        <li><a href="/tiendas">Tiendas</a></li>
+                        <li><a href="/acerca-de">Acerca de</a></li>
+                        <li><a href="/contacto">Contacto</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3 mb-4">
-                    <h5>Contacto Principal</h5>
-                    <p class="text-white-50 mb-1">
+                <div class="col-md-4 mb-4">
+                    <h5>Contacto</h5>
+                    <p>
                         <% if (primaryStore) { %>
-                            <i class="fas fa-phone"></i> <%= primaryStore.phone %>
+                            <i class="fas fa-phone me-2"></i><%= primaryStore.phone %><br>
                         <% } %>
-                    </p>
-                    <p class="text-white-50 mb-1">
                         <% if (secondaryStore) { %>
-                            <i class="fas fa-phone"></i> <%= secondaryStore.phone %>
+                            <i class="fas fa-phone me-2"></i><%= secondaryStore.phone %><br>
+                        <% } %>
+                        <% if (primaryStore) { %>
+                            <i class="fas fa-envelope me-2"></i><%= primaryStore.email %><br>
+                            <i class="fas fa-map-marker-alt me-2"></i><%= primaryStore.address %>
                         <% } %>
                     </p>
-                    <p class="text-white-50">
-                        <i class="fas fa-map-marker-alt"></i> <%= primaryStore ? primaryStore.address : 'Puebla, México' %>
-                    </p>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <h5>Síguenos</h5>
-                    <a href="#" class="text-white-50 me-3 text-decoration-none"><i class="fab fa-facebook fa-lg"></i></a>
-                    <a href="#" class="text-white-50 me-3 text-decoration-none"><i class="fab fa-instagram fa-lg"></i></a>
-                    <a href="https://wa.me/<%= primaryWhatsapp.replace(/[^0-9]/g, '') %>" target="_blank" class="text-white-50 me-3 text-decoration-none"><i class="fab fa-whatsapp fa-lg"></i></a>
-                    <a href="#" class="text-white-50 text-decoration-none"><i class="fab fa-twitter fa-lg"></i></a>
                 </div>
             </div>
-            <hr class="bg-white-50">
+            <hr style="border-color: rgba(255,255,255,0.15); margin-bottom: 1.5rem;">
             <div class="footer-bottom">
                 <p class="footer-legal">
                     <span class="footer-legal-line">&copy; 2026 Pintumex Puebla | Diseñado por: Axel Gutiérrez</span>
-                    <span class="footer-legal-line">
-                        <a href="/terminos">Términos y Condiciones</a> | 
-                        <a href="/privacidad">Política de Privacidad</a>
-                    </span>
+                    <span class="footer-legal-line"><span class="footer-legal-links"><a href="/terminos">Términos y Condiciones</a> <span style="opacity:0.5">|</span> <a href="/privacidad">Política de Privacidad</a></span></span>
                 </p>
             </div>
         </div>

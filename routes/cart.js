@@ -22,7 +22,7 @@ router.get('/', (req, res) => {
 // Agregar producto al carrito
 router.post('/add', (req, res) => {
   try {
-    const { productId, quantity, size } = req.body;
+    const { productId, quantity, size, color } = req.body;
     const product = getProductById(productId);
     
     if (!product) {
@@ -30,7 +30,8 @@ router.post('/add', (req, res) => {
     }
     
     const cart = req.session.cart || [];
-    const normalizedSize = size ? String(size) : null;
+    const normalizedSize  = size  ? String(size)  : null;
+    const normalizedColor = color ? String(color) : null;
     let finalPrice = product.price;
 
     if (normalizedSize && Array.isArray(product.sizes)) {
@@ -40,18 +41,23 @@ router.post('/add', (req, res) => {
       }
     }
 
-    const existingItem = cart.find(item => item.id === parseInt(productId) && item.size === normalizedSize);
+    const existingItem = cart.find(
+      item => item.id === parseInt(productId) &&
+               item.size  === normalizedSize  &&
+               item.color === normalizedColor
+    );
     
     if (existingItem) {
       existingItem.quantity += parseInt(quantity) || 1;
     } else {
       cart.push({
-        id: product.id,
-        name: product.name,
-        code: product.code,
-        price: finalPrice,
-        image: product.image,
-        size: normalizedSize,
+        id:       product.id,
+        name:     product.name,
+        code:     product.code,
+        price:    finalPrice,
+        image:    product.image,
+        size:     normalizedSize,
+        color:    normalizedColor,
         quantity: parseInt(quantity) || 1
       });
     }
@@ -150,9 +156,10 @@ router.post('/checkout', (req, res) => {
       ...savedOrder,
       id: savedOrder.id
     });
-    
-    // Crear enlace de WhatsApp
-    const whatsappUrl = `https://wa.me/+522212022838, '')}?text=${encodeURIComponent(whatsappMessage)}`;
+
+    // Crear enlace de WhatsApp usando el número configurado
+    const whatsappNumber = (process.env.WHATSAPP_SUCURSAL_1 || '522212131403').replace(/[^0-9]/g, '');
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
     
     // Limpiar carrito
     req.session.cart = [];
